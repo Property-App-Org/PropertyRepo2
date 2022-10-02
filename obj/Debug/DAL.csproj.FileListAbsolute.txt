@@ -1,2 +1,0 @@
-E:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-E:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
