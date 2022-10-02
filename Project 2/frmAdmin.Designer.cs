@@ -64,6 +64,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.dgvAdmin);
             this.groupBox1.Controls.Add(this.btnBackTo);
@@ -103,15 +104,17 @@
             // 
             // btnSearch
             // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnSearch.Location = new System.Drawing.Point(114, 259);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(137, 41);
             this.btnSearch.TabIndex = 28;
             this.btnSearch.Text = "SEARCH";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // dgvAdmin
             // 
+            this.dgvAdmin.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.dgvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAdmin.Location = new System.Drawing.Point(10, 308);
             this.dgvAdmin.Name = "dgvAdmin";
@@ -120,53 +123,59 @@
             // 
             // btnBackTo
             // 
+            this.btnBackTo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnBackTo.Location = new System.Drawing.Point(842, 268);
             this.btnBackTo.Name = "btnBackTo";
             this.btnBackTo.Size = new System.Drawing.Size(153, 39);
             this.btnBackTo.TabIndex = 26;
             this.btnBackTo.Text = "BACK TO";
-            this.btnBackTo.UseVisualStyleBackColor = true;
+            this.btnBackTo.UseVisualStyleBackColor = false;
             this.btnBackTo.Click += new System.EventHandler(this.btnBackTo_Click);
             // 
             // btnDelete
             // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnDelete.Location = new System.Drawing.Point(842, 212);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(153, 39);
             this.btnDelete.TabIndex = 25;
             this.btnDelete.Text = "DELETE";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnList
             // 
+            this.btnList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnList.Location = new System.Drawing.Point(842, 155);
             this.btnList.Name = "btnList";
             this.btnList.Size = new System.Drawing.Size(153, 39);
             this.btnList.TabIndex = 24;
             this.btnList.Text = "LIST";
-            this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.UseVisualStyleBackColor = false;
             // 
             // btnUpdate
             // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnUpdate.Location = new System.Drawing.Point(842, 101);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(153, 39);
             this.btnUpdate.TabIndex = 23;
             this.btnUpdate.Text = "UPDATE";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnAdd.Location = new System.Drawing.Point(842, 40);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(153, 39);
             this.btnAdd.TabIndex = 22;
             this.btnAdd.Text = "ADD";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // cmbAgency
             // 
+            this.cmbAgency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.cmbAgency.FormattingEnabled = true;
             this.cmbAgency.Location = new System.Drawing.Point(488, 266);
             this.cmbAgency.Name = "cmbAgency";
@@ -175,6 +184,7 @@
             // 
             // cmbAgent
             // 
+            this.cmbAgent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.cmbAgent.FormattingEnabled = true;
             this.cmbAgent.Location = new System.Drawing.Point(488, 219);
             this.cmbAgent.Name = "cmbAgent";
@@ -183,6 +193,7 @@
             // 
             // cmbLocation
             // 
+            this.cmbLocation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.cmbLocation.FormattingEnabled = true;
             this.cmbLocation.Location = new System.Drawing.Point(488, 176);
             this.cmbLocation.Name = "cmbLocation";
@@ -191,6 +202,7 @@
             // 
             // cmbPropertyType
             // 
+            this.cmbPropertyType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.cmbPropertyType.FormattingEnabled = true;
             this.cmbPropertyType.Location = new System.Drawing.Point(488, 130);
             this.cmbPropertyType.Name = "cmbPropertyType";
@@ -199,6 +211,7 @@
             // 
             // cmbProperty
             // 
+            this.cmbProperty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.cmbProperty.FormattingEnabled = true;
             this.cmbProperty.Location = new System.Drawing.Point(488, 90);
             this.cmbProperty.Name = "cmbProperty";
@@ -207,6 +220,7 @@
             // 
             // cmbStatus
             // 
+            this.cmbStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(488, 43);
             this.cmbStatus.Name = "cmbStatus";
@@ -215,6 +229,7 @@
             // 
             // txtSurname
             // 
+            this.txtSurname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtSurname.Location = new System.Drawing.Point(114, 132);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(188, 26);
@@ -222,6 +237,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtPassword.Location = new System.Drawing.Point(114, 212);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(188, 26);
@@ -229,6 +245,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtEmail.Location = new System.Drawing.Point(114, 169);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(188, 26);
@@ -236,6 +253,7 @@
             // 
             // txtName
             // 
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtName.Location = new System.Drawing.Point(114, 88);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(188, 26);
@@ -243,6 +261,7 @@
             // 
             // txtAdminID
             // 
+            this.txtAdminID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtAdminID.Location = new System.Drawing.Point(114, 45);
             this.txtAdminID.Name = "txtAdminID";
             this.txtAdminID.Size = new System.Drawing.Size(188, 26);
