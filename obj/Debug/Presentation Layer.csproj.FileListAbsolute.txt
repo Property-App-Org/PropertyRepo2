@@ -1,0 +1,23 @@
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\bin\Debug\Project 2.exe.config
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\bin\Debug\Project 2.exe
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\bin\Debug\Project 2.pdb
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Presentation Layer.csproj.AssemblyReference.cache
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Project_2.frmAgency.resources
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Project_2.frmAgent.resources
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Project_2.frmCity.resources
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Project_2.frmMenu.resources
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Project_2.frmProperty.resources
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Project_2.frmPropertyAgent.resources
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Project_2.frmPropertyType.resources
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Project_2.frmProvince.resources
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Project_2.frmRental.resources
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Project_2.frmSurbub.resources
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Project_2.frmTenant.resources
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Project_2.Location.resources
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Project_2.Properties.Resources.resources
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Presentation Layer.csproj.GenerateResource.cache
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Presentation Layer.csproj.CoreCompileInputs.cache
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Project 2.exe
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Project 2.pdb
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Project_2.frmLogIn.resources
+D:\school work\SOFTWARE DEVELOPMENT(ONT2000)\Big Project\Project 2\Project 2\obj\Debug\Project_2.frmAdmin.resources
