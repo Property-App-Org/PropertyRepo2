@@ -76,6 +76,8 @@
             this.dgvPropertyType.Name = "dgvPropertyType";
             this.dgvPropertyType.Size = new System.Drawing.Size(463, 189);
             this.dgvPropertyType.TabIndex = 7;
+            this.dgvPropertyType.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPropertyType_CellClick);
+            this.dgvPropertyType.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPropertyType_CellContentClick);
             // 
             // btnBackTo
             // 

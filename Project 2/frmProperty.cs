@@ -108,7 +108,7 @@ namespace Project_2
             }
             if (validate)
             {
-                bll.InsertProerty(pt);
+                bll.InsertProperty(pt);
             }
 
         }

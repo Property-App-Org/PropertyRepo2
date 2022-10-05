@@ -35,8 +35,11 @@ namespace Project_2
             {
                 validate = true;
             }
-
-            bll.InsertPropertyType(pty);
+            if (validate)
+            {
+                bll.InsertPropertyType(pty);
+            }
+            
 
         }
 
@@ -44,6 +47,16 @@ namespace Project_2
         {
             PropertyType pty = new PropertyType();
             dgvPropertyType.DataSource = bll.GetPropertyType();
+        }
+
+        private void dgvPropertyType_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvPropertyType_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

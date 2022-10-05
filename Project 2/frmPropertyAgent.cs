@@ -72,7 +72,11 @@ namespace Project_2
             {
                 validate = true;
             }
-            bll.InsertPropertyAgent(pa);
+            if (validate)
+            {
+                bll.InsertPropertyAgent(pa);
+            }
+           
 
         }
 

@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.dgvProvince = new System.Windows.Forms.DataGridView();
             this.btnBackTo = new System.Windows.Forms.Button();
             this.btnList = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.errorProvince = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProvince)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvince)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -56,6 +59,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Province Details";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(421, 109);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(93, 55);
+            this.btnSearch.TabIndex = 12;
+            this.btnSearch.Text = "SEARCH";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // dgvProvince
             // 
@@ -82,6 +94,7 @@
             this.btnList.TabIndex = 5;
             this.btnList.Text = "LIST";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // btnAdd
             // 
@@ -91,6 +104,7 @@
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtDesc
             // 
@@ -108,14 +122,9 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Description:";
             // 
-            // btnSearch
+            // errorProvince
             // 
-            this.btnSearch.Location = new System.Drawing.Point(421, 109);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(93, 55);
-            this.btnSearch.TabIndex = 12;
-            this.btnSearch.Text = "SEARCH";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.errorProvince.ContainerControl = this;
             // 
             // frmProvince
             // 
@@ -128,6 +137,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProvince)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvince)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -142,5 +152,6 @@
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ErrorProvider errorProvince;
     }
 }

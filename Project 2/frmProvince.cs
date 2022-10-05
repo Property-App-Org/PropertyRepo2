@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using DAL;
+using System.Text.RegularExpressions;
 
 namespace Project_2
 {
@@ -15,6 +18,34 @@ namespace Project_2
         public frmProvince()
         {
             InitializeComponent();
+        }
+        BusinessLogicLayer bll = new BusinessLogicLayer();
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Province pr = new Province();
+            bool validate = true;
+
+            pr.Description = txtDesc.Text;
+            if (string.IsNullOrEmpty(txtDesc.Text))
+            {
+                errorProvince.SetError(txtDesc, "Please enter description");
+                validate = false;
+            }
+            else
+            {
+                validate = true;
+            }
+            if (validate)
+            {
+                bll.InsertProvince(pr);
+            }
+            
+        }
+
+        private void btnList_Click(object sender, EventArgs e)
+        {
+            Province pr = new Province();
+            dgvProvince.DataSource = bll.GetProvince();
         }
     }
 }

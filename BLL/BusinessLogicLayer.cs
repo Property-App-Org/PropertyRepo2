@@ -21,7 +21,7 @@ namespace BLL
         {
             return dal.GetPropertyType();
         }
-        public int InsertProerty(Property pt)
+        public int InsertProperty(Property pt)
         {
             return dal.InsertProperty(pt);
         }
