@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class Property
+    public class Property
     {
         public int PropertyID { get; set; }
         public int SurbubID { get; set; }
