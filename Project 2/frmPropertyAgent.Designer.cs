@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.dtaDate = new System.Windows.Forms.DateTimePicker();
@@ -41,8 +42,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.errPropertyAgent = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropertyAgent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errPropertyAgent)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -109,6 +112,7 @@
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnList
             // 
@@ -118,6 +122,7 @@
             this.btnList.TabIndex = 7;
             this.btnList.Text = "LIST";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // btnAdd
             // 
@@ -127,6 +132,7 @@
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // cmbAgent
             // 
@@ -171,6 +177,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Property:";
             // 
+            // errPropertyAgent
+            // 
+            this.errPropertyAgent.ContainerControl = this;
+            // 
             // frmPropertyAgent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,6 +193,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropertyAgent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errPropertyAgent)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -202,5 +213,6 @@
         private System.Windows.Forms.ComboBox cmbAgent;
         private System.Windows.Forms.DateTimePicker dtaDate;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ErrorProvider errPropertyAgent;
     }
 }
