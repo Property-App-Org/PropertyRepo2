@@ -50,6 +50,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.errDescription = new System.Windows.Forms.ErrorProvider(this.components);
             this.pbxImage = new System.Windows.Forms.PictureBox();
+            this.lblProperty = new System.Windows.Forms.Label();
+            this.txtPropertyID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProperty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errDescription)).BeginInit();
@@ -58,6 +60,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtPropertyID);
+            this.groupBox1.Controls.Add(this.lblProperty);
             this.groupBox1.Controls.Add(this.pbxImage);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.dgvProperty);
@@ -163,7 +167,7 @@
             // cmbStatus
             // 
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(235, 240);
+            this.cmbStatus.Location = new System.Drawing.Point(235, 243);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(192, 28);
             this.cmbStatus.TabIndex = 12;
@@ -171,24 +175,25 @@
             // cmbPropertyType
             // 
             this.cmbPropertyType.FormattingEnabled = true;
-            this.cmbPropertyType.Location = new System.Drawing.Point(235, 192);
+            this.cmbPropertyType.Location = new System.Drawing.Point(235, 193);
             this.cmbPropertyType.Name = "cmbPropertyType";
             this.cmbPropertyType.Size = new System.Drawing.Size(192, 28);
             this.cmbPropertyType.TabIndex = 11;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(235, 81);
+            this.txtPrice.Location = new System.Drawing.Point(235, 94);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(192, 26);
             this.txtPrice.TabIndex = 9;
             // 
             // txtpropertyDesc
             // 
-            this.txtpropertyDesc.Location = new System.Drawing.Point(235, 26);
+            this.txtpropertyDesc.Location = new System.Drawing.Point(235, 47);
             this.txtpropertyDesc.Name = "txtpropertyDesc";
             this.txtpropertyDesc.Size = new System.Drawing.Size(192, 26);
             this.txtpropertyDesc.TabIndex = 8;
+            this.txtpropertyDesc.TextChanged += new System.EventHandler(this.txtpropertyDesc_TextChanged);
             // 
             // label7
             // 
@@ -229,7 +234,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 84);
+            this.label3.Location = new System.Drawing.Point(13, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 20);
             this.label3.TabIndex = 2;
@@ -238,7 +243,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 32);
+            this.label2.Location = new System.Drawing.Point(13, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 20);
             this.label2.TabIndex = 1;
@@ -255,6 +260,22 @@
             this.pbxImage.Size = new System.Drawing.Size(192, 50);
             this.pbxImage.TabIndex = 21;
             this.pbxImage.TabStop = false;
+            // 
+            // lblProperty
+            // 
+            this.lblProperty.AutoSize = true;
+            this.lblProperty.Location = new System.Drawing.Point(13, 22);
+            this.lblProperty.Name = "lblProperty";
+            this.lblProperty.Size = new System.Drawing.Size(85, 20);
+            this.lblProperty.TabIndex = 22;
+            this.lblProperty.Text = "PropertyID";
+            // 
+            // txtPropertyID
+            // 
+            this.txtPropertyID.Location = new System.Drawing.Point(235, 15);
+            this.txtPropertyID.Name = "txtPropertyID";
+            this.txtPropertyID.Size = new System.Drawing.Size(192, 26);
+            this.txtPropertyID.TabIndex = 23;
             // 
             // frmProperty
             // 
@@ -297,5 +318,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ErrorProvider errDescription;
         private System.Windows.Forms.PictureBox pbxImage;
+        private System.Windows.Forms.TextBox txtPropertyID;
+        private System.Windows.Forms.Label lblProperty;
     }
 }

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using DAL;
+using BLL;
 
 namespace Project_2
 {
@@ -16,13 +19,150 @@ namespace Project_2
         {
             InitializeComponent();
         }
-
+        BusinessLogicLayer bll = new BusinessLogicLayer();
         private void btnBackTo_Click(object sender, EventArgs e)
         {
             frmLogIn lg = new frmLogIn();
             lg.Show();
             this.Hide();
             MessageBox.Show("welcome Back!");
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Agent a = new Agent();
+            bool validate = true;
+
+            a.Name = txtName.Text;
+            a.Surname = txtSurname.Text;
+            a.Email = txtEmail.Text;
+            a.Password = txtPassword.Text;
+            a.Phone = txtPhone.Text;
+            a.Status = cmbStatus.SelectedItem.ToString();
+            a.AgencyID = int.Parse(cmbStatus.SelectedItem.ToString());
+            if (string.IsNullOrEmpty(txtName.Text))
+            {
+                errAgent.SetError(txtName, "Please enter  Name");
+                validate = false;
+            }
+
+            else
+            {
+                validate = true;
+            }
+            if (string.IsNullOrEmpty(txtSurname.Text))
+            {
+                errAgent.SetError(txtSurname, "Please enter Surname");
+                validate = false;
+            }
+            else
+            {
+                validate = true;
+            }
+            if (string.IsNullOrEmpty(txtEmail.Text)|| (!Regex.IsMatch(txtEmail.Text, @"/^w+[+.w-]*@([w-]+.)*w+[w-]*.([a-z]{2,4}|d+)$/i")))
+            {
+                errAgent.SetError(txtEmail, "Please enter correct Email format");
+                validate = false;
+            }
+            else
+            {
+                validate = true;
+            }
+            if (string.IsNullOrEmpty(txtPassword.Text)|| (!Regex.IsMatch(txtPassword.Text, @"^[a-zA-Z0-9!@#%]+$")))
+            {
+                errAgent.SetError(txtPassword, "Please select End Date");
+                validate = false;
+            }
+            else
+            {
+                validate = true;
+            }
+            if (string.IsNullOrEmpty(txtPhone.Text))
+            {
+                errAgent.SetError(txtPhone, "Please eneter phone");
+                validate = false;
+            }
+            else
+            {
+                validate = true;
+            }
+            if (string.IsNullOrEmpty(cmbStatus.Text))
+            {
+                errAgent.SetError(cmbStatus, "Please select status");
+                validate = false;
+            }
+            else
+            {
+                validate = true;
+            }
+            if (string.IsNullOrEmpty(cmbAgency.Text))
+            {
+                errAgent.SetError(cmbAgency, "Please select Agency");
+                validate = false;
+            }
+            else
+            {
+                validate = true;
+            }
+            if (validate)
+            {
+                bll.InsertAgent(a);
+            }
+
+        }
+
+        private void btnList_Click(object sender, EventArgs e)
+        {
+            Agent a = new Agent();
+            dgvAgent.DataSource = bll.GetAgent();
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Agent a = new Agent();
+            a.Email = txtName.Text;
+            a.Phone = txtPhone.Text;
+            a.Status = cmbStatus.SelectedItem.ToString();
+            bll.UpdateAgent(a);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Agent a = new Agent();
+            a.AgentID = int.Parse(txtAgent.Text);
+            bll.DeleteAgent(a);
+           
+        }
+
+        private void cmbAgency_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvAgent_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvAgent.SelectedRows.Count > 0)
+            {
+                txtAgent.Text = dgvAgent.SelectedRows[0].Cells["AgentID"].Value.ToString();
+                txtName.Text = dgvAgent.SelectedRows[0].Cells["Name"].Value.ToString();
+                txtSurname.Text = dgvAgent.SelectedRows[0].Cells["Surname"].Value.ToString();
+                txtEmail.Text = dgvAgent.SelectedRows[0].Cells["Email"].Value.ToString();
+                txtPassword.Text = dgvAgent.SelectedRows[0].Cells["Password"].Value.ToString();
+                txtPhone.Text = dgvAgent.SelectedRows[0].Cells["Phone"].Value.ToString();
+                cmbStatus.Text = dgvAgent.SelectedRows[0].Cells["Status"].Value.ToString();
+                cmbAgency.Text = dgvAgent.SelectedRows[0].Cells["AngecyID"].Value.ToString();
+
+
+
+               
+
+            }
         }
     }
 }

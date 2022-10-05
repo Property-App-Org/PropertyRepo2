@@ -133,9 +133,7 @@ namespace Project_2
         private void btnDelete_Click(object sender, EventArgs e)
         {
             Property pt = new Property();
-            pt.PropertyTypeID = int.Parse(cmbPropertyType.SelectedItem.ToString());
-            pt.Price = int.Parse(txtPrice.Text);
-            pt.Status = cmbStatus.SelectedItem.ToString();
+            pt.PropertyID = int.Parse(txtPropertyID.Text);
             bll.DeleteProperty(pt);
         }
 
@@ -166,6 +164,11 @@ namespace Project_2
                 cmbSurbub.Text = dgvProperty.SelectedRows[0].Cells["SurbubDescription"].Value.ToString();
 
             }
+        }
+
+        private void txtpropertyDesc_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

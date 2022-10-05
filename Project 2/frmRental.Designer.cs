@@ -90,6 +90,7 @@
             this.dgvRental.Name = "dgvRental";
             this.dgvRental.Size = new System.Drawing.Size(734, 215);
             this.dgvRental.TabIndex = 12;
+            this.dgvRental.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRental_CellClick);
             // 
             // btnBackTo
             // 
@@ -108,6 +109,7 @@
             this.btnUpdate.TabIndex = 10;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnList
             // 
@@ -117,6 +119,7 @@
             this.btnList.TabIndex = 9;
             this.btnList.Text = "LIST";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // btnAdd
             // 

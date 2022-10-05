@@ -72,5 +72,36 @@ namespace Project_2
             }
             
         }
+
+        private void btnList_Click(object sender, EventArgs e)
+        {
+            Rental r = new Rental();
+            dgvRental.DataSource = bll.GetRental();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Rental r = new Rental();
+
+            r.StartDate =dtaStartDate.Text;
+            r.EndDate = dtaEndDate.Text;
+            
+
+            bll.UpdateRental(r);
+        }
+
+        private void dgvRental_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvRental.SelectedRows.Count > 0)
+            {
+                cmbPropertyAgent.Text = dgvRental.SelectedRows[0].Cells["PropertyAgentID"].Value.ToString();
+                cmbTenant.Text = dgvRental.SelectedRows[0].Cells["TenantID"].Value.ToString();
+                dtaStartDate.Text = dgvRental.SelectedRows[0].Cells["StartDate"].Value.ToString();
+                dtaEndDate.Text = dgvRental.SelectedRows[0].Cells["EndDate"].Value.ToString();
+               
+                
+
+            }
+        }
     }
 }
