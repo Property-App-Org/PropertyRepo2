@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.dtaDate = new System.Windows.Forms.DateTimePicker();
             this.dgvPropertyAgent = new System.Windows.Forms.DataGridView();
             this.btnBackTo = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropertyAgent)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +67,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Property Agent Details";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(607, 158);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(120, 35);
+            this.btnSearch.TabIndex = 12;
+            this.btnSearch.Text = "SEARCH";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // dtaDate
             // 
@@ -162,15 +171,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Property:";
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(607, 158);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(120, 35);
-            this.btnSearch.TabIndex = 12;
-            this.btnSearch.Text = "SEARCH";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
             // frmPropertyAgent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,6 +179,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPropertyAgent";
             this.Text = "frmPropertyAgent";
+            this.Load += new System.EventHandler(this.frmPropertyAgent_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropertyAgent)).EndInit();
