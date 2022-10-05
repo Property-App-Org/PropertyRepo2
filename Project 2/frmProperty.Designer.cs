@@ -101,6 +101,7 @@
             this.dgvProperty.Name = "dgvProperty";
             this.dgvProperty.Size = new System.Drawing.Size(662, 226);
             this.dgvProperty.TabIndex = 19;
+            this.dgvProperty.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProperty_CellClick);
             // 
             // btnBackTo
             // 

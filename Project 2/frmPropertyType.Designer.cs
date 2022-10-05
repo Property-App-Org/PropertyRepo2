@@ -28,22 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.dgvPropertyType = new System.Windows.Forms.DataGridView();
             this.btnBackTo = new System.Windows.Forms.Button();
             this.btnlist = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtPropertyTypeDesc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.errPropertyType = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPropertyType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errPropertyType)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnSearch);
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgvPropertyType);
             this.groupBox1.Controls.Add(this.btnBackTo);
             this.groupBox1.Controls.Add(this.btnlist);
             this.groupBox1.Controls.Add(this.btnAdd);
@@ -57,13 +60,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Property Type Details";
             // 
-            // dataGridView1
+            // btnSearch
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 139);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(463, 189);
-            this.dataGridView1.TabIndex = 7;
+            this.btnSearch.Location = new System.Drawing.Point(367, 77);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(109, 41);
+            this.btnSearch.TabIndex = 12;
+            this.btnSearch.Text = "SEARCH";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // dgvPropertyType
+            // 
+            this.dgvPropertyType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPropertyType.Location = new System.Drawing.Point(13, 139);
+            this.dgvPropertyType.Name = "dgvPropertyType";
+            this.dgvPropertyType.Size = new System.Drawing.Size(463, 189);
+            this.dgvPropertyType.TabIndex = 7;
             // 
             // btnBackTo
             // 
@@ -82,6 +94,7 @@
             this.btnlist.TabIndex = 5;
             this.btnlist.Text = "LIST";
             this.btnlist.UseVisualStyleBackColor = true;
+            this.btnlist.Click += new System.EventHandler(this.btnlist_Click);
             // 
             // btnAdd
             // 
@@ -91,6 +104,7 @@
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtPropertyTypeDesc
             // 
@@ -108,14 +122,9 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Property Type Description:";
             // 
-            // btnSearch
+            // errPropertyType
             // 
-            this.btnSearch.Location = new System.Drawing.Point(367, 77);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(109, 41);
-            this.btnSearch.TabIndex = 12;
-            this.btnSearch.Text = "SEARCH";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.errPropertyType.ContainerControl = this;
             // 
             // frmPropertyType
             // 
@@ -127,7 +136,8 @@
             this.Text = "frmPropertyType";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPropertyType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errPropertyType)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -135,12 +145,13 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPropertyType;
         private System.Windows.Forms.Button btnBackTo;
         private System.Windows.Forms.Button btnlist;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtPropertyTypeDesc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ErrorProvider errPropertyType;
     }
 }

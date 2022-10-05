@@ -94,6 +94,7 @@
             this.dgvPropertyAgent.Name = "dgvPropertyAgent";
             this.dgvPropertyAgent.Size = new System.Drawing.Size(701, 210);
             this.dgvPropertyAgent.TabIndex = 10;
+            this.dgvPropertyAgent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPropertyAgent_CellClick);
             // 
             // btnBackTo
             // 

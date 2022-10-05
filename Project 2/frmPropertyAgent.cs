@@ -92,5 +92,17 @@ namespace Project_2
 
             bll.UpdatePropertAgent(pa);
         }
+
+        private void dgvPropertyAgent_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvPropertyAgent.SelectedRows.Count > 0)
+            {
+               
+                cmbProperty.Text = dgvPropertyAgent.SelectedRows[0].Cells["PropertyID"].Value.ToString();
+                cmbAgent.Text = dgvPropertyAgent.SelectedRows[0].Cells["AgentID"].Value.ToString();
+                dtaDate.Text = dgvPropertyAgent.SelectedRows[0].Cells["Date"].Value.ToString();
+
+            }
+        }
     }
 }

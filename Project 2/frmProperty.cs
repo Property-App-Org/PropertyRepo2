@@ -153,5 +153,19 @@ namespace Project_2
             cmbStatus.Items.Add("Pending");
             cmbStatus.Items.Add("Full");
         }
+
+        private void dgvProperty_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvProperty.SelectedRows.Count > 0)
+            {
+                txtpropertyDesc.Text = dgvProperty.SelectedRows[0].Cells["Description"].Value.ToString();
+                txtPrice.Text = dgvProperty.SelectedRows[0].Cells["Price"].Value.ToString();
+                pbxImage.Text = dgvProperty.SelectedRows[0].Cells["Image"].Value.ToString();
+                cmbPropertyType.Text = dgvProperty.SelectedRows[0].Cells["PropertyTypeDescription"].Value.ToString();
+                cmbStatus.Text = dgvProperty.SelectedRows[0].Cells["Status"].Value.ToString();
+                cmbSurbub.Text = dgvProperty.SelectedRows[0].Cells["SurbubDescription"].Value.ToString();
+
+            }
+        }
     }
 }
