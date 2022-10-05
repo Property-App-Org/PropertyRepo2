@@ -231,5 +231,15 @@
   <ItemGroup>
     <None Include="Resources\Tenant.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{fde7ce2c-5504-41bd-878f-12594a1346fd}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{c45cd3f2-39ab-4cbb-bf2d-088841f46269}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

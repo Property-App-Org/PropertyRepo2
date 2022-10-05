@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.dgvProperty = new System.Windows.Forms.DataGridView();
             this.btnBackTo = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -38,7 +40,6 @@
             this.cmbSurbub = new System.Windows.Forms.ComboBox();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.cmbPropertyType = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtpropertyDesc = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,13 +48,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.errDescription = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pbxImage = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProperty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errDescription)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.pbxImage);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.dgvProperty);
             this.groupBox1.Controls.Add(this.btnBackTo);
@@ -64,7 +69,6 @@
             this.groupBox1.Controls.Add(this.cmbSurbub);
             this.groupBox1.Controls.Add(this.cmbStatus);
             this.groupBox1.Controls.Add(this.cmbPropertyType);
-            this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.txtPrice);
             this.groupBox1.Controls.Add(this.txtpropertyDesc);
             this.groupBox1.Controls.Add(this.label7);
@@ -80,6 +84,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Property Details";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(433, 272);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(90, 42);
+            this.btnSearch.TabIndex = 20;
+            this.btnSearch.Text = "SEARCH";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // dgvProperty
             // 
@@ -106,6 +119,7 @@
             this.btnDelete.TabIndex = 17;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -115,6 +129,7 @@
             this.btnUpdate.TabIndex = 16;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnList
             // 
@@ -124,6 +139,7 @@
             this.btnList.TabIndex = 15;
             this.btnList.Text = "LIST";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // btnAdd
             // 
@@ -133,6 +149,7 @@
             this.btnAdd.TabIndex = 14;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // cmbSurbub
             // 
@@ -157,13 +174,6 @@
             this.cmbPropertyType.Name = "cmbPropertyType";
             this.cmbPropertyType.Size = new System.Drawing.Size(192, 28);
             this.cmbPropertyType.TabIndex = 11;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(235, 131);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(192, 26);
-            this.textBox4.TabIndex = 10;
             // 
             // txtPrice
             // 
@@ -233,14 +243,17 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Property Description:";
             // 
-            // btnSearch
+            // errDescription
             // 
-            this.btnSearch.Location = new System.Drawing.Point(433, 272);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(90, 42);
-            this.btnSearch.TabIndex = 20;
-            this.btnSearch.Text = "SEARCH";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.errDescription.ContainerControl = this;
+            // 
+            // pbxImage
+            // 
+            this.pbxImage.Location = new System.Drawing.Point(235, 137);
+            this.pbxImage.Name = "pbxImage";
+            this.pbxImage.Size = new System.Drawing.Size(192, 50);
+            this.pbxImage.TabIndex = 21;
+            this.pbxImage.TabStop = false;
             // 
             // frmProperty
             // 
@@ -250,9 +263,12 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmProperty";
             this.Text = "frmProperty";
+            this.Load += new System.EventHandler(this.frmProperty_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProperty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errDescription)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,7 +285,6 @@
         private System.Windows.Forms.ComboBox cmbSurbub;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.ComboBox cmbPropertyType;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtpropertyDesc;
         private System.Windows.Forms.Label label7;
@@ -279,5 +294,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ErrorProvider errDescription;
+        private System.Windows.Forms.PictureBox pbxImage;
     }
 }
