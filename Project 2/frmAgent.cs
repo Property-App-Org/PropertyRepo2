@@ -164,5 +164,10 @@ namespace Project_2
 
             }
         }
+
+        private void frmAgent_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

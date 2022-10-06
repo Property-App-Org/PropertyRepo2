@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Data;
 using DAL;
 
-
 namespace BLL
 {
     public class BusinessLogicLayer

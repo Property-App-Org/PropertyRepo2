@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.dgvAdmin = new System.Windows.Forms.DataGridView();
@@ -58,8 +59,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.errAdmin = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errAdmin)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -120,6 +123,8 @@
             this.dgvAdmin.Name = "dgvAdmin";
             this.dgvAdmin.Size = new System.Drawing.Size(985, 274);
             this.dgvAdmin.TabIndex = 27;
+            this.dgvAdmin.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdmin_CellClick);
+            this.dgvAdmin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdmin_CellContentClick);
             // 
             // btnBackTo
             // 
@@ -152,6 +157,7 @@
             this.btnList.TabIndex = 24;
             this.btnList.Text = "LIST";
             this.btnList.UseVisualStyleBackColor = false;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // btnUpdate
             // 
@@ -162,6 +168,7 @@
             this.btnUpdate.TabIndex = 23;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -172,6 +179,7 @@
             this.btnAdd.TabIndex = 22;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // cmbAgency
             // 
@@ -366,6 +374,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "AdminID:";
             // 
+            // errAdmin
+            // 
+            this.errAdmin.ContainerControl = this;
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -377,6 +389,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errAdmin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -413,6 +426,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ErrorProvider errAdmin;
     }
 }
 

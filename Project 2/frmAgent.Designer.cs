@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtAgent = new System.Windows.Forms.TextBox();
+            this.lblAgent = new System.Windows.Forms.Label();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.dgvAgent = new System.Windows.Forms.DataGridView();
             this.btnBackTo = new System.Windows.Forms.Button();
@@ -50,10 +53,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.errAgent = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblAgent = new System.Windows.Forms.Label();
-            this.txtAgent = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errAgent)).BeginInit();
@@ -91,6 +91,30 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agent Details";
+            // 
+            // txtAgent
+            // 
+            this.txtAgent.Location = new System.Drawing.Point(183, 25);
+            this.txtAgent.Name = "txtAgent";
+            this.txtAgent.Size = new System.Drawing.Size(193, 26);
+            this.txtAgent.TabIndex = 23;
+            // 
+            // lblAgent
+            // 
+            this.lblAgent.AutoSize = true;
+            this.lblAgent.Location = new System.Drawing.Point(21, 26);
+            this.lblAgent.Name = "lblAgent";
+            this.lblAgent.Size = new System.Drawing.Size(73, 20);
+            this.lblAgent.TabIndex = 22;
+            this.lblAgent.Text = "AgentID:";
+            // 
+            // cmbStatus
+            // 
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Location = new System.Drawing.Point(183, 282);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(242, 28);
+            this.cmbStatus.TabIndex = 21;
             // 
             // btnSearch
             // 
@@ -261,33 +285,9 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Name:";
             // 
-            // cmbStatus
-            // 
-            this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(183, 282);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(242, 28);
-            this.cmbStatus.TabIndex = 21;
-            // 
             // errAgent
             // 
             this.errAgent.ContainerControl = this;
-            // 
-            // lblAgent
-            // 
-            this.lblAgent.AutoSize = true;
-            this.lblAgent.Location = new System.Drawing.Point(21, 26);
-            this.lblAgent.Name = "lblAgent";
-            this.lblAgent.Size = new System.Drawing.Size(73, 20);
-            this.lblAgent.TabIndex = 22;
-            this.lblAgent.Text = "AgentID:";
-            // 
-            // txtAgent
-            // 
-            this.txtAgent.Location = new System.Drawing.Point(183, 25);
-            this.txtAgent.Name = "txtAgent";
-            this.txtAgent.Size = new System.Drawing.Size(193, 26);
-            this.txtAgent.TabIndex = 23;
             // 
             // frmAgent
             // 
@@ -297,6 +297,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmAgent";
             this.Text = "frmAgent";
+            this.Load += new System.EventHandler(this.frmAgent_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgent)).EndInit();

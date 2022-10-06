@@ -26,8 +26,6 @@ namespace Project_2
         private void btnAdd_Click(object sender, EventArgs e)
         {
            
-             BusinessLogicLayer bll = new BusinessLogicLayer();
-            string ImageLoc = " ";
              OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "*.jpg; *.jpeg; *.png; *.gif; *.bmp)| *.jpg; *.jpeg; *.png; *.gif; *.bmp";
 
@@ -48,8 +46,8 @@ namespace Project_2
             pt.Description = txtpropertyDesc.Text;
             pt.Price = double.Parse(txtPrice.Text.ToString());
             pt.Image = images;
-            pt.PropertyID = int.Parse(cmbPropertyType.SelectedValue.ToString());
-            pt.SurbubID = int.Parse(cmbSurbub.SelectedValue.ToString());
+            pt.PropertyID = int.Parse(cmbPropertyType.SelectedItem.ToString());
+            pt.SurbubID = int.Parse(cmbSurbub.SelectedItem.ToString());
             pt.Status = cmbStatus.SelectedItem.ToString();
 
             if (string.IsNullOrEmpty(txtpropertyDesc.Text))
