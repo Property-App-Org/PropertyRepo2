@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL;
+using System.Text.RegularExpressions;
+using BLL;
+
 
 namespace Project_2
 {
@@ -15,6 +19,59 @@ namespace Project_2
         public frmAgency()
         {
             InitializeComponent();
+        }
+        BusinessLogicLayer bll = new BusinessLogicLayer();
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Agency ag = new Agency();
+            bool validate;
+
+            ag.AgencyName=txtAgencyName.Text;
+            ag.SurbubID=int.Parse(cmbSurbub.SelectedValue.ToString());
+
+
+            if (string.IsNullOrEmpty(txtAgencyName.Text))
+            {
+                errAgency.SetError(txtAgencyName, "Please Enter Agency Name");
+                validate = false;
+            }
+            else
+            {
+                validate = true;
+            }
+            if (string.IsNullOrEmpty(cmbSurbub.Text))
+            {
+                errAgency.SetError(cmbSurbub, "Please Select surbub.");
+                validate = false;
+            }
+            else
+            {
+                validate = true;
+            }
+            if (validate)
+            {
+                bll.InsertAgency(ag);
+            }
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnList_Click(object sender, EventArgs e)
+        {
+            Agency ag = new Agency();
+
+            dgvAgency.DataSource = bll.GetAgency();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Agency ag = new Agency();
+            ag.AgencyID=int.Parse(txtAgencyID.Text);
+            bll.DeleteAgency(ag);
         }
     }
 }

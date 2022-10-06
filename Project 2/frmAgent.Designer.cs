@@ -295,6 +295,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 559);
             this.Controls.Add(this.groupBox1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmAgent";
             this.Text = "frmAgent";
             this.Load += new System.EventHandler(this.frmAgent_Load);

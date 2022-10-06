@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.dgvAgency = new System.Windows.Forms.DataGridView();
             this.btnBackTo = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -38,13 +40,18 @@
             this.txtAgencyName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.errAgency = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtAgencyID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgency)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errAgency)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtAgencyID);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.dgvAgency);
             this.groupBox1.Controls.Add(this.btnBackTo);
@@ -63,6 +70,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agency Details";
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(579, 134);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(115, 36);
+            this.btnSearch.TabIndex = 12;
+            this.btnSearch.Text = "SEARCH";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
             // dgvAgency
             // 
             this.dgvAgency.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -73,7 +89,7 @@
             // 
             // btnBackTo
             // 
-            this.btnBackTo.Location = new System.Drawing.Point(445, 134);
+            this.btnBackTo.Location = new System.Drawing.Point(579, 74);
             this.btnBackTo.Name = "btnBackTo";
             this.btnBackTo.Size = new System.Drawing.Size(97, 36);
             this.btnBackTo.TabIndex = 7;
@@ -82,30 +98,33 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(317, 134);
+            this.btnDelete.Location = new System.Drawing.Point(414, 79);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(97, 36);
+            this.btnDelete.Size = new System.Drawing.Size(97, 31);
             this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnList
             // 
-            this.btnList.Location = new System.Drawing.Point(192, 134);
+            this.btnList.Location = new System.Drawing.Point(579, 28);
             this.btnList.Name = "btnList";
             this.btnList.Size = new System.Drawing.Size(97, 36);
             this.btnList.TabIndex = 5;
             this.btnList.Text = "LIST";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(64, 134);
+            this.btnAdd.Location = new System.Drawing.Point(414, 33);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(97, 36);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // cmbSurbub
             // 
@@ -117,7 +136,7 @@
             // 
             // txtAgencyName
             // 
-            this.txtAgencyName.Location = new System.Drawing.Point(192, 33);
+            this.txtAgencyName.Location = new System.Drawing.Point(192, 131);
             this.txtAgencyName.Name = "txtAgencyName";
             this.txtAgencyName.Size = new System.Drawing.Size(183, 26);
             this.txtAgencyName.TabIndex = 2;
@@ -136,18 +155,29 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 20);
+            this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Agency Name:";
+            this.label1.Text = "AgencyID";
             // 
-            // btnSearch
+            // errAgency
             // 
-            this.btnSearch.Location = new System.Drawing.Point(579, 134);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(115, 36);
-            this.btnSearch.TabIndex = 12;
-            this.btnSearch.Text = "SEARCH";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.errAgency.ContainerControl = this;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 134);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 20);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Agency Name:";
+            // 
+            // txtAgencyID
+            // 
+            this.txtAgencyID.Location = new System.Drawing.Point(192, 33);
+            this.txtAgencyID.Name = "txtAgencyID";
+            this.txtAgencyID.Size = new System.Drawing.Size(183, 26);
+            this.txtAgencyID.TabIndex = 14;
             // 
             // frmAgency
             // 
@@ -160,6 +190,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgency)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errAgency)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -177,5 +208,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ErrorProvider errAgency;
+        private System.Windows.Forms.TextBox txtAgencyID;
     }
 }

@@ -46,9 +46,9 @@ namespace Project_2
             pt.Description = txtpropertyDesc.Text;
             pt.Price = double.Parse(txtPrice.Text.ToString());
             pt.Image = images;
-            pt.PropertyID = int.Parse(cmbPropertyType.SelectedItem.ToString());
-            pt.SurbubID = int.Parse(cmbSurbub.SelectedItem.ToString());
-            pt.Status = cmbStatus.SelectedItem.ToString();
+            pt.PropertyID = int.Parse(cmbPropertyType.SelectedValue.ToString());
+            pt.SurbubID = int.Parse(cmbSurbub.SelectedValue.ToString());
+            pt.Status = cmbStatus.SelectedValue.ToString();
 
             if (string.IsNullOrEmpty(txtpropertyDesc.Text))
             {

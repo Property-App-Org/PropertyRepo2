@@ -26,7 +26,7 @@ namespace Project_2
             bool validate = true;
 
             ct.CityDescription = txtDesc.Text;
-            ct.ProvinceID = int.Parse(cmbProvince.SelectedItem.ToString());
+            ct.ProvinceID = int.Parse(cmbProvince.SelectedValue.ToString());
             
             if (string.IsNullOrEmpty(txtDesc.Text))
             {

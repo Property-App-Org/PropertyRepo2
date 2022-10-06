@@ -25,8 +25,8 @@ namespace Project_2
             Rental r = new Rental();
             bool validate = true;
 
-            r.PropertyAgentID = int.Parse( cmbPropertyAgent.SelectedItem.ToString());
-            r.TenantID = int.Parse( cmbTenant.SelectedItem.ToString());
+            r.PropertyAgentID = int.Parse( cmbPropertyAgent.SelectedValue.ToString());
+            r.TenantID = int.Parse( cmbTenant.SelectedValue.ToString());
             r.StartDate = dtaStartDate.Text;
             r.EndDate = dtaEndDate.Text;
             if (string.IsNullOrEmpty(cmbPropertyAgent.Text))
