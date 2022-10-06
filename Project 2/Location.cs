@@ -26,6 +26,7 @@ namespace Project_2
 
             loc.Address=txtAddress.Text;
             
+            
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
