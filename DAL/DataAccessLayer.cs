@@ -562,7 +562,7 @@ namespace DAL
 
             dbComm.Parameters.AddWithValue("@SurbubID", loc.SurbubID);
             dbComm.Parameters.AddWithValue("@ProvinceID", loc.ProvinceID);
-            dbComm.Parameters.AddWithValue("@Address", loc.Address);
+            dbComm.Parameters.AddWithValue("@Address",loc.Address);
             
 
             int x = dbComm.ExecuteNonQuery();

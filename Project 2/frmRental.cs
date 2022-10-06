@@ -99,8 +99,6 @@ namespace Project_2
                 dtaStartDate.Text = dgvRental.SelectedRows[0].Cells["StartDate"].Value.ToString();
                 dtaEndDate.Text = dgvRental.SelectedRows[0].Cells["EndDate"].Value.ToString();
                
-                
-
             }
         }
     }

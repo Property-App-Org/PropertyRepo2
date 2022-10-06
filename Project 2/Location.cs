@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using DAL;
+using BLL;
+
 
 namespace Project_2
 {
@@ -15,6 +19,16 @@ namespace Project_2
         public Location()
         {
             InitializeComponent();
+        }
+        BusinessLogicLayer bll = new BusinessLogicLayer();
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Location loc = new Location();
+            bool validate = true;
+
+            
+
+            
         }
     }
 }

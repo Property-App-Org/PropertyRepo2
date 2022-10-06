@@ -28,21 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.cmbSurbub = new System.Windows.Forms.ComboBox();
-            this.cmbProvince = new System.Windows.Forms.ComboBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnList = new System.Windows.Forms.Button();
-            this.btnMenu = new System.Windows.Forms.Button();
-            this.dgvLocation = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.dgvLocation = new System.Windows.Forms.DataGridView();
+            this.btnMenu = new System.Windows.Forms.Button();
+            this.btnList = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.cmbProvince = new System.Windows.Forms.ComboBox();
+            this.cmbSurbub = new System.Windows.Forms.ComboBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.errLocation = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errLocation)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -67,82 +70,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Location Details";
             // 
-            // label1
+            // btnSearch
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Address:";
+            this.btnSearch.Location = new System.Drawing.Point(512, 128);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(137, 41);
+            this.btnSearch.TabIndex = 11;
+            this.btnSearch.Text = "SEARCH";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // dgvLocation
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Surbub:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 134);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Province:";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(210, 29);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(215, 26);
-            this.txtAddress.TabIndex = 3;
-            // 
-            // cmbSurbub
-            // 
-            this.cmbSurbub.FormattingEnabled = true;
-            this.cmbSurbub.Location = new System.Drawing.Point(210, 77);
-            this.cmbSurbub.Name = "cmbSurbub";
-            this.cmbSurbub.Size = new System.Drawing.Size(215, 28);
-            this.cmbSurbub.TabIndex = 4;
-            // 
-            // cmbProvince
-            // 
-            this.cmbProvince.FormattingEnabled = true;
-            this.cmbProvince.Location = new System.Drawing.Point(210, 131);
-            this.cmbProvince.Name = "cmbProvince";
-            this.cmbProvince.Size = new System.Drawing.Size(215, 28);
-            this.cmbProvince.TabIndex = 5;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(20, 213);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(137, 41);
-            this.btnAdd.TabIndex = 6;
-            this.btnAdd.Text = "ADD";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(210, 213);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(137, 41);
-            this.btnUpdate.TabIndex = 7;
-            this.btnUpdate.Text = "UPDATE";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // btnList
-            // 
-            this.btnList.Location = new System.Drawing.Point(391, 213);
-            this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(137, 41);
-            this.btnList.TabIndex = 8;
-            this.btnList.Text = "LIST";
-            this.btnList.UseVisualStyleBackColor = true;
+            this.dgvLocation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLocation.Location = new System.Drawing.Point(20, 278);
+            this.dgvLocation.Name = "dgvLocation";
+            this.dgvLocation.Size = new System.Drawing.Size(700, 243);
+            this.dgvLocation.TabIndex = 10;
             // 
             // btnMenu
             // 
@@ -153,22 +96,87 @@
             this.btnMenu.Text = "MENU";
             this.btnMenu.UseVisualStyleBackColor = true;
             // 
-            // dgvLocation
+            // btnList
             // 
-            this.dgvLocation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLocation.Location = new System.Drawing.Point(20, 278);
-            this.dgvLocation.Name = "dgvLocation";
-            this.dgvLocation.Size = new System.Drawing.Size(700, 243);
-            this.dgvLocation.TabIndex = 10;
+            this.btnList.Location = new System.Drawing.Point(391, 213);
+            this.btnList.Name = "btnList";
+            this.btnList.Size = new System.Drawing.Size(137, 41);
+            this.btnList.TabIndex = 8;
+            this.btnList.Text = "LIST";
+            this.btnList.UseVisualStyleBackColor = true;
             // 
-            // btnSearch
+            // btnUpdate
             // 
-            this.btnSearch.Location = new System.Drawing.Point(512, 128);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(137, 41);
-            this.btnSearch.TabIndex = 11;
-            this.btnSearch.Text = "SEARCH";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnUpdate.Location = new System.Drawing.Point(210, 213);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(137, 41);
+            this.btnUpdate.TabIndex = 7;
+            this.btnUpdate.Text = "UPDATE";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(20, 213);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(137, 41);
+            this.btnAdd.TabIndex = 6;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // cmbProvince
+            // 
+            this.cmbProvince.FormattingEnabled = true;
+            this.cmbProvince.Location = new System.Drawing.Point(210, 131);
+            this.cmbProvince.Name = "cmbProvince";
+            this.cmbProvince.Size = new System.Drawing.Size(215, 28);
+            this.cmbProvince.TabIndex = 5;
+            // 
+            // cmbSurbub
+            // 
+            this.cmbSurbub.FormattingEnabled = true;
+            this.cmbSurbub.Location = new System.Drawing.Point(210, 77);
+            this.cmbSurbub.Name = "cmbSurbub";
+            this.cmbSurbub.Size = new System.Drawing.Size(215, 28);
+            this.cmbSurbub.TabIndex = 4;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(210, 29);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(215, 26);
+            this.txtAddress.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 134);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Province:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Surbub:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Address:";
+            // 
+            // errLocation
+            // 
+            this.errLocation.ContainerControl = this;
             // 
             // Location
             // 
@@ -181,6 +189,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errLocation)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -200,5 +209,6 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ErrorProvider errLocation;
     }
 }

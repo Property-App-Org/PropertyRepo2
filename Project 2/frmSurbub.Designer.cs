@@ -41,10 +41,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.errDesc = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errSurbub = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSurbub)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errDesc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errSurbub)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -84,6 +84,8 @@
             this.dgvSurbub.Name = "dgvSurbub";
             this.dgvSurbub.Size = new System.Drawing.Size(657, 169);
             this.dgvSurbub.TabIndex = 11;
+            this.dgvSurbub.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSurbub_CellClick);
+            this.dgvSurbub.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSurbub_CellContentClick);
             // 
             // btnBackTo
             // 
@@ -102,6 +104,7 @@
             this.btnList.TabIndex = 9;
             this.btnList.Text = "LIST";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // btnAdd
             // 
@@ -162,9 +165,9 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Surbub Description:";
             // 
-            // errDesc
+            // errSurbub
             // 
-            this.errDesc.ContainerControl = this;
+            this.errSurbub.ContainerControl = this;
             // 
             // frmSurbub
             // 
@@ -177,7 +180,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSurbub)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errDesc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errSurbub)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -196,6 +199,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.ErrorProvider errDesc;
+        private System.Windows.Forms.ErrorProvider errSurbub;
     }
 }
