@@ -20,6 +20,6 @@ namespace DAL
         public string Password { get; set; }
         public string Status { get; set; }
         
-
     }
+   
 }
