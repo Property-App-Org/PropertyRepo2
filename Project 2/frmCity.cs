@@ -49,7 +49,11 @@ namespace Project_2
             
             if (validate)
             {
-                bll.InsertCity(ct);
+                int x=bll.InsertCity(ct);
+                if(x>0)
+                {
+                    MessageBox.Show("City Added!");
+                }
             }
 
         }
@@ -58,6 +62,13 @@ namespace Project_2
         {
             City ct = new City();
             dgvCity.DataSource = bll.GetCity();
+        }
+
+        private void btnBackTo_Click(object sender, EventArgs e)
+        {
+            frmMenu m = new frmMenu();
+            m.Show();
+            this.Hide();
         }
     }
 }

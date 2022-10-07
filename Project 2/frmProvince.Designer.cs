@@ -85,6 +85,7 @@
             this.btnBackTo.TabIndex = 6;
             this.btnBackTo.Text = "MENU";
             this.btnBackTo.UseVisualStyleBackColor = true;
+            this.btnBackTo.Click += new System.EventHandler(this.btnBackTo_Click);
             // 
             // btnList
             // 

@@ -10,7 +10,7 @@ namespace DAL
 {
     public class DataAccessLayer
     {
-        static string Connstr = "Data Source=Mazibukoi7;Initial Catalog=PropertyAppDB;Integrated Security=True;";
+        static string Connstr = @"Data Source=MAZIBUKO\SQLEXPRESS;Initial Catalog=PropertyAppDB;Integrated Security=True";
         SqlConnection dbConn=new SqlConnection(Connstr);
         SqlCommand dbComm;
         SqlDataAdapter dbAdapter;

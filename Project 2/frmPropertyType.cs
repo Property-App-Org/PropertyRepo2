@@ -37,7 +37,11 @@ namespace Project_2
             }
             if (validate)
             {
-                bll.InsertPropertyType(pty);
+                int x=bll.InsertPropertyType(pty);
+                if(x>0)
+                {
+                    MessageBox.Show("Property Type Added!");
+                }
             }
             
 
@@ -57,6 +61,13 @@ namespace Project_2
         private void dgvPropertyType_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnBackTo_Click(object sender, EventArgs e)
+        {
+            frmMenu m = new frmMenu();
+            m.Show();
+            this.Hide();
         }
     }
 }

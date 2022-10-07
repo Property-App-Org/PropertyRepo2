@@ -26,6 +26,8 @@ namespace Project_2
             bool validate = true;
 
             pr.Description = txtDesc.Text;
+            
+
             if (string.IsNullOrEmpty(txtDesc.Text))
             {
                 errorProvince.SetError(txtDesc, "Please enter description");
@@ -37,7 +39,11 @@ namespace Project_2
             }
             if (validate)
             {
-                bll.InsertProvince(pr);
+                int x =bll.InsertProvince(pr);
+                if(x>0)
+                {
+                    MessageBox.Show("Province added!");
+                }
             }
             
         }
@@ -46,6 +52,13 @@ namespace Project_2
         {
             Province pr = new Province();
             dgvProvince.DataSource = bll.GetProvince();
+        }
+
+        private void btnBackTo_Click(object sender, EventArgs e)
+        {
+            frmMenu menu = new frmMenu();
+            menu.Show();
+            this.Hide();
         }
     }
 }
