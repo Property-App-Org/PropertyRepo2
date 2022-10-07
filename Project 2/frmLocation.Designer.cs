@@ -1,6 +1,6 @@
 ﻿namespace Project_2
 {
-    partial class Location
+    partial class frmLocation
     {
         /// <summary>
         /// Required designer variable.
@@ -86,6 +86,8 @@
             this.dgvLocation.Name = "dgvLocation";
             this.dgvLocation.Size = new System.Drawing.Size(700, 243);
             this.dgvLocation.TabIndex = 10;
+            this.dgvLocation.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLocation_CellClick);
+            this.dgvLocation.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLocation_CellContentClick);
             // 
             // btnMenu
             // 
@@ -104,6 +106,7 @@
             this.btnList.TabIndex = 8;
             this.btnList.Text = "LIST";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // btnUpdate
             // 
@@ -179,13 +182,13 @@
             // 
             this.errLocation.ContainerControl = this;
             // 
-            // Location
+            // frmLocation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(753, 552);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Location";
+            this.Name = "frmLocation";
             this.Text = "Location";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

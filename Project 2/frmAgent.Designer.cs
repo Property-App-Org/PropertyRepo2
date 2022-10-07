@@ -133,6 +133,7 @@
             this.dgvAgent.Size = new System.Drawing.Size(749, 167);
             this.dgvAgent.TabIndex = 19;
             this.dgvAgent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgent_CellClick);
+            this.dgvAgent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgent_CellContentClick);
             // 
             // btnBackTo
             // 

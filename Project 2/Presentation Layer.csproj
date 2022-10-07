@@ -124,11 +124,11 @@
     <Compile Include="frmTenant.Designer.cs">
       <DependentUpon>frmTenant.cs</DependentUpon>
     </Compile>
-    <Compile Include="Location.cs">
+    <Compile Include="frmLocation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Location.Designer.cs">
-      <DependentUpon>Location.cs</DependentUpon>
+    <Compile Include="frmLocation.Designer.cs">
+      <DependentUpon>frmLocation.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -171,8 +171,8 @@
     <EmbeddedResource Include="frmTenant.resx">
       <DependentUpon>frmTenant.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Location.resx">
-      <DependentUpon>Location.cs</DependentUpon>
+    <EmbeddedResource Include="frmLocation.resx">
+      <DependentUpon>frmLocation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -169,5 +169,10 @@ namespace Project_2
         {
 
         }
+
+        private void dgvAgent_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
