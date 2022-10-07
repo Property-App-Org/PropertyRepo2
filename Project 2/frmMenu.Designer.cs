@@ -154,6 +154,7 @@
             this.btnAdmin.TabIndex = 5;
             this.btnAdmin.Text = "Administrastor";
             this.btnAdmin.UseVisualStyleBackColor = true;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // label11
             // 
@@ -193,6 +194,7 @@
             this.btnRental.TabIndex = 5;
             this.btnRental.Text = "Rental";
             this.btnRental.UseVisualStyleBackColor = true;
+            this.btnRental.Click += new System.EventHandler(this.btnRental_Click);
             // 
             // label10
             // 
@@ -232,6 +234,7 @@
             this.btnPropertyAgent.TabIndex = 5;
             this.btnPropertyAgent.Text = "Property Agent";
             this.btnPropertyAgent.UseVisualStyleBackColor = true;
+            this.btnPropertyAgent.Click += new System.EventHandler(this.btnPropertyAgent_Click);
             // 
             // label9
             // 
@@ -271,6 +274,7 @@
             this.btnTenant.TabIndex = 5;
             this.btnTenant.Text = "Tenant";
             this.btnTenant.UseVisualStyleBackColor = true;
+            this.btnTenant.Click += new System.EventHandler(this.btnTenant_Click);
             // 
             // label8
             // 
@@ -310,6 +314,7 @@
             this.btnAgent.TabIndex = 5;
             this.btnAgent.Text = "Agent";
             this.btnAgent.UseVisualStyleBackColor = true;
+            this.btnAgent.Click += new System.EventHandler(this.btnAgent_Click);
             // 
             // label7
             // 
@@ -349,6 +354,7 @@
             this.btnAgency.TabIndex = 5;
             this.btnAgency.Text = "Agency";
             this.btnAgency.UseVisualStyleBackColor = true;
+            this.btnAgency.Click += new System.EventHandler(this.btnAgency_Click);
             // 
             // label6
             // 
@@ -388,6 +394,7 @@
             this.btnSurbub.TabIndex = 5;
             this.btnSurbub.Text = "Surbub";
             this.btnSurbub.UseVisualStyleBackColor = true;
+            this.btnSurbub.Click += new System.EventHandler(this.btnSurbub_Click);
             // 
             // label5
             // 
@@ -427,6 +434,7 @@
             this.btnCity.TabIndex = 5;
             this.btnCity.Text = "City";
             this.btnCity.UseVisualStyleBackColor = true;
+            this.btnCity.Click += new System.EventHandler(this.btnCity_Click);
             // 
             // label4
             // 
@@ -466,6 +474,7 @@
             this.btnProvince.TabIndex = 5;
             this.btnProvince.Text = "Province";
             this.btnProvince.UseVisualStyleBackColor = true;
+            this.btnProvince.Click += new System.EventHandler(this.btnProvince_Click);
             // 
             // label3
             // 
@@ -505,6 +514,7 @@
             this.btnProperty.TabIndex = 5;
             this.btnProperty.Text = "Property";
             this.btnProperty.UseVisualStyleBackColor = true;
+            this.btnProperty.Click += new System.EventHandler(this.btnProperty_Click);
             // 
             // label2
             // 
@@ -544,6 +554,7 @@
             this.btnPropertyType.TabIndex = 2;
             this.btnPropertyType.Text = "Property Type";
             this.btnPropertyType.UseVisualStyleBackColor = true;
+            this.btnPropertyType.Click += new System.EventHandler(this.btnPropertyType_Click);
             // 
             // label1
             // 
