@@ -42,7 +42,7 @@ namespace Project_2
                 int x =bll.InsertProvince(pr);
                 if(x>0)
                 {
-                    MessageBox.Show("Province added!");
+                    MessageBox.Show(txtDesc.Text+" Province added!");
                 }
             }
             

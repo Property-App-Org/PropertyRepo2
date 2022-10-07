@@ -147,6 +147,7 @@ namespace DAL
 
             dbComm.Parameters.AddWithValue("@CityDescription", c.CityDescription);
             dbComm.Parameters.AddWithValue("@ProvinceID", c.ProvinceID);
+            
 
             int x = dbComm.ExecuteNonQuery();
             dbConn.Close();
@@ -343,7 +344,8 @@ namespace DAL
             dbComm.Parameters.AddWithValue("@Email", t.Email);
             dbComm.Parameters.AddWithValue("@Phone", t.Phone);
             dbComm.Parameters.AddWithValue("@Status", t.Status);
-
+            dbComm.Parameters.AddWithValue("@TenantID", t.TenantID);
+            
 
             int x = dbComm.ExecuteNonQuery();
             dbConn.Close();
@@ -369,7 +371,7 @@ namespace DAL
 
             dbConn.Open();
 
-            dbComm=new SqlCommand("sp_GetTenent", dbConn);
+            dbComm=new SqlCommand("sp_GetTenant", dbConn);
 
             dbAdapter=new SqlDataAdapter(dbComm);
             dt=new DataTable();

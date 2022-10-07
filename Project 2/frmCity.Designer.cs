@@ -156,6 +156,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmCity";
             this.Text = "frmCity";
+            this.Load += new System.EventHandler(this.frmCity_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCity)).EndInit();

@@ -58,7 +58,11 @@ namespace Project_2
             }
             if (validate)
             {
-                bll.InsertSurbub(sb);
+                int x=bll.InsertSurbub(sb);
+                if(x>0)
+                {
+                    MessageBox.Show(txtSurbubDesc.Text+" Succefully Added!");
+                }
             }
         }
 
@@ -83,6 +87,21 @@ namespace Project_2
                 
 
             }
+        }
+
+        private void frmSurbub_Load(object sender, EventArgs e)
+        {
+            cmbCity.DataSource = bll.GetCity();
+            cmbCity.DisplayMember = "CityDescription";
+            cmbCity.ValueMember = "CityID";
+        }
+
+        private void btnBackTo_Click(object sender, EventArgs e)
+        {
+            frmMenu m = new frmMenu();
+            m.Show();
+            this.Hide();
+
         }
     }
 }

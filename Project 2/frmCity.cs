@@ -52,7 +52,7 @@ namespace Project_2
                 int x=bll.InsertCity(ct);
                 if(x>0)
                 {
-                    MessageBox.Show("City Added!");
+                    MessageBox.Show(txtDesc.Text+" City Added!");
                 }
             }
 
@@ -69,6 +69,13 @@ namespace Project_2
             frmMenu m = new frmMenu();
             m.Show();
             this.Hide();
+        }
+
+        private void frmCity_Load(object sender, EventArgs e)
+        {
+            cmbProvince.DataSource = bll.GetProvince();
+            cmbProvince.DisplayMember = "Description";
+            cmbProvince.ValueMember = "ProvinceID";
         }
     }
 }

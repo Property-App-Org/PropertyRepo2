@@ -132,23 +132,29 @@ namespace Project_2
         {
             Tenant t = new Tenant();
 
-            t.Name=txtName.Text;
-            t.Surname=txtSurname.Text;
+            
             t.Email=txtEmail.Text;
-            t.Password=txtPassword.Text;
             t.Phone=txtPhone.Text;
             t.Status=cmbStatus.SelectedItem.ToString();
 
 
-            bll.UpdateTenant(t);
+            int x=bll.UpdateTenant(t);
+            if(x>0)
+            {
+                MessageBox.Show("Updated!");
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             Tenant t = new Tenant();
 
-            t.TenantID=int.Parse(cmbStatus.SelectedValue.ToString());
-            bll.DeleteTenant(t);
+            t.TenantID=int.Parse(txtTenantID.Text);
+            int x=bll.DeleteTenant(t);
+            if(x>0)
+            {
+                MessageBox.Show("Deleted!");
+            }
 
         }
 
@@ -170,6 +176,13 @@ namespace Project_2
                 cmbStatus.Text = dgvTenant.SelectedRows[0].Cells["Status"].Value.ToString();
                 
             }
+        }
+
+        private void frmTenant_Load(object sender, EventArgs e)
+        {
+            cmbStatus.Items.Add("Available");
+            cmbStatus.Items.Add("Unavailable");
+            
         }
     }
     

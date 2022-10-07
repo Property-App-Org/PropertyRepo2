@@ -95,6 +95,7 @@
             this.btnBackTo.TabIndex = 10;
             this.btnBackTo.Text = "MENU";
             this.btnBackTo.UseVisualStyleBackColor = true;
+            this.btnBackTo.Click += new System.EventHandler(this.btnBackTo_Click);
             // 
             // btnList
             // 
@@ -177,6 +178,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmSurbub";
             this.Text = "frmSurbub";
+            this.Load += new System.EventHandler(this.frmSurbub_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSurbub)).EndInit();

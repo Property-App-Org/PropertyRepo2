@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTenantID = new System.Windows.Forms.TextBox();
+            this.TenantID = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.dgvTenant = new System.Windows.Forms.DataGridView();
             this.btnBackTo = new System.Windows.Forms.Button();
@@ -49,8 +51,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.TenantID = new System.Windows.Forms.Label();
-            this.txtTenantID = new System.Windows.Forms.TextBox();
             this.errTenant = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTenant)).BeginInit();
@@ -87,6 +87,22 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tenant Details";
+            // 
+            // txtTenantID
+            // 
+            this.txtTenantID.Location = new System.Drawing.Point(174, 48);
+            this.txtTenantID.Name = "txtTenantID";
+            this.txtTenantID.Size = new System.Drawing.Size(199, 26);
+            this.txtTenantID.TabIndex = 20;
+            // 
+            // TenantID
+            // 
+            this.TenantID.AutoSize = true;
+            this.TenantID.Location = new System.Drawing.Point(19, 51);
+            this.TenantID.Name = "TenantID";
+            this.TenantID.Size = new System.Drawing.Size(80, 20);
+            this.TenantID.TabIndex = 19;
+            this.TenantID.Text = "TenantID:";
             // 
             // btnSearch
             // 
@@ -258,22 +274,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Name:";
             // 
-            // TenantID
-            // 
-            this.TenantID.AutoSize = true;
-            this.TenantID.Location = new System.Drawing.Point(19, 51);
-            this.TenantID.Name = "TenantID";
-            this.TenantID.Size = new System.Drawing.Size(80, 20);
-            this.TenantID.TabIndex = 19;
-            this.TenantID.Text = "TenantID:";
-            // 
-            // txtTenantID
-            // 
-            this.txtTenantID.Location = new System.Drawing.Point(174, 48);
-            this.txtTenantID.Name = "txtTenantID";
-            this.txtTenantID.Size = new System.Drawing.Size(199, 26);
-            this.txtTenantID.TabIndex = 20;
-            // 
             // errTenant
             // 
             this.errTenant.ContainerControl = this;
@@ -286,6 +286,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmTenant";
             this.Text = "frmTenant";
+            this.Load += new System.EventHandler(this.frmTenant_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTenant)).EndInit();
