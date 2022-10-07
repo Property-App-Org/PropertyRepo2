@@ -22,7 +22,7 @@ namespace Project_2
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
-            Location loc = new Location();
+            DAL.Location loc = new DAL.Location();
 
             loc.Address=txtAddress.Text;
             
