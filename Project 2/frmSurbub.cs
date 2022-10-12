@@ -27,6 +27,7 @@ namespace Project_2
 
             sb.SurbubDescription = txtSurbubDesc.Text;
             sb.PostalCode = txtPostalCode.Text;
+            sb.CityID=int.Parse(cmbCity.SelectedValue.ToString());
             
             if (string.IsNullOrEmpty(cmbCity.Text))
             {
