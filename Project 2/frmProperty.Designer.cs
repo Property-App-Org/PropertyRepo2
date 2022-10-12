@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtPropertyID = new System.Windows.Forms.TextBox();
+            this.lblProperty = new System.Windows.Forms.Label();
+            this.pbxImage = new System.Windows.Forms.PictureBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.dgvProperty = new System.Windows.Forms.DataGridView();
             this.btnBackTo = new System.Windows.Forms.Button();
@@ -49,13 +52,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.errDescription = new System.Windows.Forms.ErrorProvider(this.components);
-            this.pbxImage = new System.Windows.Forms.PictureBox();
-            this.lblProperty = new System.Windows.Forms.Label();
-            this.txtPropertyID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProperty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errDescription)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -84,14 +84,39 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(702, 563);
+            this.groupBox1.Size = new System.Drawing.Size(785, 563);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Property Details";
             // 
+            // txtPropertyID
+            // 
+            this.txtPropertyID.Location = new System.Drawing.Point(189, 12);
+            this.txtPropertyID.Name = "txtPropertyID";
+            this.txtPropertyID.Size = new System.Drawing.Size(192, 26);
+            this.txtPropertyID.TabIndex = 23;
+            // 
+            // lblProperty
+            // 
+            this.lblProperty.AutoSize = true;
+            this.lblProperty.Location = new System.Drawing.Point(13, 22);
+            this.lblProperty.Name = "lblProperty";
+            this.lblProperty.Size = new System.Drawing.Size(85, 20);
+            this.lblProperty.TabIndex = 22;
+            this.lblProperty.Text = "PropertyID";
+            // 
+            // pbxImage
+            // 
+            this.pbxImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxImage.Location = new System.Drawing.Point(563, 67);
+            this.pbxImage.Name = "pbxImage";
+            this.pbxImage.Size = new System.Drawing.Size(192, 182);
+            this.pbxImage.TabIndex = 21;
+            this.pbxImage.TabStop = false;
+            // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(433, 272);
+            this.btnSearch.Location = new System.Drawing.Point(393, 267);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(90, 42);
             this.btnSearch.TabIndex = 20;
@@ -103,13 +128,13 @@
             this.dgvProperty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProperty.Location = new System.Drawing.Point(17, 320);
             this.dgvProperty.Name = "dgvProperty";
-            this.dgvProperty.Size = new System.Drawing.Size(662, 226);
+            this.dgvProperty.Size = new System.Drawing.Size(762, 226);
             this.dgvProperty.TabIndex = 19;
             this.dgvProperty.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProperty_CellClick);
             // 
             // btnBackTo
             // 
-            this.btnBackTo.Location = new System.Drawing.Point(529, 267);
+            this.btnBackTo.Location = new System.Drawing.Point(584, 255);
             this.btnBackTo.Name = "btnBackTo";
             this.btnBackTo.Size = new System.Drawing.Size(150, 47);
             this.btnBackTo.TabIndex = 18;
@@ -118,7 +143,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(529, 205);
+            this.btnDelete.Location = new System.Drawing.Point(387, 202);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(150, 47);
             this.btnDelete.TabIndex = 17;
@@ -128,7 +153,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(529, 137);
+            this.btnUpdate.Location = new System.Drawing.Point(387, 134);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(150, 47);
             this.btnUpdate.TabIndex = 16;
@@ -138,7 +163,7 @@
             // 
             // btnList
             // 
-            this.btnList.Location = new System.Drawing.Point(529, 84);
+            this.btnList.Location = new System.Drawing.Point(387, 81);
             this.btnList.Name = "btnList";
             this.btnList.Size = new System.Drawing.Size(150, 47);
             this.btnList.TabIndex = 15;
@@ -148,7 +173,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(529, 26);
+            this.btnAdd.Location = new System.Drawing.Point(387, 23);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(150, 47);
             this.btnAdd.TabIndex = 14;
@@ -159,7 +184,7 @@
             // cmbSurbub
             // 
             this.cmbSurbub.FormattingEnabled = true;
-            this.cmbSurbub.Location = new System.Drawing.Point(235, 286);
+            this.cmbSurbub.Location = new System.Drawing.Point(189, 225);
             this.cmbSurbub.Name = "cmbSurbub";
             this.cmbSurbub.Size = new System.Drawing.Size(192, 28);
             this.cmbSurbub.TabIndex = 13;
@@ -167,7 +192,7 @@
             // cmbStatus
             // 
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(235, 243);
+            this.cmbStatus.Location = new System.Drawing.Point(189, 182);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(192, 28);
             this.cmbStatus.TabIndex = 12;
@@ -175,21 +200,21 @@
             // cmbPropertyType
             // 
             this.cmbPropertyType.FormattingEnabled = true;
-            this.cmbPropertyType.Location = new System.Drawing.Point(235, 193);
+            this.cmbPropertyType.Location = new System.Drawing.Point(189, 132);
             this.cmbPropertyType.Name = "cmbPropertyType";
             this.cmbPropertyType.Size = new System.Drawing.Size(192, 28);
             this.cmbPropertyType.TabIndex = 11;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(235, 94);
+            this.txtPrice.Location = new System.Drawing.Point(189, 91);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(192, 26);
             this.txtPrice.TabIndex = 9;
             // 
             // txtpropertyDesc
             // 
-            this.txtpropertyDesc.Location = new System.Drawing.Point(235, 47);
+            this.txtpropertyDesc.Location = new System.Drawing.Point(189, 44);
             this.txtpropertyDesc.Name = "txtpropertyDesc";
             this.txtpropertyDesc.Size = new System.Drawing.Size(192, 26);
             this.txtpropertyDesc.TabIndex = 8;
@@ -198,7 +223,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 289);
+            this.label7.Location = new System.Drawing.Point(13, 231);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 20);
             this.label7.TabIndex = 6;
@@ -207,7 +232,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 243);
+            this.label6.Location = new System.Drawing.Point(13, 185);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 20);
             this.label6.TabIndex = 5;
@@ -216,7 +241,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 192);
+            this.label5.Location = new System.Drawing.Point(13, 134);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(110, 20);
             this.label5.TabIndex = 4;
@@ -225,11 +250,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 137);
+            this.label4.Location = new System.Drawing.Point(605, 36);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 20);
+            this.label4.Size = new System.Drawing.Size(109, 20);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Image:";
+            this.label4.Text = "Pick an Image";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -253,44 +279,20 @@
             // 
             this.errDescription.ContainerControl = this;
             // 
-            // pbxImage
-            // 
-            this.pbxImage.Location = new System.Drawing.Point(235, 137);
-            this.pbxImage.Name = "pbxImage";
-            this.pbxImage.Size = new System.Drawing.Size(192, 50);
-            this.pbxImage.TabIndex = 21;
-            this.pbxImage.TabStop = false;
-            // 
-            // lblProperty
-            // 
-            this.lblProperty.AutoSize = true;
-            this.lblProperty.Location = new System.Drawing.Point(13, 22);
-            this.lblProperty.Name = "lblProperty";
-            this.lblProperty.Size = new System.Drawing.Size(85, 20);
-            this.lblProperty.TabIndex = 22;
-            this.lblProperty.Text = "PropertyID";
-            // 
-            // txtPropertyID
-            // 
-            this.txtPropertyID.Location = new System.Drawing.Point(235, 15);
-            this.txtPropertyID.Name = "txtPropertyID";
-            this.txtPropertyID.Size = new System.Drawing.Size(192, 26);
-            this.txtPropertyID.TabIndex = 23;
-            // 
             // frmProperty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 581);
+            this.ClientSize = new System.Drawing.Size(810, 581);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmProperty";
             this.Text = "frmProperty";
             this.Load += new System.EventHandler(this.frmProperty_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProperty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errDescription)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).EndInit();
             this.ResumeLayout(false);
 
         }
