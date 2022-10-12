@@ -31,7 +31,7 @@ namespace Project_2
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Agent a = new Agent();
-            bool validate = true;
+            bool validate = false;
 
             a.Name = txtName.Text;
             a.Surname = txtSurname.Text;
@@ -39,7 +39,7 @@ namespace Project_2
             a.Password = txtPassword.Text;
             a.Phone = txtPhone.Text;
             a.Status = cmbStatus.SelectedItem.ToString();
-            a.AgencyID = int.Parse(cmbStatus.SelectedItem.ToString());
+            a.AgencyID = int.Parse(cmbAgency.SelectedValue.ToString());
             if (string.IsNullOrEmpty(txtName.Text))
             {
                 errAgent.SetError(txtName, "Please enter  Name");
@@ -124,7 +124,10 @@ namespace Project_2
             a.Email = txtName.Text;
             a.Phone = txtPhone.Text;
             a.Status = cmbStatus.SelectedItem.ToString();
+            a.AgentID = int.Parse(txtAgent.Text);
             bll.UpdateAgent(a);
+            dgvAgent.DataSource = bll.GetAgent();
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -132,7 +135,7 @@ namespace Project_2
             Agent a = new Agent();
             a.AgentID = int.Parse(txtAgent.Text);
             bll.DeleteAgent(a);
-           
+            dgvAgent.DataSource = bll.GetAgent();
         }
 
         private void cmbAgency_SelectedIndexChanged(object sender, EventArgs e)
@@ -156,18 +159,18 @@ namespace Project_2
                 txtPassword.Text = dgvAgent.SelectedRows[0].Cells["Password"].Value.ToString();
                 txtPhone.Text = dgvAgent.SelectedRows[0].Cells["Phone"].Value.ToString();
                 cmbStatus.Text = dgvAgent.SelectedRows[0].Cells["Status"].Value.ToString();
-                cmbAgency.Text = dgvAgent.SelectedRows[0].Cells["AngecyID"].Value.ToString();
-
-
-
-               
-
+                //cmbAgency.Text = dgvAgent.SelectedRows[0].Cells["AngencyName"].Value.ToString();
             }
         }
 
         private void frmAgent_Load(object sender, EventArgs e)
         {
+            cmbAgency.DataSource = bll.GetAgency();
+            cmbAgency.DisplayMember = "AgencyName";
+            cmbAgency.ValueMember = "AgencyID";
 
+            cmbStatus.Items.Add("Available");
+            cmbStatus.Items.Add("Not Available");
         }
 
         private void dgvAgent_CellContentClick(object sender, DataGridViewCellEventArgs e)

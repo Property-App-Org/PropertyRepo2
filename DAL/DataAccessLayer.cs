@@ -278,6 +278,7 @@ namespace DAL
             dbComm.Parameters.AddWithValue("@Email", ag.Email);
             dbComm.Parameters.AddWithValue("@Phone", ag.Phone);
             dbComm.Parameters.AddWithValue("@Status", ag.Status);
+            dbComm.Parameters.AddWithValue("@AgentID", ag.AgentID);
             
 
             int x = dbComm.ExecuteNonQuery();

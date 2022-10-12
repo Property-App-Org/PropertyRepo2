@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtAgencyID = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.dgvAgency = new System.Windows.Forms.DataGridView();
             this.btnBackTo = new System.Windows.Forms.Button();
@@ -41,8 +43,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errAgency = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtAgencyID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgency)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errAgency)).BeginInit();
@@ -70,6 +70,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agency Details";
             // 
+            // txtAgencyID
+            // 
+            this.txtAgencyID.Location = new System.Drawing.Point(192, 33);
+            this.txtAgencyID.Name = "txtAgencyID";
+            this.txtAgencyID.Size = new System.Drawing.Size(183, 26);
+            this.txtAgencyID.TabIndex = 14;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 134);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 20);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Agency Name:";
+            // 
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(579, 134);
@@ -95,6 +111,7 @@
             this.btnBackTo.TabIndex = 7;
             this.btnBackTo.Text = "MENU";
             this.btnBackTo.UseVisualStyleBackColor = true;
+            this.btnBackTo.Click += new System.EventHandler(this.btnBackTo_Click);
             // 
             // btnDelete
             // 
@@ -163,22 +180,6 @@
             // 
             this.errAgency.ContainerControl = this;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 134);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 20);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Agency Name:";
-            // 
-            // txtAgencyID
-            // 
-            this.txtAgencyID.Location = new System.Drawing.Point(192, 33);
-            this.txtAgencyID.Name = "txtAgencyID";
-            this.txtAgencyID.Size = new System.Drawing.Size(183, 26);
-            this.txtAgencyID.TabIndex = 14;
-            // 
             // frmAgency
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,6 +188,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmAgency";
             this.Text = "frmAgency";
+            this.Load += new System.EventHandler(this.frmAgency_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgency)).EndInit();

@@ -43,6 +43,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errPropertyAgent = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPropertyAgentID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropertyAgent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errPropertyAgent)).BeginInit();
@@ -50,6 +52,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtPropertyAgentID);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.dtaDate);
             this.groupBox1.Controls.Add(this.dgvPropertyAgent);
@@ -73,7 +77,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(607, 158);
+            this.btnSearch.Location = new System.Drawing.Point(607, 190);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(120, 35);
             this.btnSearch.TabIndex = 12;
@@ -82,7 +86,7 @@
             // 
             // dtaDate
             // 
-            this.dtaDate.Location = new System.Drawing.Point(192, 111);
+            this.dtaDate.Location = new System.Drawing.Point(205, 151);
             this.dtaDate.Name = "dtaDate";
             this.dtaDate.Size = new System.Drawing.Size(286, 26);
             this.dtaDate.TabIndex = 11;
@@ -90,7 +94,7 @@
             // dgvPropertyAgent
             // 
             this.dgvPropertyAgent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPropertyAgent.Location = new System.Drawing.Point(26, 199);
+            this.dgvPropertyAgent.Location = new System.Drawing.Point(26, 231);
             this.dgvPropertyAgent.Name = "dgvPropertyAgent";
             this.dgvPropertyAgent.Size = new System.Drawing.Size(701, 210);
             this.dgvPropertyAgent.TabIndex = 10;
@@ -98,16 +102,17 @@
             // 
             // btnBackTo
             // 
-            this.btnBackTo.Location = new System.Drawing.Point(470, 157);
+            this.btnBackTo.Location = new System.Drawing.Point(470, 189);
             this.btnBackTo.Name = "btnBackTo";
             this.btnBackTo.Size = new System.Drawing.Size(120, 36);
             this.btnBackTo.TabIndex = 9;
             this.btnBackTo.Text = "MENU";
             this.btnBackTo.UseVisualStyleBackColor = true;
+            this.btnBackTo.Click += new System.EventHandler(this.btnBackTo_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(328, 157);
+            this.btnUpdate.Location = new System.Drawing.Point(328, 189);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(120, 36);
             this.btnUpdate.TabIndex = 8;
@@ -117,7 +122,7 @@
             // 
             // btnList
             // 
-            this.btnList.Location = new System.Drawing.Point(181, 157);
+            this.btnList.Location = new System.Drawing.Point(181, 189);
             this.btnList.Name = "btnList";
             this.btnList.Size = new System.Drawing.Size(120, 36);
             this.btnList.TabIndex = 7;
@@ -127,7 +132,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(26, 157);
+            this.btnAdd.Location = new System.Drawing.Point(26, 189);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(120, 36);
             this.btnAdd.TabIndex = 6;
@@ -138,23 +143,23 @@
             // cmbAgent
             // 
             this.cmbAgent.FormattingEnabled = true;
-            this.cmbAgent.Location = new System.Drawing.Point(192, 77);
+            this.cmbAgent.Location = new System.Drawing.Point(205, 117);
             this.cmbAgent.Name = "cmbAgent";
-            this.cmbAgent.Size = new System.Drawing.Size(212, 28);
+            this.cmbAgent.Size = new System.Drawing.Size(286, 28);
             this.cmbAgent.TabIndex = 5;
             // 
             // cmbProperty
             // 
             this.cmbProperty.FormattingEnabled = true;
-            this.cmbProperty.Location = new System.Drawing.Point(192, 32);
+            this.cmbProperty.Location = new System.Drawing.Point(205, 72);
             this.cmbProperty.Name = "cmbProperty";
-            this.cmbProperty.Size = new System.Drawing.Size(212, 28);
+            this.cmbProperty.Size = new System.Drawing.Size(286, 28);
             this.cmbProperty.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 117);
+            this.label3.Location = new System.Drawing.Point(35, 157);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 20);
             this.label3.TabIndex = 2;
@@ -163,7 +168,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 73);
+            this.label2.Location = new System.Drawing.Point(35, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 20);
             this.label2.TabIndex = 1;
@@ -172,7 +177,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 32);
+            this.label1.Location = new System.Drawing.Point(35, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 20);
             this.label1.TabIndex = 0;
@@ -181,6 +186,22 @@
             // errPropertyAgent
             // 
             this.errPropertyAgent.ContainerControl = this;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(35, 36);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 20);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "PropertyAgentID:";
+            // 
+            // txtPropertyAgentID
+            // 
+            this.txtPropertyAgentID.Location = new System.Drawing.Point(205, 30);
+            this.txtPropertyAgentID.Name = "txtPropertyAgentID";
+            this.txtPropertyAgentID.Size = new System.Drawing.Size(199, 26);
+            this.txtPropertyAgentID.TabIndex = 14;
             // 
             // frmPropertyAgent
             // 
@@ -215,5 +236,7 @@
         private System.Windows.Forms.DateTimePicker dtaDate;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ErrorProvider errPropertyAgent;
+        private System.Windows.Forms.TextBox txtPropertyAgentID;
+        private System.Windows.Forms.Label label4;
     }
 }

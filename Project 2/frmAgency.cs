@@ -50,7 +50,11 @@ namespace Project_2
             }
             if (validate)
             {
-                bll.InsertAgency(ag);
+                int x=bll.InsertAgency(ag);
+                if(x>0)
+                {
+                    MessageBox.Show(txtAgencyName.Text+" Added");
+                }
             }
 
         }
@@ -72,6 +76,21 @@ namespace Project_2
             Agency ag = new Agency();
             ag.AgencyID=int.Parse(txtAgencyID.Text);
             bll.DeleteAgency(ag);
+            dgvAgency.DataSource = bll.GetAgency();
+        }
+
+        private void frmAgency_Load(object sender, EventArgs e)
+        {
+            cmbSurbub.DataSource = bll.GetSurbub();
+            cmbSurbub.DisplayMember = "SurbubDescription";
+            cmbSurbub.ValueMember = "SurbubID";
+        }
+
+        private void btnBackTo_Click(object sender, EventArgs e)
+        {
+            frmMenu menu = new frmMenu();
+            menu.Show();
+            this.Hide();
         }
     }
 }

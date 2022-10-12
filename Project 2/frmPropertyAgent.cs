@@ -63,7 +63,7 @@ namespace Project_2
             {
                 validate = true;
             }
-            if (string.IsNullOrEmpty(dtaDate.Text) || (!Regex.IsMatch(dtaDate.Text, @"0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)[0-9]{ 2}")))
+            if (string.IsNullOrEmpty(dtaDate.Text) )
             {
                 errPropertyAgent.SetError(dtaDate, "select correct date");
                 validate = false;
@@ -92,7 +92,7 @@ namespace Project_2
 
             pa.PropertyID = int.Parse(cmbProperty.SelectedValue.ToString());
             pa.AgentID = int.Parse(cmbAgent.SelectedValue.ToString());
-            pa.Date = dtaDate.ToString();
+            pa.Date = dtaDate.Value.ToString();
 
             bll.UpdatePropertAgent(pa);
         }
@@ -102,11 +102,19 @@ namespace Project_2
             if (dgvPropertyAgent.SelectedRows.Count > 0)
             {
                
+               txtPropertyAgentID.Text= dgvPropertyAgent.SelectedRows[0].Cells["PropertyAgentID"].Value.ToString();
                 cmbProperty.Text = dgvPropertyAgent.SelectedRows[0].Cells["PropertyID"].Value.ToString();
                 cmbAgent.Text = dgvPropertyAgent.SelectedRows[0].Cells["AgentID"].Value.ToString();
                 dtaDate.Text = dgvPropertyAgent.SelectedRows[0].Cells["Date"].Value.ToString();
 
             }
+        }
+
+        private void btnBackTo_Click(object sender, EventArgs e)
+        {
+            frmMenu menu = new frmMenu();
+            menu.Show();
+            this.Hide();
         }
     }
 }

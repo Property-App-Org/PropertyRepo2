@@ -33,7 +33,7 @@
             this.txtPropertyID = new System.Windows.Forms.TextBox();
             this.lblProperty = new System.Windows.Forms.Label();
             this.pbxImage = new System.Windows.Forms.PictureBox();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnBrowseImage = new System.Windows.Forms.Button();
             this.dgvProperty = new System.Windows.Forms.DataGridView();
             this.btnBackTo = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -63,7 +63,7 @@
             this.groupBox1.Controls.Add(this.txtPropertyID);
             this.groupBox1.Controls.Add(this.lblProperty);
             this.groupBox1.Controls.Add(this.pbxImage);
-            this.groupBox1.Controls.Add(this.btnSearch);
+            this.groupBox1.Controls.Add(this.btnBrowseImage);
             this.groupBox1.Controls.Add(this.dgvProperty);
             this.groupBox1.Controls.Add(this.btnBackTo);
             this.groupBox1.Controls.Add(this.btnDelete);
@@ -84,7 +84,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(785, 563);
+            this.groupBox1.Size = new System.Drawing.Size(937, 563);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Property Details";
@@ -111,35 +111,38 @@
             this.pbxImage.Location = new System.Drawing.Point(563, 67);
             this.pbxImage.Name = "pbxImage";
             this.pbxImage.Size = new System.Drawing.Size(192, 182);
+            this.pbxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImage.TabIndex = 21;
             this.pbxImage.TabStop = false;
             // 
-            // btnSearch
+            // btnBrowseImage
             // 
-            this.btnSearch.Location = new System.Drawing.Point(393, 267);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(90, 42);
-            this.btnSearch.TabIndex = 20;
-            this.btnSearch.Text = "SEARCH";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnBrowseImage.Location = new System.Drawing.Point(586, 260);
+            this.btnBrowseImage.Name = "btnBrowseImage";
+            this.btnBrowseImage.Size = new System.Drawing.Size(144, 54);
+            this.btnBrowseImage.TabIndex = 20;
+            this.btnBrowseImage.Text = "BROWSE";
+            this.btnBrowseImage.UseVisualStyleBackColor = true;
+            this.btnBrowseImage.Click += new System.EventHandler(this.btnBrowseImage_Click);
             // 
             // dgvProperty
             // 
             this.dgvProperty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProperty.Location = new System.Drawing.Point(17, 320);
             this.dgvProperty.Name = "dgvProperty";
-            this.dgvProperty.Size = new System.Drawing.Size(762, 226);
+            this.dgvProperty.Size = new System.Drawing.Size(914, 226);
             this.dgvProperty.TabIndex = 19;
             this.dgvProperty.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProperty_CellClick);
             // 
             // btnBackTo
             // 
-            this.btnBackTo.Location = new System.Drawing.Point(584, 255);
+            this.btnBackTo.Location = new System.Drawing.Point(237, 259);
             this.btnBackTo.Name = "btnBackTo";
             this.btnBackTo.Size = new System.Drawing.Size(150, 47);
             this.btnBackTo.TabIndex = 18;
             this.btnBackTo.Text = "MENU";
             this.btnBackTo.UseVisualStyleBackColor = true;
+            this.btnBackTo.Click += new System.EventHandler(this.btnBackTo_Click);
             // 
             // btnDelete
             // 
@@ -283,7 +286,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 581);
+            this.ClientSize = new System.Drawing.Size(962, 581);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmProperty";
             this.Text = "frmProperty";
@@ -317,7 +320,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnBrowseImage;
         private System.Windows.Forms.ErrorProvider errDescription;
         private System.Windows.Forms.PictureBox pbxImage;
         private System.Windows.Forms.TextBox txtPropertyID;

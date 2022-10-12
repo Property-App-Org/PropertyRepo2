@@ -26,15 +26,7 @@ namespace Project_2
         private void btnAdd_Click(object sender, EventArgs e)
         {
            
-             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "*.jpg; *.jpeg; *.png; *.gif; *.bmp)| *.jpg; *.jpeg; *.png; *.gif; *.bmp";
-
-            if (dialog.ShowDialog() == DialogResult.OK)
-            {
-                ImageLoc = dialog.FileName.ToString();
-                pbxImage.ImageLocation = ImageLoc;
-            }
-
+             
             Property pt = new Property();
 
             bool validate = true;
@@ -46,9 +38,9 @@ namespace Project_2
             pt.Description = txtpropertyDesc.Text;
             pt.Price = double.Parse(txtPrice.Text.ToString());
             pt.Image = images;
-            pt.PropertyID = int.Parse(cmbPropertyType.SelectedValue.ToString());
+            pt.PropertyTypeID = int.Parse(cmbPropertyType.SelectedValue.ToString());
             pt.SurbubID = int.Parse(cmbSurbub.SelectedValue.ToString());
-            pt.Status = cmbStatus.SelectedValue.ToString();
+            pt.Status = cmbStatus.SelectedItem.ToString();
 
             if (string.IsNullOrEmpty(txtpropertyDesc.Text))
             {
@@ -59,18 +51,9 @@ namespace Project_2
             {
                 validate = true;
             }
-            if (string.IsNullOrEmpty(txtPrice.Text) || (!Regex.IsMatch(txtPrice.Text, @"^[0-9]+[.[0-0]]+?")))
+            if (string.IsNullOrEmpty(txtPrice.Text) || (!Regex.IsMatch(txtPrice.Text, @"^[0-9]+[.[0-9]]+]?")))
             {
                 errDescription.SetError(txtPrice, "Please enter correct price format");
-                validate = false;
-            }
-            else
-            {
-                validate = true;
-            }
-            if (string.IsNullOrEmpty(pbxImage.Text))
-            {
-                errDescription.SetError(pbxImage, "Insert Image");
                 validate = false;
             }
             else
@@ -122,17 +105,24 @@ namespace Project_2
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             Property pt = new Property();
-            pt.PropertyTypeID = int.Parse(cmbPropertyType.SelectedItem.ToString());
-            pt.Price = int.Parse(txtPrice.Text);
+            pt.PropertyTypeID = int.Parse(cmbPropertyType.SelectedValue.ToString());
+            pt.Price = double.Parse(txtPrice.Text);
             pt.Status = cmbStatus.SelectedItem.ToString();
-            bll.UpdateProperty(pt);
+            pt.PropertyID=int.Parse(txtPropertyID.Text);
+            int x=bll.UpdateProperty(pt);
+            if (x>0)
+            {
+                MessageBox.Show("Updated Successfully");
+            }
+            dgvProperty.DataSource = bll.GetProperty();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Property pt = new Property();
+            Property pt = new Property();          
             pt.PropertyID = int.Parse(txtPropertyID.Text);
             bll.DeleteProperty(pt);
+            dgvProperty.DataSource = bll.GetProperty();
         }
 
         private void frmProperty_Load(object sender, EventArgs e)
@@ -155,6 +145,7 @@ namespace Project_2
         {
             if (dgvProperty.SelectedRows.Count > 0)
             {
+                txtPropertyID.Text = dgvProperty.SelectedRows[0].Cells["PropertyID"].Value.ToString();
                 txtpropertyDesc.Text = dgvProperty.SelectedRows[0].Cells["Description"].Value.ToString();
                 txtPrice.Text = dgvProperty.SelectedRows[0].Cells["Price"].Value.ToString();
                 pbxImage.Text = dgvProperty.SelectedRows[0].Cells["Image"].Value.ToString();
@@ -173,6 +164,25 @@ namespace Project_2
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBackTo_Click(object sender, EventArgs e)
+        {
+            frmMenu menu = new frmMenu();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void btnBrowseImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "*.jpg; *.jpeg; *.png; *.gif; *.bmp)| *.jpg; *.jpeg; *.png; *.gif; *.bmp;| All Files(*.*)|*.*";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                ImageLoc = dialog.FileName.ToString();
+                pbxImage.ImageLocation = ImageLoc;
+            }
         }
     }
 }
