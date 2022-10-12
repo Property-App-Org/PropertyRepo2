@@ -11,7 +11,7 @@ namespace DAL
         public int PropertyAgentID { get; set; }
         public int PropertyID { get; set; }
         public int AgentID { get; set; }
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
 
     }
 }

@@ -102,6 +102,7 @@
             this.dgvAgency.Name = "dgvAgency";
             this.dgvAgency.Size = new System.Drawing.Size(711, 206);
             this.dgvAgency.TabIndex = 8;
+            this.dgvAgency.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgency_CellClick);
             // 
             // btnBackTo
             // 

@@ -43,7 +43,7 @@ namespace Project_2
 
             pa.PropertyID = int.Parse(cmbProperty.SelectedValue.ToString());
             pa.AgentID = int.Parse(cmbAgent.SelectedValue.ToString());
-            pa.Date = dtaDate.ToString();
+            pa.Date=dtaDate.Value;
 
             if (string.IsNullOrEmpty(cmbProperty.Text))
             {
@@ -92,7 +92,8 @@ namespace Project_2
 
             pa.PropertyID = int.Parse(cmbProperty.SelectedValue.ToString());
             pa.AgentID = int.Parse(cmbAgent.SelectedValue.ToString());
-            pa.Date = dtaDate.Value.ToString();
+            pa.PropertyAgentID=int.Parse(txtPropertyAgentID.Text);
+            pa.Date = dtaDate.Value;
 
             bll.UpdatePropertAgent(pa);
         }
@@ -103,9 +104,9 @@ namespace Project_2
             {
                
                txtPropertyAgentID.Text= dgvPropertyAgent.SelectedRows[0].Cells["PropertyAgentID"].Value.ToString();
-                cmbProperty.Text = dgvPropertyAgent.SelectedRows[0].Cells["PropertyID"].Value.ToString();
-                cmbAgent.Text = dgvPropertyAgent.SelectedRows[0].Cells["AgentID"].Value.ToString();
-                dtaDate.Text = dgvPropertyAgent.SelectedRows[0].Cells["Date"].Value.ToString();
+                cmbProperty.Text = dgvPropertyAgent.SelectedRows[0].Cells["Description"].Value.ToString();
+                cmbAgent.Text = dgvPropertyAgent.SelectedRows[0].Cells["FullName"].Value.ToString();
+                //dtaDate.Text = dgvPropertyAgent.SelectedRows[0].Cells["Date"].Value.ToString();
 
             }
         }

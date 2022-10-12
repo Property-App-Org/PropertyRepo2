@@ -409,6 +409,7 @@ namespace DAL
             dbComm.Parameters.AddWithValue("@PropertyID", pa.PropertyID);
             dbComm.Parameters.AddWithValue("@AgentID", pa.AgentID);
             dbComm.Parameters.AddWithValue("@Date", pa.Date);
+            dbComm.Parameters.AddWithValue("@PropertyAgentID", pa.PropertyAgentID);
 
 
             int x = dbComm.ExecuteNonQuery();

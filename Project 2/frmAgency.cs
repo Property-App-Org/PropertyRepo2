@@ -92,5 +92,16 @@ namespace Project_2
             menu.Show();
             this.Hide();
         }
+
+        private void dgvAgency_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvAgency.SelectedRows.Count > 0)
+            {
+                txtAgencyID.Text = dgvAgency.SelectedRows[0].Cells["AgencyID"].Value.ToString();
+                txtAgencyName.Text = dgvAgency.SelectedRows[0].Cells["AgencyName"].Value.ToString();
+                cmbSurbub.Text = dgvAgency.SelectedRows[0].Cells["SurbubDescription"].Value.ToString();
+                
+            }
+        }
     }
 }
