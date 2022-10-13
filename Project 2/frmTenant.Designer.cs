@@ -32,7 +32,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTenantID = new System.Windows.Forms.TextBox();
             this.TenantID = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.dgvTenant = new System.Windows.Forms.DataGridView();
             this.btnBackTo = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -61,7 +60,6 @@
             // 
             this.groupBox1.Controls.Add(this.txtTenantID);
             this.groupBox1.Controls.Add(this.TenantID);
-            this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.dgvTenant);
             this.groupBox1.Controls.Add(this.btnBackTo);
             this.groupBox1.Controls.Add(this.btnDelete);
@@ -103,15 +101,6 @@
             this.TenantID.Size = new System.Drawing.Size(80, 20);
             this.TenantID.TabIndex = 19;
             this.TenantID.Text = "TenantID:";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(661, 216);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(96, 41);
-            this.btnSearch.TabIndex = 18;
-            this.btnSearch.Text = "SEARCH";
-            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // dgvTenant
             // 
@@ -316,7 +305,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtTenantID;
         private System.Windows.Forms.Label TenantID;
         private System.Windows.Forms.ErrorProvider errTenant;

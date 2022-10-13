@@ -33,7 +33,6 @@
             this.txtAgent = new System.Windows.Forms.TextBox();
             this.lblAgent = new System.Windows.Forms.Label();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.dgvAgent = new System.Windows.Forms.DataGridView();
             this.btnBackTo = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -64,7 +63,6 @@
             this.groupBox1.Controls.Add(this.txtAgent);
             this.groupBox1.Controls.Add(this.lblAgent);
             this.groupBox1.Controls.Add(this.cmbStatus);
-            this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.dgvAgent);
             this.groupBox1.Controls.Add(this.btnBackTo);
             this.groupBox1.Controls.Add(this.btnDelete);
@@ -115,15 +113,6 @@
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(242, 28);
             this.cmbStatus.TabIndex = 21;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(665, 297);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(105, 41);
-            this.btnSearch.TabIndex = 20;
-            this.btnSearch.Text = "SEARCH";
-            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // dgvAgent
             // 
@@ -330,7 +319,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.ErrorProvider errAgent;
         private System.Windows.Forms.TextBox txtAgent;

@@ -30,7 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtPropertyAgentID = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.dtaDate = new System.Windows.Forms.DateTimePicker();
             this.dgvPropertyAgent = new System.Windows.Forms.DataGridView();
             this.btnBackTo = new System.Windows.Forms.Button();
@@ -43,8 +44,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errPropertyAgent = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtPropertyAgentID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropertyAgent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errPropertyAgent)).BeginInit();
@@ -54,7 +53,6 @@
             // 
             this.groupBox1.Controls.Add(this.txtPropertyAgentID);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.dtaDate);
             this.groupBox1.Controls.Add(this.dgvPropertyAgent);
             this.groupBox1.Controls.Add(this.btnBackTo);
@@ -75,14 +73,21 @@
             this.groupBox1.Text = "Property Agent Details";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // btnSearch
+            // txtPropertyAgentID
             // 
-            this.btnSearch.Location = new System.Drawing.Point(607, 190);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(120, 35);
-            this.btnSearch.TabIndex = 12;
-            this.btnSearch.Text = "SEARCH";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.txtPropertyAgentID.Location = new System.Drawing.Point(205, 30);
+            this.txtPropertyAgentID.Name = "txtPropertyAgentID";
+            this.txtPropertyAgentID.Size = new System.Drawing.Size(199, 26);
+            this.txtPropertyAgentID.TabIndex = 14;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(35, 36);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 20);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "PropertyAgentID:";
             // 
             // dtaDate
             // 
@@ -187,22 +192,6 @@
             // 
             this.errPropertyAgent.ContainerControl = this;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 36);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 20);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "PropertyAgentID:";
-            // 
-            // txtPropertyAgentID
-            // 
-            this.txtPropertyAgentID.Location = new System.Drawing.Point(205, 30);
-            this.txtPropertyAgentID.Name = "txtPropertyAgentID";
-            this.txtPropertyAgentID.Size = new System.Drawing.Size(199, 26);
-            this.txtPropertyAgentID.TabIndex = 14;
-            // 
             // frmPropertyAgent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,7 +223,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox cmbAgent;
         private System.Windows.Forms.DateTimePicker dtaDate;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ErrorProvider errPropertyAgent;
         private System.Windows.Forms.TextBox txtPropertyAgentID;
         private System.Windows.Forms.Label label4;

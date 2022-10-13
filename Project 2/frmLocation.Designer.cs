@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.dgvLocation = new System.Windows.Forms.DataGridView();
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnList = new System.Windows.Forms.Button();
@@ -54,7 +53,6 @@
             // 
             this.groupBox1.Controls.Add(this.txtLocationID);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.dgvLocation);
             this.groupBox1.Controls.Add(this.btnMenu);
             this.groupBox1.Controls.Add(this.btnList);
@@ -73,15 +71,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Location Details";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(512, 128);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(137, 41);
-            this.btnSearch.TabIndex = 11;
-            this.btnSearch.Text = "SEARCH";
-            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // dgvLocation
             // 
@@ -235,7 +224,6 @@
         private System.Windows.Forms.Button btnList;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ErrorProvider errLocation;
         private System.Windows.Forms.TextBox txtLocationID;
         private System.Windows.Forms.Label label4;
