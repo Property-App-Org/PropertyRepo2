@@ -132,29 +132,24 @@ namespace Project_2
         {
             Tenant t = new Tenant();
 
-            
+            t.TenantID=int.Parse(txtTenantID.Text);
             t.Email=txtEmail.Text;
             t.Phone=txtPhone.Text;
             t.Status=cmbStatus.SelectedItem.ToString();
 
 
             int x=bll.UpdateTenant(t);
-            if(x>0)
-            {
-                MessageBox.Show("Updated!");
-            }
+            dgvTenant.DataSource = bll.GetTenant();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             Tenant t = new Tenant();
 
+
             t.TenantID=int.Parse(txtTenantID.Text);
             int x=bll.DeleteTenant(t);
-            if(x>0)
-            {
-                MessageBox.Show("Deleted!");
-            }
+            dgvTenant.DataSource = bll.GetTenant();
 
         }
 

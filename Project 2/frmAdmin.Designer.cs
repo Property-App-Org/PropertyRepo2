@@ -67,7 +67,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.groupBox1.BackColor = System.Drawing.Color.Silver;
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.dgvAdmin);
             this.groupBox1.Controls.Add(this.btnBackTo);
@@ -117,7 +117,7 @@
             // 
             // dgvAdmin
             // 
-            this.dgvAdmin.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.dgvAdmin.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.dgvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAdmin.Location = new System.Drawing.Point(10, 308);
             this.dgvAdmin.Name = "dgvAdmin";
@@ -386,6 +386,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmAdmin";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmAdmin_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).EndInit();

@@ -29,6 +29,7 @@ namespace Project_2
             r.TenantID = int.Parse( cmbTenant.SelectedValue.ToString());
             r.StartDate = dtaStartDate.Text;
             r.EndDate = dtaEndDate.Text;
+
             if (string.IsNullOrEmpty(cmbPropertyAgent.Text))
             {
                 errRental.SetError(cmbPropertyAgent, "Please select Property Agent");
@@ -48,7 +49,7 @@ namespace Project_2
             {
                 validate = true;
             }
-            if (string.IsNullOrEmpty(dtaStartDate.Text)|| (!Regex.IsMatch(dtaStartDate.Text, @"0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)[0-9]{ 2}")))
+            if (string.IsNullOrEmpty(dtaStartDate.Text))
             {
                 errRental.SetError(dtaStartDate , "Please select Start Date");
                 validate = false;
@@ -57,7 +58,7 @@ namespace Project_2
             {
                 validate = true;
             }
-            if (string.IsNullOrEmpty(dtaEndDate.Text)|| (!Regex.IsMatch(dtaEndDate.Text, @"0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)[0-9]{ 2}")))
+            if (string.IsNullOrEmpty(dtaEndDate.Text))
             {
                 errRental.SetError(dtaEndDate, "Please select End Date");
                 validate = false;
@@ -68,7 +69,11 @@ namespace Project_2
             }
             if(validate)
             {
-                bll.InsertRental(r);
+                int x =bll.InsertRental(r);
+                if(x>0)
+                {
+                    MessageBox.Show("Rental Added!");
+                }
             }
             
         }
@@ -83,23 +88,48 @@ namespace Project_2
         {
             Rental r = new Rental();
 
+            r.RentalID=int.Parse(txtRentalID.Text);
             r.StartDate =dtaStartDate.Text;
             r.EndDate = dtaEndDate.Text;
             
-
             bll.UpdateRental(r);
+            dgvRental.DataSource = bll.GetRental();
         }
 
         private void dgvRental_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvRental.SelectedRows.Count > 0)
             {
-                cmbPropertyAgent.Text = dgvRental.SelectedRows[0].Cells["PropertyAgentID"].Value.ToString();
-                cmbTenant.Text = dgvRental.SelectedRows[0].Cells["TenantID"].Value.ToString();
+                txtRentalID.Text = dgvRental.SelectedRows[0].Cells["RentalID"].Value.ToString();
+                cmbPropertyAgent.Text = dgvRental.SelectedRows[0].Cells["FullName"].Value.ToString();
+                cmbTenant.Text = dgvRental.SelectedRows[0].Cells["FullName"].Value.ToString();
                 dtaStartDate.Text = dgvRental.SelectedRows[0].Cells["StartDate"].Value.ToString();
                 dtaEndDate.Text = dgvRental.SelectedRows[0].Cells["EndDate"].Value.ToString();
                
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmRental_Load(object sender, EventArgs e)
+        {
+            cmbPropertyAgent.DataSource = bll.GetPropertyAgent();
+            cmbPropertyAgent.DisplayMember = "FullName";
+            cmbPropertyAgent.ValueMember = "PropertyAgentID";
+
+            cmbTenant.DataSource = bll.GetTenant();
+            cmbTenant.DisplayMember = "FullName";
+            cmbTenant.ValueMember = "TenantID";
+        }
+
+        private void btnBackTo_Click(object sender, EventArgs e)
+        {
+            frmMenu m = new frmMenu();
+            m.Show();
+            this.Hide();
         }
     }
 }

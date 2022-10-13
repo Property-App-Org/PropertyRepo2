@@ -457,6 +457,7 @@ namespace DAL
             dbComm = new SqlCommand("sp_UpdateRental", dbConn);
             dbComm.CommandType=CommandType.StoredProcedure;
 
+            dbComm.Parameters.AddWithValue("@RentalID", r.RentalID);
             dbComm.Parameters.AddWithValue("@StartDate", r.StartDate);
             dbComm.Parameters.AddWithValue("@EndDate", r.EndDate);
             

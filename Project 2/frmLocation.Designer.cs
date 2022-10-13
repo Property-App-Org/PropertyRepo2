@@ -43,6 +43,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errLocation = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtLocationID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errLocation)).BeginInit();
@@ -50,6 +52,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtLocationID);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.dgvLocation);
             this.groupBox1.Controls.Add(this.btnMenu);
@@ -97,6 +101,7 @@
             this.btnMenu.TabIndex = 9;
             this.btnMenu.Text = "MENU";
             this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // btnList
             // 
@@ -131,7 +136,7 @@
             // cmbProvince
             // 
             this.cmbProvince.FormattingEnabled = true;
-            this.cmbProvince.Location = new System.Drawing.Point(210, 131);
+            this.cmbProvince.Location = new System.Drawing.Point(210, 160);
             this.cmbProvince.Name = "cmbProvince";
             this.cmbProvince.Size = new System.Drawing.Size(215, 28);
             this.cmbProvince.TabIndex = 5;
@@ -139,14 +144,14 @@
             // cmbSurbub
             // 
             this.cmbSurbub.FormattingEnabled = true;
-            this.cmbSurbub.Location = new System.Drawing.Point(210, 77);
+            this.cmbSurbub.Location = new System.Drawing.Point(210, 108);
             this.cmbSurbub.Name = "cmbSurbub";
             this.cmbSurbub.Size = new System.Drawing.Size(215, 28);
             this.cmbSurbub.TabIndex = 4;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(210, 29);
+            this.txtAddress.Location = new System.Drawing.Point(210, 71);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(215, 26);
             this.txtAddress.TabIndex = 3;
@@ -154,7 +159,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 134);
+            this.label3.Location = new System.Drawing.Point(17, 168);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 20);
             this.label3.TabIndex = 2;
@@ -163,16 +168,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 86);
+            this.label2.Location = new System.Drawing.Point(17, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Surbub:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 37);
+            this.label1.Location = new System.Drawing.Point(17, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 20);
             this.label1.TabIndex = 0;
@@ -182,6 +188,22 @@
             // 
             this.errLocation.ContainerControl = this;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 20);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "LocationID:";
+            // 
+            // txtLocationID
+            // 
+            this.txtLocationID.Location = new System.Drawing.Point(210, 31);
+            this.txtLocationID.Name = "txtLocationID";
+            this.txtLocationID.Size = new System.Drawing.Size(215, 26);
+            this.txtLocationID.TabIndex = 13;
+            // 
             // frmLocation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,6 +212,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmLocation";
             this.Text = "Location";
+            this.Load += new System.EventHandler(this.frmLocation_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocation)).EndInit();
@@ -214,5 +237,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ErrorProvider errLocation;
+        private System.Windows.Forms.TextBox txtLocationID;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -172,5 +172,12 @@ namespace Project_2
             r.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmLocation loc = new frmLocation();
+            loc.Show();
+            this.Hide();
+        }
     }
 }

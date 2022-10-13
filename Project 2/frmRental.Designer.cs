@@ -45,6 +45,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errRental = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtRentalID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRental)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errRental)).BeginInit();
@@ -52,6 +54,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtRentalID);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.dgvRental);
             this.groupBox1.Controls.Add(this.btnBackTo);
@@ -100,6 +104,7 @@
             this.btnBackTo.TabIndex = 11;
             this.btnBackTo.Text = "MENU";
             this.btnBackTo.UseVisualStyleBackColor = true;
+            this.btnBackTo.Click += new System.EventHandler(this.btnBackTo_Click);
             // 
             // btnUpdate
             // 
@@ -140,7 +145,7 @@
             // 
             // dtaStartDate
             // 
-            this.dtaStartDate.Location = new System.Drawing.Point(202, 119);
+            this.dtaStartDate.Location = new System.Drawing.Point(202, 132);
             this.dtaStartDate.Name = "dtaStartDate";
             this.dtaStartDate.Size = new System.Drawing.Size(294, 26);
             this.dtaStartDate.TabIndex = 6;
@@ -148,7 +153,7 @@
             // cmbTenant
             // 
             this.cmbTenant.FormattingEnabled = true;
-            this.cmbTenant.Location = new System.Drawing.Point(202, 84);
+            this.cmbTenant.Location = new System.Drawing.Point(202, 97);
             this.cmbTenant.Name = "cmbTenant";
             this.cmbTenant.Size = new System.Drawing.Size(244, 28);
             this.cmbTenant.TabIndex = 5;
@@ -156,7 +161,7 @@
             // cmbPropertyAgent
             // 
             this.cmbPropertyAgent.FormattingEnabled = true;
-            this.cmbPropertyAgent.Location = new System.Drawing.Point(202, 41);
+            this.cmbPropertyAgent.Location = new System.Drawing.Point(202, 63);
             this.cmbPropertyAgent.Name = "cmbPropertyAgent";
             this.cmbPropertyAgent.Size = new System.Drawing.Size(244, 28);
             this.cmbPropertyAgent.TabIndex = 4;
@@ -173,16 +178,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 124);
+            this.label3.Location = new System.Drawing.Point(21, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Start Date:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 87);
+            this.label2.Location = new System.Drawing.Point(21, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 20);
             this.label2.TabIndex = 1;
@@ -191,7 +197,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 44);
+            this.label1.Location = new System.Drawing.Point(21, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 20);
             this.label1.TabIndex = 0;
@@ -201,6 +207,22 @@
             // 
             this.errRental.ContainerControl = this;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 37);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 20);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "RentalID:";
+            // 
+            // txtRentalID
+            // 
+            this.txtRentalID.Location = new System.Drawing.Point(202, 31);
+            this.txtRentalID.Name = "txtRentalID";
+            this.txtRentalID.Size = new System.Drawing.Size(244, 26);
+            this.txtRentalID.TabIndex = 15;
+            // 
             // frmRental
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,6 +231,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmRental";
             this.Text = "frmRental";
+            this.Load += new System.EventHandler(this.frmRental_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRental)).EndInit();
@@ -235,5 +258,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ErrorProvider errRental;
+        private System.Windows.Forms.TextBox txtRentalID;
+        private System.Windows.Forms.Label label5;
     }
 }

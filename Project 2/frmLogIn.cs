@@ -51,7 +51,7 @@ namespace Project_2
             frmMenu m = new frmMenu();
             m.Show();
             this.Hide();
-            MessageBox.Show("Welcome!\n Please choose the form you wish to open.");
+           
         }
     }
 }

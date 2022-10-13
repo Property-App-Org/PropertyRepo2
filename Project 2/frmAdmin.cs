@@ -25,6 +25,7 @@ namespace Project_2
             Admin ad = new Admin();
             ad.AdminID=int.Parse(txtAdminID.Text);
             bll.DeleteAdmin(ad);
+            dgvAdmin.DataSource = bll.GetAdmin();
         }
 
         private void btnBackTo_Click(object sender, EventArgs e)
@@ -40,17 +41,17 @@ namespace Project_2
             Admin ad = new Admin();
             bool validate;
 
-            ad.AdminID=int.Parse(txtAdminID.Text);
+            
             ad.Name=txtName.Text;
             ad.Surname=txtSurname.Text;
             ad.Email=txtEmail.Text;
             ad.Password=txtPassword.Text;
-            ad.Status=cmbStatus.Text;
-            ad.PropertyID=int.Parse(cmbProperty.SelectedItem.ToString());
-            ad.PropertyTypeID=int.Parse(cmbPropertyType.SelectedItem.ToString());
-            ad.LocationID=int.Parse(cmbLocation.SelectedItem.ToString());
-            ad.AgentID=int.Parse(cmbAgent.SelectedItem.ToString());
-            ad.AgencyID=int.Parse(cmbAgency.SelectedItem.ToString());
+            ad.Status=cmbStatus.SelectedItem.ToString();
+            ad.PropertyID=int.Parse(cmbProperty.SelectedValue.ToString());
+            ad.PropertyTypeID=int.Parse(cmbPropertyType.SelectedValue.ToString());
+            ad.LocationID=int.Parse(cmbLocation.SelectedValue.ToString());
+            ad.AgentID=int.Parse(cmbAgent.SelectedValue.ToString());
+            ad.AgencyID=int.Parse(cmbAgency.SelectedValue.ToString());
             
 
             if (string.IsNullOrEmpty(txtName.Text))
@@ -145,7 +146,11 @@ namespace Project_2
             }
             if (validate)
             {
-                bll.InsertAdmin(ad);
+                int x=bll.InsertAdmin(ad);
+                if(x>0)
+                {
+                    MessageBox.Show("Admin Added!");
+                }
             }
 
         }
@@ -160,6 +165,7 @@ namespace Project_2
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             Admin ad = new Admin();
+            ad.AdminID=int.Parse(txtAdminID.Text);
             ad.Email=txtEmail.Text;
             ad.Password=txtPassword.Text;
             ad.Status=cmbStatus.SelectedItem.ToString();
@@ -170,6 +176,9 @@ namespace Project_2
             ad.AgencyID=int.Parse(cmbAgency.SelectedValue.ToString());
             
             bll.UpdateAdmin(ad);
+            dgvAdmin.DataSource = bll.GetAdmin();
+
+
         }
 
         private void dgvAdmin_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -187,13 +196,40 @@ namespace Project_2
                 txtEmail.Text = dgvAdmin.SelectedRows[0].Cells["Email"].Value.ToString();
                 txtPassword.Text = dgvAdmin.SelectedRows[0].Cells["Password"].Value.ToString();
                 cmbStatus.Text = dgvAdmin.SelectedRows[0].Cells["Status"].Value.ToString();
-                cmbProperty.Text = dgvAdmin.SelectedRows[0].Cells["PropertyID"].Value.ToString();
-                cmbPropertyType.Text = dgvAdmin.SelectedRows[0].Cells["PropertyTypeID"].Value.ToString();
-                cmbLocation.Text = dgvAdmin.SelectedRows[0].Cells["Location"].Value.ToString();
-                cmbAgent.Text = dgvAdmin.SelectedRows[0].Cells["AgentID"].Value.ToString();
-                cmbAgency.Text = dgvAdmin.SelectedRows[0].Cells["AgencyID"].Value.ToString();
+                cmbProperty.Text = dgvAdmin.SelectedRows[0].Cells["Description"].Value.ToString();
+                cmbPropertyType.Text = dgvAdmin.SelectedRows[0].Cells["PropertyTypeDescription"].Value.ToString();
+                cmbLocation.Text = dgvAdmin.SelectedRows[0].Cells["Address"].Value.ToString();
+                cmbAgent.Text = dgvAdmin.SelectedRows[0].Cells["FullName"].Value.ToString();
+                cmbAgency.Text = dgvAdmin.SelectedRows[0].Cells["AgencyName"].Value.ToString();
 
             }
+        }
+
+        private void frmAdmin_Load(object sender, EventArgs e)
+        {
+            cmbStatus.Items.Add("Available");
+            cmbStatus.Items.Add("Not Available");
+
+            cmbAgency.DataSource = bll.GetAgency();
+            cmbAgency.DisplayMember = "AgencyName";
+            cmbAgency.ValueMember = "AgencyID";
+
+            cmbPropertyType.DataSource = bll.GetPropertyType();
+            cmbPropertyType.DisplayMember = "PropertyTypeDescription";
+            cmbPropertyType.ValueMember = "PropertyTypeID";
+
+            cmbProperty.DataSource=bll.GetProperty();
+            cmbProperty.DisplayMember="Description";
+            cmbProperty.ValueMember="PropertyID";
+
+            cmbAgent.DataSource = bll.GetAgent();
+            cmbAgent.DisplayMember = "FullName";
+            cmbAgent.ValueMember = "AgentID";
+
+            cmbLocation.DataSource = bll.GetLocation();
+            cmbLocation.DisplayMember = "Address";
+            cmbLocation.ValueMember = "LocationID";
+
         }
     }
 }
