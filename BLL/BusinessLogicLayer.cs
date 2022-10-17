@@ -156,5 +156,9 @@ namespace BLL
         {
             return dal.GetLocation();
         }
+        public DataTable Login(string email,string password)
+        {
+            return dal.Login(email,password);
+        }
     }
 }

@@ -23,5 +23,10 @@ namespace Project_2
             menu.Show();
             this.Hide();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

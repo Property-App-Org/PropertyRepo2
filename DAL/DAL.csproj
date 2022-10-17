@@ -55,6 +55,7 @@
     <Compile Include="Rental.cs" />
     <Compile Include="Surbub.cs" />
     <Compile Include="Tenant.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

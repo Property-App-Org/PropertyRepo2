@@ -608,6 +608,25 @@ namespace DAL
             return dt;
 
         }
+        public DataTable Login(string email,string password)
+        {
+
+            dbConn.Open();
+
+            dbComm=new SqlCommand("sp_Login", dbConn);
+
+            dbComm.CommandType=CommandType.StoredProcedure;
+            dbComm.Parameters.AddWithValue("@Email",email);
+            dbComm.Parameters.AddWithValue("@Password",password);
+
+            dbAdapter=new SqlDataAdapter(dbComm);
+            dt=new DataTable();
+
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
+
+        }
 
     }
 }

@@ -30,15 +30,15 @@ namespace Project_2
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.dgvSearch = new System.Windows.Forms.DataGridView();
             this.btnMenu = new System.Windows.Forms.Button();
+            this.dgvSearch = new System.Windows.Forms.DataGridView();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
             this.SuspendLayout();
@@ -63,23 +63,54 @@ namespace Project_2
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "  ";
             // 
-            // label1
+            // btnMenu
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "User Name:";
+            this.btnMenu.Location = new System.Drawing.Point(766, 117);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(96, 36);
+            this.btnMenu.TabIndex = 8;
+            this.btnMenu.Text = "Menu";
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // label2
+            // dgvSearch
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(262, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Start Date";
+            this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSearch.Location = new System.Drawing.Point(20, 171);
+            this.dgvSearch.Name = "dgvSearch";
+            this.dgvSearch.Size = new System.Drawing.Size(860, 322);
+            this.dgvSearch.TabIndex = 7;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(766, 64);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(96, 36);
+            this.btnSearch.TabIndex = 6;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // dtpEndDate
+            // 
+            this.dtpEndDate.Location = new System.Drawing.Point(534, 74);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(200, 26);
+            this.dtpEndDate.TabIndex = 5;
+            // 
+            // dtpStartDate
+            // 
+            this.dtpStartDate.Location = new System.Drawing.Point(266, 72);
+            this.dtpStartDate.Name = "dtpStartDate";
+            this.dtpStartDate.Size = new System.Drawing.Size(200, 26);
+            this.dtpStartDate.TabIndex = 4;
+            // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(20, 74);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(198, 26);
+            this.txtUser.TabIndex = 3;
             // 
             // label3
             // 
@@ -90,53 +121,23 @@ namespace Project_2
             this.label3.TabIndex = 2;
             this.label3.Text = "End Date:";
             // 
-            // txtUser
+            // label2
             // 
-            this.txtUser.Location = new System.Drawing.Point(20, 74);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(198, 26);
-            this.txtUser.TabIndex = 3;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(262, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Start Date";
             // 
-            // dtpStartDate
+            // label1
             // 
-            this.dtpStartDate.Location = new System.Drawing.Point(266, 72);
-            this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(200, 26);
-            this.dtpStartDate.TabIndex = 4;
-            // 
-            // dtpEndDate
-            // 
-            this.dtpEndDate.Location = new System.Drawing.Point(534, 74);
-            this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(200, 26);
-            this.dtpEndDate.TabIndex = 5;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(766, 64);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(96, 36);
-            this.btnSearch.TabIndex = 6;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // dgvSearch
-            // 
-            this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearch.Location = new System.Drawing.Point(20, 171);
-            this.dgvSearch.Name = "dgvSearch";
-            this.dgvSearch.Size = new System.Drawing.Size(860, 322);
-            this.dgvSearch.TabIndex = 7;
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.Location = new System.Drawing.Point(766, 117);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(96, 36);
-            this.btnMenu.TabIndex = 8;
-            this.btnMenu.Text = "Menu";
-            this.btnMenu.UseVisualStyleBackColor = true;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "User Name:";
             // 
             // frmSearch
             // 

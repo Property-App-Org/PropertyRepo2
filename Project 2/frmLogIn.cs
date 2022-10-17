@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using DAL;
+
 
 namespace Project_2
 {
@@ -16,33 +19,45 @@ namespace Project_2
         {
             InitializeComponent();
         }
-
+        BusinessLogicLayer bll = new BusinessLogicLayer();
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(txtUsername.Text=="Username.Admin"&&txtPassword.Text=="Password@Admin")
+            DataTable dt = bll.Login(txtEmail.Text, txtPassword.Text);
+            
+
+            if(dt.Rows.Count>0)
             {
-                frmAdmin ad = new frmAdmin();
-                ad.Show();
-                this.Hide();
-                MessageBox.Show("Access granted!");
-            }
-            else if (txtUsername.Text=="Username.Tenant"&&txtPassword.Text=="Password@Tenant")
-            {
-                frmTenant tn = new frmTenant();
-                tn.Show();
-                this.Hide();
-                MessageBox.Show("Access granted!");
-            }
-            else if (txtUsername.Text=="Username.Agent"&&txtPassword.Text=="Password@Agent")
-            {
-                frmAgent ag = new frmAgent();
-                ag.Show();
-                this.Hide();
-                MessageBox.Show("Access granted!");
+                string role = dt.Rows[0]["RoleDescription"].ToString();
+                if(role=="Admin")
+                {
+                    frmAdmin ad = new frmAdmin();
+                    ad.Show();
+                    this.Hide();
+                    
+                    
+                }
+                else if (role=="Tenant")
+                {
+                    frmTenant t = new frmTenant();
+                    t.Show();
+                    this.Hide();
+                    
+                }
+                else if (role=="Agent")
+                {
+                    frmAgent ag = new frmAgent();
+                    ag.Show();
+                    this.Hide();
+                }
+
             }
             else
             {
-                MessageBox.Show("Password it's wrong or it does not match with the Username\nPlease Log in again.");
+                txtEmail.Clear();
+                txtPassword.Clear();
+                lblWrong.Visible=true;
+                MessageBox.Show("Access Denied!");
+                
             }
         }
 
@@ -51,7 +66,16 @@ namespace Project_2
             frmMenu m = new frmMenu();
             m.Show();
             this.Hide();
-           
+        }
+
+        private void frmLogIn_Load(object sender, EventArgs e)
+        {
+            lblWrong.Visible=false;
+        }
+
+        private void lblWarning_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

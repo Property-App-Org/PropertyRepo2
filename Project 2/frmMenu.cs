@@ -100,6 +100,9 @@ namespace Project_2
             frmAdmin ad = new frmAdmin();
             ad.Show();
             this.Hide();
+
+            btnLocation.Enabled=false;
+            this.Show();
         }
 
         private void btnPropertyType_Click(object sender, EventArgs e)
@@ -185,6 +188,11 @@ namespace Project_2
             frmSearch search = new frmSearch();
             search.Show();
             this.Hide();
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
