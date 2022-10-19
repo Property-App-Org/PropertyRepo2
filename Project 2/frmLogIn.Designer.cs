@@ -29,12 +29,15 @@ namespace Project_2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblWrong = new System.Windows.Forms.Label();
+            this.errEmail = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errEmail)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -103,6 +106,10 @@ namespace Project_2
             this.lblWrong.TabIndex = 6;
             this.lblWrong.Text = "INVALID LOG IN, PLEASE TRY AGAIN!";
             // 
+            // errEmail
+            // 
+            this.errEmail.ContainerControl = this;
+            // 
             // frmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,6 +126,7 @@ namespace Project_2
             this.Name = "frmLogIn";
             this.Text = "frmLogIn";
             this.Load += new System.EventHandler(this.frmLogIn_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errEmail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +140,6 @@ namespace Project_2
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblWrong;
+        private System.Windows.Forms.ErrorProvider errEmail;
     }
 }

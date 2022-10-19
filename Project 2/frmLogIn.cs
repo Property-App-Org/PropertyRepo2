@@ -56,7 +56,7 @@ namespace Project_2
                 txtEmail.Clear();
                 txtPassword.Clear();
                 lblWrong.Visible=true;
-                MessageBox.Show("Access Denied!");
+                //MessageBox.Show("Access Denied!");
                 
             }
         }
