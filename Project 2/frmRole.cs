@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 using BLL;
 using DAL;
 
@@ -21,39 +22,41 @@ namespace Project_2
         BusinessLogicLayer bll = new BusinessLogicLayer();
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            City ct = new City();
+            Role r = new Role();
             bool validate = true;
 
-            ct.CityDescription = txtDesc.Text;
-            ct.ProvinceID = int.Parse(cmbProvince.SelectedValue.ToString());
+            r.RoleDesc = txtRoleDesc.Text;
 
-            if (string.IsNullOrEmpty(txtDesc.Text))
+            if (string.IsNullOrEmpty(txtRoleDesc.Text))
             {
-                errCity.SetError(txtDesc, "Please enter City");
+                errRole.SetError(txtRoleDesc, "Please enter Role Description.");
                 validate = false;
             }
             else
             {
                 validate = true;
             }
-            if (string.IsNullOrEmpty(cmbProvince.Text))
-            {
-                errCity.SetError(cmbProvince, "Please select Province");
-                validate = false;
-            }
-            else
-            {
-                validate = true;
-            }
-
+            
             if (validate)
             {
-                int x = bll.InsertCity(ct);
+                int x = bll.InsertRole(r);
                 if (x>0)
                 {
-                    MessageBox.Show(txtDesc.Text+" City Added!");
+                    MessageBox.Show(txtRoleDesc.Text+" Role Added!");
                 }
             }
+        }
+
+        private void btnBackTo_Click(object sender, EventArgs e)
+        {
+            frmUser u = new frmUser();
+            u.Show();
+            this.Hide();
+        }
+
+        private void btnList_Click(object sender, EventArgs e)
+        {
+            dgvRole.DataSource=bll.GetRole();
         }
     }
 }

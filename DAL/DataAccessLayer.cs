@@ -29,11 +29,69 @@ namespace DAL
             return x;
 
         }
+        public int InsertRole(Role r)
+        {
+            dbConn.Open();
+            dbComm = new SqlCommand("sp_InsertRole", dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@RoleDesc",r.RoleDesc);
+
+            int x = dbComm.ExecuteNonQuery();
+            dbConn.Close();
+            return x;
+
+        }
+        public int InsertUser(User u)
+        {
+            dbConn.Open();
+            dbComm = new SqlCommand("sp_InsertUser", dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@Name",u.Name);
+            dbComm.Parameters.AddWithValue("@Surname",u.Surname);
+            dbComm.Parameters.AddWithValue("@Email",u.Email);
+            dbComm.Parameters.AddWithValue("@Password",u.Password);
+            dbComm.Parameters.AddWithValue("@RoleID",u.RoleID);
+
+            int x = dbComm.ExecuteNonQuery();
+            dbConn.Close();
+            return x;
+
+        }
         public DataTable GetPropertyType()
         {
             dbConn.Open();
 
             dbComm=new SqlCommand("sp_GetPropertyType", dbConn);
+
+            dbAdapter=new SqlDataAdapter(dbComm);
+            dt=new DataTable();
+
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
+
+        }
+        public DataTable GetRole()
+        {
+            dbConn.Open();
+
+            dbComm=new SqlCommand("sp_GetRole", dbConn);
+
+            dbAdapter=new SqlDataAdapter(dbComm);
+            dt=new DataTable();
+
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
+
+        }
+        public DataTable GetUser()
+        {
+            dbConn.Open();
+
+            dbComm=new SqlCommand("sp_GetUser", dbConn);
 
             dbAdapter=new SqlDataAdapter(dbComm);
             dt=new DataTable();

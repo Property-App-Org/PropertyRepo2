@@ -29,6 +29,7 @@ namespace Project_2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtUserID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,8 +47,10 @@ namespace Project_2
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnList = new System.Windows.Forms.Button();
             this.btnBackTo = new System.Windows.Forms.Button();
+            this.errUser = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errUser)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -190,6 +193,7 @@ namespace Project_2
             this.btnAdd.TabIndex = 19;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnList
             // 
@@ -199,6 +203,7 @@ namespace Project_2
             this.btnList.TabIndex = 20;
             this.btnList.Text = "LIST";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // btnBackTo
             // 
@@ -208,6 +213,11 @@ namespace Project_2
             this.btnBackTo.TabIndex = 21;
             this.btnBackTo.Text = "BACK";
             this.btnBackTo.UseVisualStyleBackColor = true;
+            this.btnBackTo.Click += new System.EventHandler(this.btnBackTo_Click);
+            // 
+            // errUser
+            // 
+            this.errUser.ContainerControl = this;
             // 
             // frmUser
             // 
@@ -217,9 +227,11 @@ namespace Project_2
             this.Controls.Add(this.groupBox1);
             this.Name = "frmUser";
             this.Text = "frmUser";
+            this.Load += new System.EventHandler(this.frmUser_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -243,5 +255,6 @@ namespace Project_2
         private System.Windows.Forms.Button btnBackTo;
         private System.Windows.Forms.Button btnList;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.ErrorProvider errUser;
     }
 }

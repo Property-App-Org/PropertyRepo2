@@ -160,5 +160,22 @@ namespace BLL
         {
             return dal.Login(email,password);
         }
+        public int InsertUser(User u)
+        {
+            return dal.InsertUser(u);
+        }
+        public int InsertRole(Role r)
+        {
+            return dal.InsertRole(r);
+        }
+        public DataTable GetRole()
+        {
+            return dal.GetRole();
+        }
+        public DataTable GetUser()
+        {
+            return dal.GetUser();
+        }
+
     }
 }

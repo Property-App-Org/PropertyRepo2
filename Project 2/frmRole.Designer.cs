@@ -29,6 +29,7 @@ namespace Project_2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvRole = new System.Windows.Forms.DataGridView();
             this.btnBackTo = new System.Windows.Forms.Button();
@@ -38,8 +39,10 @@ namespace Project_2
             this.txtRoleID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtRoleDesc = new System.Windows.Forms.TextBox();
+            this.errRole = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRole)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errRole)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -76,6 +79,7 @@ namespace Project_2
             this.btnBackTo.TabIndex = 8;
             this.btnBackTo.Text = "MENU";
             this.btnBackTo.UseVisualStyleBackColor = true;
+            this.btnBackTo.Click += new System.EventHandler(this.btnBackTo_Click);
             // 
             // btnList
             // 
@@ -85,6 +89,7 @@ namespace Project_2
             this.btnList.TabIndex = 7;
             this.btnList.Text = "LIST";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // btnAdd
             // 
@@ -128,6 +133,10 @@ namespace Project_2
             this.txtRoleDesc.Size = new System.Drawing.Size(237, 26);
             this.txtRoleDesc.TabIndex = 10;
             // 
+            // errRole
+            // 
+            this.errRole.ContainerControl = this;
+            // 
             // frmRole
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,6 +148,7 @@ namespace Project_2
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRole)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errRole)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,5 +164,6 @@ namespace Project_2
         private System.Windows.Forms.TextBox txtRoleID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtRoleDesc;
+        private System.Windows.Forms.ErrorProvider errRole;
     }
 }

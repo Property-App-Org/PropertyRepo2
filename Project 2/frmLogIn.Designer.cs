@@ -48,6 +48,7 @@ namespace Project_2
             this.label1.Size = new System.Drawing.Size(55, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Email:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -63,17 +64,19 @@ namespace Project_2
             // 
             // txtEmail
             // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(247, 66);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(228, 20);
+            this.txtEmail.Size = new System.Drawing.Size(228, 26);
             this.txtEmail.TabIndex = 2;
             // 
             // txtPassword
             // 
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(247, 125);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(228, 20);
+            this.txtPassword.Size = new System.Drawing.Size(228, 26);
             this.txtPassword.TabIndex = 3;
             // 
             // btnLogin
@@ -94,11 +97,11 @@ namespace Project_2
             this.lblWrong.AutoSize = true;
             this.lblWrong.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWrong.ForeColor = System.Drawing.Color.Red;
-            this.lblWrong.Location = new System.Drawing.Point(231, 9);
+            this.lblWrong.Location = new System.Drawing.Point(303, 177);
             this.lblWrong.Name = "lblWrong";
-            this.lblWrong.Size = new System.Drawing.Size(244, 21);
+            this.lblWrong.Size = new System.Drawing.Size(297, 21);
             this.lblWrong.TabIndex = 6;
-            this.lblWrong.Text = "PLEASE ENTER YOUR DETAILS!";
+            this.lblWrong.Text = "INVALID LOG IN, PLEASE TRY AGAIN!";
             // 
             // frmLogIn
             // 
