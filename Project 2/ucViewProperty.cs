@@ -12,9 +12,9 @@ using BLL;
 
 namespace Project_2
 {
-    public partial class ucProperty : UserControl
+    public partial class ucViewProperty : UserControl
     {
-        public ucProperty()
+        public ucViewProperty()
         {
             InitializeComponent();
         }
@@ -24,6 +24,12 @@ namespace Project_2
             Property pt = new Property();
 
             dgvProperty.DataSource = bll.GetProperty();
+        }
+
+        private void btnSearchPropertyType_Click(object sender, EventArgs e)
+        {
+            PropertyType pty = new PropertyType();
+            dgvProperty.DataSource = bll.GetPropertyType();
         }
     }
 }

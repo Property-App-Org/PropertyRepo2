@@ -73,6 +73,58 @@ namespace DAL
             return dt;
 
         }
+        public DataTable GetAdminByName(Admin ad)
+        {
+            dbConn.Open();
+
+            dbComm=new SqlCommand("sp_GetAdminByAdmin", dbConn);
+
+            dbComm.CommandType=CommandType.StoredProcedure;
+            dbComm.Parameters.AddWithValue("@Name", ad.Name);
+
+            dbAdapter=new SqlDataAdapter(dbComm);
+            dt=new DataTable();
+
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
+
+        }
+        public DataTable GetAgentByName(Agent ag)
+        {
+            dbConn.Open();
+
+            dbComm=new SqlCommand("sp_GetAgentByName", dbConn);
+
+            dbComm.CommandType=CommandType.StoredProcedure;
+            dbComm.Parameters.AddWithValue("@Name", ag.Name);
+
+            dbAdapter=new SqlDataAdapter(dbComm);
+            dt=new DataTable();
+
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
+
+        }
+        public DataTable GetTenantByName(Tenant t)
+        {
+            dbConn.Open();
+
+            dbComm=new SqlCommand("sp_GetTenantByName", dbConn);
+
+            dbComm.CommandType=CommandType.StoredProcedure;
+            dbComm.Parameters.AddWithValue("@Name", t.Name);
+
+            dbAdapter=new SqlDataAdapter(dbComm);
+            dt=new DataTable();
+
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
+
+        }
+
         public DataTable GetRole()
         {
             dbConn.Open();

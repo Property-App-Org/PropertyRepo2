@@ -12,9 +12,9 @@ using BLL;
 
 namespace Project_2
 {
-    public partial class ucUser : UserControl
+    public partial class ucViewUser : UserControl
     {
-        public ucUser()
+        public ucViewUser()
         {
             InitializeComponent();
         }
@@ -36,6 +36,14 @@ namespace Project_2
         {
             Tenant t = new Tenant();
             dgvUserReport.DataSource = bll.GetTenant();
+        }
+
+        private void btnSearchAdmin_Click(object sender, EventArgs e)
+        {
+            Admin ad = new Admin();
+            ad.Name=txtAdmin.Text;
+            dgvUserReport.DataSource=bll.GetAdminByName(ad);
+
         }
     }
 }

@@ -118,12 +118,6 @@
     <Compile Include="frmRole.Designer.cs">
       <DependentUpon>frmRole.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSearch.Designer.cs">
-      <DependentUpon>frmSearch.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmSurbub.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,17 +144,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ucProperty.cs">
+    <Compile Include="ucViewProperty.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucProperty.Designer.cs">
-      <DependentUpon>ucProperty.cs</DependentUpon>
+    <Compile Include="ucViewProperty.Designer.cs">
+      <DependentUpon>ucViewProperty.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucUser.cs">
+    <Compile Include="ucViewUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucUser.Designer.cs">
-      <DependentUpon>ucUser.cs</DependentUpon>
+    <Compile Include="ucViewUser.Designer.cs">
+      <DependentUpon>ucViewUser.cs</DependentUpon>
     </Compile>
     <Compile Include="ucViewLocation.cs">
       <SubType>UserControl</SubType>
@@ -216,9 +210,6 @@
     <EmbeddedResource Include="frmRole.resx">
       <DependentUpon>frmRole.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSearch.resx">
-      <DependentUpon>frmSearch.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmSurbub.resx">
       <DependentUpon>frmSurbub.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,11 +232,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ucProperty.resx">
-      <DependentUpon>ucProperty.cs</DependentUpon>
+    <EmbeddedResource Include="ucViewProperty.resx">
+      <DependentUpon>ucViewProperty.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucUser.resx">
-      <DependentUpon>ucUser.cs</DependentUpon>
+    <EmbeddedResource Include="ucViewUser.resx">
+      <DependentUpon>ucViewUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucViewLocation.resx">
       <DependentUpon>ucViewLocation.cs</DependentUpon>

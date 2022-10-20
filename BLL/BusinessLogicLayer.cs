@@ -176,6 +176,18 @@ namespace BLL
         {
             return dal.GetUser();
         }
+        public DataTable GetAdminByName(Admin ad)
+        {
+            return dal.GetAdminByName(ad);
+        }
+        public DataTable GetAgentByName(Agent ag)
+        {
+            return dal.GetAgentByName(ag);
+        }
+        public DataTable GetTenantByName(Tenant t)
+        {
+            return dal.GetTenantByName(t);
+        }
 
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace Project_2
 {
-    partial class ucProperty
+    partial class ucViewProperty
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace Project_2
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvProperty = new System.Windows.Forms.DataGridView();
-            this.btnSearchPropertyType = new System.Windows.Forms.Button();
+            this.btnListPropertyType = new System.Windows.Forms.Button();
             this.btnSearchProperty = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProperty)).BeginInit();
@@ -40,7 +40,7 @@ namespace Project_2
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvProperty);
-            this.groupBox1.Controls.Add(this.btnSearchPropertyType);
+            this.groupBox1.Controls.Add(this.btnListPropertyType);
             this.groupBox1.Controls.Add(this.btnSearchProperty);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(13, 16);
@@ -58,14 +58,15 @@ namespace Project_2
             this.dgvProperty.Size = new System.Drawing.Size(694, 150);
             this.dgvProperty.TabIndex = 12;
             // 
-            // btnSearchPropertyType
+            // btnListPropertyType
             // 
-            this.btnSearchPropertyType.Location = new System.Drawing.Point(399, 76);
-            this.btnSearchPropertyType.Name = "btnSearchPropertyType";
-            this.btnSearchPropertyType.Size = new System.Drawing.Size(312, 42);
-            this.btnSearchPropertyType.TabIndex = 7;
-            this.btnSearchPropertyType.Text = "List Property Types";
-            this.btnSearchPropertyType.UseVisualStyleBackColor = true;
+            this.btnListPropertyType.Location = new System.Drawing.Point(399, 76);
+            this.btnListPropertyType.Name = "btnListPropertyType";
+            this.btnListPropertyType.Size = new System.Drawing.Size(312, 42);
+            this.btnListPropertyType.TabIndex = 7;
+            this.btnListPropertyType.Text = "List Property Types";
+            this.btnListPropertyType.UseVisualStyleBackColor = true;
+            this.btnListPropertyType.Click += new System.EventHandler(this.btnSearchPropertyType_Click);
             // 
             // btnSearchProperty
             // 
@@ -93,7 +94,7 @@ namespace Project_2
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvProperty;
-        private System.Windows.Forms.Button btnSearchPropertyType;
+        private System.Windows.Forms.Button btnListPropertyType;
         private System.Windows.Forms.Button btnSearchProperty;
     }
 }

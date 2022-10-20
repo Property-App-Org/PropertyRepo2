@@ -1,7 +1,7 @@
 ﻿
 namespace Project_2
 {
-    partial class ucUser
+    partial class ucViewUser
     {
         /// <summary> 
         /// Required designer variable.
@@ -134,6 +134,7 @@ namespace Project_2
             this.btnSearchAdmin.TabIndex = 6;
             this.btnSearchAdmin.Text = "Search";
             this.btnSearchAdmin.UseVisualStyleBackColor = true;
+            this.btnSearchAdmin.Click += new System.EventHandler(this.btnSearchAdmin_Click);
             // 
             // txtTenant
             // 
