@@ -66,5 +66,14 @@ namespace Project_2
             ucViewAgencies1.Show();
             ucViewAgencies1.BringToFront();
         }
+
+        private void frmSeach_Load(object sender, EventArgs e)
+        {
+            ucViewUser1.Hide();
+            ucViewLocation1.Hide();
+            ucViewProperty1.Hide();
+            ucViewRental1.Hide();
+            ucViewAgencies1.Hide();
+        }
     }
 }

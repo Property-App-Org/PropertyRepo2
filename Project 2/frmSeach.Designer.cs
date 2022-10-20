@@ -182,6 +182,7 @@ namespace Project_2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSeach";
             this.Text = "frmSeach";
+            this.Load += new System.EventHandler(this.frmSeach_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

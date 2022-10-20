@@ -37,6 +37,7 @@ namespace Project_2
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblWrong = new System.Windows.Forms.Label();
             this.errEmail = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errEmail)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,12 +111,26 @@ namespace Project_2
             // 
             this.errEmail.ContainerControl = this;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(592, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 35);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "sign up";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(701, 285);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblWrong);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
@@ -141,5 +156,6 @@ namespace Project_2
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblWrong;
         private System.Windows.Forms.ErrorProvider errEmail;
+        private System.Windows.Forms.Button button1;
     }
 }
