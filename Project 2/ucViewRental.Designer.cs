@@ -76,9 +76,9 @@ namespace Project_2
             // 
             this.btnSearchPrice.Location = new System.Drawing.Point(434, 118);
             this.btnSearchPrice.Name = "btnSearchPrice";
-            this.btnSearchPrice.Size = new System.Drawing.Size(114, 42);
+            this.btnSearchPrice.Size = new System.Drawing.Size(137, 42);
             this.btnSearchPrice.TabIndex = 8;
-            this.btnSearchPrice.Text = "Search";
+            this.btnSearchPrice.Text = "Search By Price";
             this.btnSearchPrice.UseVisualStyleBackColor = true;
             // 
             // btnViewEndedRentals
