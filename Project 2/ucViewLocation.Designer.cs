@@ -72,6 +72,7 @@ namespace Project_2
             this.btnListProvinces.TabIndex = 7;
             this.btnListProvinces.Text = "List Provinces";
             this.btnListProvinces.UseVisualStyleBackColor = true;
+            this.btnListProvinces.Click += new System.EventHandler(this.btnListProvinces_Click);
             // 
             // btnListCities
             // 
@@ -81,6 +82,7 @@ namespace Project_2
             this.btnListCities.TabIndex = 6;
             this.btnListCities.Text = "List Cities";
             this.btnListCities.UseVisualStyleBackColor = true;
+            this.btnListCities.Click += new System.EventHandler(this.btnListCities_Click);
             // 
             // btnListSurbubs
             // 
@@ -90,6 +92,7 @@ namespace Project_2
             this.btnListSurbubs.TabIndex = 13;
             this.btnListSurbubs.Text = "List Surbubs";
             this.btnListSurbubs.UseVisualStyleBackColor = true;
+            this.btnListSurbubs.Click += new System.EventHandler(this.btnListSurbubs_Click);
             // 
             // panel1
             // 
