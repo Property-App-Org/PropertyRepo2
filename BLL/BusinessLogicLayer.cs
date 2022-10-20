@@ -188,6 +188,20 @@ namespace BLL
         {
             return dal.GetTenantByName(t);
         }
+        public DataTable GetTenantAgent()
+        {
+            return dal.GetTenantAgent();
+        }
+        public DataTable GetEndedDate()
+        {
+            return dal.GetEndedDate();
+        }
+        public DataTable GetRentalByPrice(Property p)
+        {
+            return dal.GetRentalByPrice(p);
+        }
+            
+
 
     }
 }

@@ -34,7 +34,7 @@ namespace Project_2
             this.btnSearchPrice = new System.Windows.Forms.Button();
             this.btnViewEndedRentals = new System.Windows.Forms.Button();
             this.btnViewTenant = new System.Windows.Forms.Button();
-            this.txtPriceTo = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@ namespace Project_2
             this.groupBox1.Controls.Add(this.btnSearchPrice);
             this.groupBox1.Controls.Add(this.btnViewEndedRentals);
             this.groupBox1.Controls.Add(this.btnViewTenant);
-            this.groupBox1.Controls.Add(this.txtPriceTo);
+            this.groupBox1.Controls.Add(this.txtPrice);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -80,6 +80,7 @@ namespace Project_2
             this.btnSearchPrice.TabIndex = 8;
             this.btnSearchPrice.Text = "Search By Price";
             this.btnSearchPrice.UseVisualStyleBackColor = true;
+            this.btnSearchPrice.Click += new System.EventHandler(this.btnSearchPrice_Click);
             // 
             // btnViewEndedRentals
             // 
@@ -89,6 +90,7 @@ namespace Project_2
             this.btnViewEndedRentals.TabIndex = 7;
             this.btnViewEndedRentals.Text = "View";
             this.btnViewEndedRentals.UseVisualStyleBackColor = true;
+            this.btnViewEndedRentals.Click += new System.EventHandler(this.btnViewEndedRentals_Click);
             // 
             // btnViewTenant
             // 
@@ -100,12 +102,12 @@ namespace Project_2
             this.btnViewTenant.UseVisualStyleBackColor = true;
             this.btnViewTenant.Click += new System.EventHandler(this.btnViewTenant_Click);
             // 
-            // txtPriceTo
+            // txtPrice
             // 
-            this.txtPriceTo.Location = new System.Drawing.Point(241, 126);
-            this.txtPriceTo.Name = "txtPriceTo";
-            this.txtPriceTo.Size = new System.Drawing.Size(213, 26);
-            this.txtPriceTo.TabIndex = 5;
+            this.txtPrice.Location = new System.Drawing.Point(241, 126);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(213, 26);
+            this.txtPrice.TabIndex = 5;
             // 
             // label3
             // 
@@ -148,9 +150,9 @@ namespace Project_2
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(29, 169);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(142, 20);
+            this.label5.Size = new System.Drawing.Size(196, 20);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Rented Properties:";
+            this.label5.Text = "Tenant Rented Properties:";
             // 
             // ucViewRental
             // 
@@ -173,7 +175,7 @@ namespace Project_2
         private System.Windows.Forms.Button btnSearchPrice;
         private System.Windows.Forms.Button btnViewEndedRentals;
         private System.Windows.Forms.Button btnViewTenant;
-        private System.Windows.Forms.TextBox txtPriceTo;
+        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
