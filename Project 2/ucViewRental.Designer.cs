@@ -74,7 +74,7 @@ namespace Project_2
             // 
             // btnSearchPrice
             // 
-            this.btnSearchPrice.Location = new System.Drawing.Point(434, 118);
+            this.btnSearchPrice.Location = new System.Drawing.Point(480, 118);
             this.btnSearchPrice.Name = "btnSearchPrice";
             this.btnSearchPrice.Size = new System.Drawing.Size(137, 42);
             this.btnSearchPrice.TabIndex = 8;
@@ -83,7 +83,7 @@ namespace Project_2
             // 
             // btnViewEndedRentals
             // 
-            this.btnViewEndedRentals.Location = new System.Drawing.Point(195, 73);
+            this.btnViewEndedRentals.Location = new System.Drawing.Point(241, 73);
             this.btnViewEndedRentals.Name = "btnViewEndedRentals";
             this.btnViewEndedRentals.Size = new System.Drawing.Size(213, 42);
             this.btnViewEndedRentals.TabIndex = 7;
@@ -92,7 +92,7 @@ namespace Project_2
             // 
             // btnViewTenant
             // 
-            this.btnViewTenant.Location = new System.Drawing.Point(195, 25);
+            this.btnViewTenant.Location = new System.Drawing.Point(241, 25);
             this.btnViewTenant.Name = "btnViewTenant";
             this.btnViewTenant.Size = new System.Drawing.Size(213, 42);
             this.btnViewTenant.TabIndex = 6;
@@ -102,7 +102,7 @@ namespace Project_2
             // 
             // txtPriceTo
             // 
-            this.txtPriceTo.Location = new System.Drawing.Point(195, 126);
+            this.txtPriceTo.Location = new System.Drawing.Point(241, 126);
             this.txtPriceTo.Name = "txtPriceTo";
             this.txtPriceTo.Size = new System.Drawing.Size(213, 26);
             this.txtPriceTo.TabIndex = 5;
@@ -130,13 +130,13 @@ namespace Project_2
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(29, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 20);
+            this.label1.Size = new System.Drawing.Size(206, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Tenant Rentals:";
+            this.label1.Text = "Tenant Rentals and agents:";
             // 
             // btnViewRentedProperties
             // 
-            this.btnViewRentedProperties.Location = new System.Drawing.Point(195, 155);
+            this.btnViewRentedProperties.Location = new System.Drawing.Point(241, 155);
             this.btnViewRentedProperties.Name = "btnViewRentedProperties";
             this.btnViewRentedProperties.Size = new System.Drawing.Size(213, 42);
             this.btnViewRentedProperties.TabIndex = 15;

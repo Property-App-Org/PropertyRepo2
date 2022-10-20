@@ -139,6 +139,52 @@ namespace DAL
             return dt;
 
         }
+        public DataTable GetTenantAgent()
+        {
+            dbConn.Open();
+
+            dbComm=new SqlCommand("sp_GetTenantAgent", dbConn);
+
+            dbAdapter=new SqlDataAdapter(dbComm);
+            dt=new DataTable();
+
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
+
+        }
+        public DataTable GetEndedDate()
+        {
+            dbConn.Open();
+
+            dbComm=new SqlCommand("sp_GetEndedDate", dbConn);
+
+            dbAdapter=new SqlDataAdapter(dbComm);
+            dt=new DataTable();
+
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
+
+        }
+        public DataTable GetRentalByPrice(Property p)
+        {
+            dbConn.Open();
+
+            dbComm=new SqlCommand("sp_GetRentalByPrice", dbConn);
+
+            dbComm.CommandType=CommandType.StoredProcedure;
+            dbComm.Parameters.AddWithValue("@Price", p.Price);
+
+            dbAdapter=new SqlDataAdapter(dbComm);
+            dt=new DataTable();
+
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
+
+        }
+        
         public DataTable GetUser()
         {
             dbConn.Open();
