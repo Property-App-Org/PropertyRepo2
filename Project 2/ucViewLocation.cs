@@ -7,23 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DAL;
-using BLL;
 
 namespace Project_2
 {
-    public partial class ucProperty : UserControl
+    public partial class ucViewLocation : UserControl
     {
-        public ucProperty()
+        public ucViewLocation()
         {
             InitializeComponent();
         }
-        BusinessLogicLayer bll = new BusinessLogicLayer();
-        private void btnSearchAdmin_Click(object sender, EventArgs e)
-        {
-            Property pt = new Property();
 
-            dgvProperty.DataSource = bll.GetProperty();
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

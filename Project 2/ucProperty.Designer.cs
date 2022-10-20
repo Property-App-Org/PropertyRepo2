@@ -29,52 +29,19 @@ namespace Project_2
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtAdmin = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvProperty = new System.Windows.Forms.DataGridView();
-            this.btnSearchAgent = new System.Windows.Forms.Button();
-            this.btnSearchAdmin = new System.Windows.Forms.Button();
-            this.txtAgent = new System.Windows.Forms.TextBox();
+            this.btnSearchPropertyType = new System.Windows.Forms.Button();
+            this.btnSearchProperty = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProperty)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtAdmin
-            // 
-            this.txtAdmin.Location = new System.Drawing.Point(234, 38);
-            this.txtAdmin.Name = "txtAdmin";
-            this.txtAdmin.Size = new System.Drawing.Size(205, 26);
-            this.txtAdmin.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Property Type:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Property:";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvProperty);
-            this.groupBox1.Controls.Add(this.btnSearchAgent);
-            this.groupBox1.Controls.Add(this.btnSearchAdmin);
-            this.groupBox1.Controls.Add(this.txtAgent);
-            this.groupBox1.Controls.Add(this.txtAdmin);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.btnSearchPropertyType);
+            this.groupBox1.Controls.Add(this.btnSearchProperty);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(13, 16);
             this.groupBox1.Name = "groupBox1";
@@ -91,30 +58,24 @@ namespace Project_2
             this.dgvProperty.Size = new System.Drawing.Size(694, 150);
             this.dgvProperty.TabIndex = 12;
             // 
-            // btnSearchAgent
+            // btnSearchPropertyType
             // 
-            this.btnSearchAgent.Location = new System.Drawing.Point(477, 76);
-            this.btnSearchAgent.Name = "btnSearchAgent";
-            this.btnSearchAgent.Size = new System.Drawing.Size(114, 42);
-            this.btnSearchAgent.TabIndex = 7;
-            this.btnSearchAgent.Text = "Search";
-            this.btnSearchAgent.UseVisualStyleBackColor = true;
+            this.btnSearchPropertyType.Location = new System.Drawing.Point(399, 76);
+            this.btnSearchPropertyType.Name = "btnSearchPropertyType";
+            this.btnSearchPropertyType.Size = new System.Drawing.Size(312, 42);
+            this.btnSearchPropertyType.TabIndex = 7;
+            this.btnSearchPropertyType.Text = "List Property Types";
+            this.btnSearchPropertyType.UseVisualStyleBackColor = true;
             // 
-            // btnSearchAdmin
+            // btnSearchProperty
             // 
-            this.btnSearchAdmin.Location = new System.Drawing.Point(477, 36);
-            this.btnSearchAdmin.Name = "btnSearchAdmin";
-            this.btnSearchAdmin.Size = new System.Drawing.Size(114, 42);
-            this.btnSearchAdmin.TabIndex = 6;
-            this.btnSearchAdmin.Text = "Search";
-            this.btnSearchAdmin.UseVisualStyleBackColor = true;
-            // 
-            // txtAgent
-            // 
-            this.txtAgent.Location = new System.Drawing.Point(234, 81);
-            this.txtAgent.Name = "txtAgent";
-            this.txtAgent.Size = new System.Drawing.Size(205, 26);
-            this.txtAgent.TabIndex = 4;
+            this.btnSearchProperty.Location = new System.Drawing.Point(17, 76);
+            this.btnSearchProperty.Name = "btnSearchProperty";
+            this.btnSearchProperty.Size = new System.Drawing.Size(312, 42);
+            this.btnSearchProperty.TabIndex = 6;
+            this.btnSearchProperty.Text = "List Properties";
+            this.btnSearchProperty.UseVisualStyleBackColor = true;
+            this.btnSearchProperty.Click += new System.EventHandler(this.btnSearchAdmin_Click);
             // 
             // ucProperty
             // 
@@ -124,21 +85,15 @@ namespace Project_2
             this.Name = "ucProperty";
             this.Size = new System.Drawing.Size(783, 376);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProperty)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtAdmin;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvProperty;
-        private System.Windows.Forms.Button btnSearchAgent;
-        private System.Windows.Forms.Button btnSearchAdmin;
-        private System.Windows.Forms.TextBox txtAgent;
+        private System.Windows.Forms.Button btnSearchPropertyType;
+        private System.Windows.Forms.Button btnSearchProperty;
     }
 }

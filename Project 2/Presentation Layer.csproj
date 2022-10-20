@@ -162,6 +162,24 @@
     <Compile Include="ucUser.Designer.cs">
       <DependentUpon>ucUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucViewLocation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucViewLocation.Designer.cs">
+      <DependentUpon>ucViewLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucViewRental.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucViewRental.Designer.cs">
+      <DependentUpon>ucViewRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucViewAgencies.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucViewAgencies.Designer.cs">
+      <DependentUpon>ucViewAgencies.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,6 +246,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucUser.resx">
       <DependentUpon>ucUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucViewLocation.resx">
+      <DependentUpon>ucViewLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucViewRental.resx">
+      <DependentUpon>ucViewRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucViewAgencies.resx">
+      <DependentUpon>ucViewAgencies.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>

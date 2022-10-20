@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL;
+using BLL;
 
 namespace Project_2
 {
@@ -15,6 +17,25 @@ namespace Project_2
         public ucUser()
         {
             InitializeComponent();
+        }
+        BusinessLogicLayer bll = new BusinessLogicLayer();
+        private void btnViewAdmin_Click(object sender, EventArgs e)
+        {
+            Admin ad = new Admin();
+
+            dgvUserReport.DataSource = bll.GetAdmin();
+        }
+
+        private void btnViewAgent_Click(object sender, EventArgs e)
+        {
+            Agent a = new Agent();
+            dgvUserReport.DataSource = bll.GetAgent();
+        }
+
+        private void btnViewTenant_Click(object sender, EventArgs e)
+        {
+            Tenant t = new Tenant();
+            dgvUserReport.DataSource = bll.GetTenant();
         }
     }
 }
