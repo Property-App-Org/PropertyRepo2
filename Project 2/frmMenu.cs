@@ -185,7 +185,7 @@ namespace Project_2
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            frmSearch search = new frmSearch();
+            frmSeach search = new frmSeach();
             search.Show();
             this.Hide();
         }

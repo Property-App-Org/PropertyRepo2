@@ -45,5 +45,19 @@ namespace Project_2
             dgvUserReport.DataSource=bll.GetAdminByName(ad);
 
         }
+
+        private void btnSearchAgent_Click(object sender, EventArgs e)
+        {
+            Agent ag = new Agent();
+            ag.Name=txtAgent.Text;
+            dgvUserReport.DataSource=bll.GetAgentByName(ag);
+        }
+
+        private void btnSearchTenant_Click(object sender, EventArgs e)
+        {
+            Tenant t = new Tenant();
+            t.Name=txtTenant.Text;
+            dgvUserReport.DataSource=bll.GetTenantByName(t);
+        }
     }
 }

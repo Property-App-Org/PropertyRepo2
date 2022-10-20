@@ -77,7 +77,7 @@ namespace DAL
         {
             dbConn.Open();
 
-            dbComm=new SqlCommand("sp_GetAdminByAdmin", dbConn);
+            dbComm=new SqlCommand("sp_GetAdminByName", dbConn);
 
             dbComm.CommandType=CommandType.StoredProcedure;
             dbComm.Parameters.AddWithValue("@Name", ad.Name);

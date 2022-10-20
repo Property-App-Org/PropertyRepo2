@@ -116,6 +116,7 @@ namespace Project_2
             this.btnSearchTenant.TabIndex = 8;
             this.btnSearchTenant.Text = "Search";
             this.btnSearchTenant.UseVisualStyleBackColor = true;
+            this.btnSearchTenant.Click += new System.EventHandler(this.btnSearchTenant_Click);
             // 
             // btnSearchAgent
             // 
@@ -125,6 +126,7 @@ namespace Project_2
             this.btnSearchAgent.TabIndex = 7;
             this.btnSearchAgent.Text = "Search";
             this.btnSearchAgent.UseVisualStyleBackColor = true;
+            this.btnSearchAgent.Click += new System.EventHandler(this.btnSearchAgent_Click);
             // 
             // btnSearchAdmin
             // 
@@ -184,12 +186,12 @@ namespace Project_2
             this.label1.TabIndex = 0;
             this.label1.Text = "Admin:";
             // 
-            // ucUser
+            // ucViewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
-            this.Name = "ucUser";
+            this.Name = "ucViewUser";
             this.Size = new System.Drawing.Size(793, 404);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

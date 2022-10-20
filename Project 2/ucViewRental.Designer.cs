@@ -35,11 +35,9 @@ namespace Project_2
             this.btnViewEndedRentals = new System.Windows.Forms.Button();
             this.btnViewTenant = new System.Windows.Forms.Button();
             this.txtPriceTo = new System.Windows.Forms.TextBox();
-            this.txtPriceFrom = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnViewRentedProperties = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -50,13 +48,11 @@ namespace Project_2
             // 
             this.groupBox1.Controls.Add(this.btnViewRentedProperties);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.dgvRentalReport);
             this.groupBox1.Controls.Add(this.btnSearchPrice);
             this.groupBox1.Controls.Add(this.btnViewEndedRentals);
             this.groupBox1.Controls.Add(this.btnViewTenant);
             this.groupBox1.Controls.Add(this.txtPriceTo);
-            this.groupBox1.Controls.Add(this.txtPriceFrom);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -102,29 +98,23 @@ namespace Project_2
             this.btnViewTenant.TabIndex = 6;
             this.btnViewTenant.Text = "View";
             this.btnViewTenant.UseVisualStyleBackColor = true;
+            this.btnViewTenant.Click += new System.EventHandler(this.btnViewTenant_Click);
             // 
             // txtPriceTo
             // 
-            this.txtPriceTo.Location = new System.Drawing.Point(314, 126);
+            this.txtPriceTo.Location = new System.Drawing.Point(195, 126);
             this.txtPriceTo.Name = "txtPriceTo";
-            this.txtPriceTo.Size = new System.Drawing.Size(76, 26);
+            this.txtPriceTo.Size = new System.Drawing.Size(213, 26);
             this.txtPriceTo.TabIndex = 5;
-            // 
-            // txtPriceFrom
-            // 
-            this.txtPriceFrom.Location = new System.Drawing.Point(122, 126);
-            this.txtPriceFrom.Name = "txtPriceFrom";
-            this.txtPriceFrom.Size = new System.Drawing.Size(76, 26);
-            this.txtPriceFrom.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(29, 129);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 20);
+            this.label3.Size = new System.Drawing.Size(93, 20);
             this.label3.TabIndex = 2;
-            this.label3.Text = "From:";
+            this.label3.Text = "Select Price";
             // 
             // label2
             // 
@@ -143,15 +133,6 @@ namespace Project_2
             this.label1.Size = new System.Drawing.Size(122, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tenant Rentals:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(241, 132);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 20);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "To:";
             // 
             // btnViewRentedProperties
             // 
@@ -188,13 +169,11 @@ namespace Project_2
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvRentalReport;
         private System.Windows.Forms.Button btnSearchPrice;
         private System.Windows.Forms.Button btnViewEndedRentals;
         private System.Windows.Forms.Button btnViewTenant;
         private System.Windows.Forms.TextBox txtPriceTo;
-        private System.Windows.Forms.TextBox txtPriceFrom;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

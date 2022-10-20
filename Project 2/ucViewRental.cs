@@ -16,5 +16,10 @@ namespace Project_2
         {
             InitializeComponent();
         }
+
+        private void btnViewTenant_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
