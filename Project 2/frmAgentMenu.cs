@@ -19,7 +19,7 @@ namespace Project_2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmSeach sch = new frmSeach();
+            frmSearch sch = new frmSearch();
             sch.Show();
             this.Hide();
         }

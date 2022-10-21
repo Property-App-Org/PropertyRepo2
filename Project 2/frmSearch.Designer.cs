@@ -1,7 +1,7 @@
 ﻿
 namespace Project_2
 {
-    partial class frmSeach
+    partial class frmSearch
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,7 @@ namespace Project_2
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogIn = new System.Windows.Forms.Button();
             this.btnAgency = new System.Windows.Forms.Button();
             this.btnRental = new System.Windows.Forms.Button();
             this.btnLocation = new System.Windows.Forms.Button();
@@ -42,14 +43,13 @@ namespace Project_2
             this.ucViewRental1 = new Project_2.ucViewRental();
             this.ucViewLocation1 = new Project_2.ucViewLocation();
             this.ucViewAgencies1 = new Project_2.ucViewAgencies();
-            this.btnLogIn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnLogIn);
             this.panel1.Controls.Add(this.btnAgency);
@@ -64,58 +64,81 @@ namespace Project_2
             this.panel1.Size = new System.Drawing.Size(200, 643);
             this.panel1.TabIndex = 0;
             // 
+            // btnLogIn
+            // 
+            this.btnLogIn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnLogIn.ForeColor = System.Drawing.Color.Yellow;
+            this.btnLogIn.Location = new System.Drawing.Point(36, 530);
+            this.btnLogIn.Name = "btnLogIn";
+            this.btnLogIn.Size = new System.Drawing.Size(125, 41);
+            this.btnLogIn.TabIndex = 5;
+            this.btnLogIn.Text = "Log In.";
+            this.btnLogIn.UseVisualStyleBackColor = false;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
+            // 
             // btnAgency
             // 
+            this.btnAgency.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnAgency.ForeColor = System.Drawing.Color.Yellow;
             this.btnAgency.Location = new System.Drawing.Point(36, 383);
             this.btnAgency.Name = "btnAgency";
             this.btnAgency.Size = new System.Drawing.Size(125, 41);
             this.btnAgency.TabIndex = 4;
             this.btnAgency.Text = "View Agency";
-            this.btnAgency.UseVisualStyleBackColor = true;
+            this.btnAgency.UseVisualStyleBackColor = false;
             this.btnAgency.Click += new System.EventHandler(this.btnAgency_Click);
             // 
             // btnRental
             // 
+            this.btnRental.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnRental.ForeColor = System.Drawing.Color.Yellow;
             this.btnRental.Location = new System.Drawing.Point(36, 320);
             this.btnRental.Name = "btnRental";
             this.btnRental.Size = new System.Drawing.Size(125, 41);
             this.btnRental.TabIndex = 3;
             this.btnRental.Text = "View Rental";
-            this.btnRental.UseVisualStyleBackColor = true;
+            this.btnRental.UseVisualStyleBackColor = false;
             this.btnRental.Click += new System.EventHandler(this.btnRental_Click);
             // 
             // btnLocation
             // 
+            this.btnLocation.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnLocation.ForeColor = System.Drawing.Color.Yellow;
             this.btnLocation.Location = new System.Drawing.Point(36, 251);
             this.btnLocation.Name = "btnLocation";
             this.btnLocation.Size = new System.Drawing.Size(125, 41);
             this.btnLocation.TabIndex = 2;
             this.btnLocation.Text = "View Location";
-            this.btnLocation.UseVisualStyleBackColor = true;
+            this.btnLocation.UseVisualStyleBackColor = false;
             this.btnLocation.Click += new System.EventHandler(this.btnLocation_Click);
             // 
             // btnProperty
             // 
+            this.btnProperty.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnProperty.ForeColor = System.Drawing.Color.Yellow;
             this.btnProperty.Location = new System.Drawing.Point(36, 177);
             this.btnProperty.Name = "btnProperty";
             this.btnProperty.Size = new System.Drawing.Size(125, 41);
             this.btnProperty.TabIndex = 1;
             this.btnProperty.Text = "View property";
-            this.btnProperty.UseVisualStyleBackColor = true;
+            this.btnProperty.UseVisualStyleBackColor = false;
             this.btnProperty.Click += new System.EventHandler(this.btnProperty_Click);
             // 
             // btnUser
             // 
+            this.btnUser.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnUser.ForeColor = System.Drawing.Color.Yellow;
             this.btnUser.Location = new System.Drawing.Point(36, 102);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(125, 41);
             this.btnUser.TabIndex = 0;
             this.btnUser.Text = "View User";
-            this.btnUser.UseVisualStyleBackColor = true;
+            this.btnUser.UseVisualStyleBackColor = false;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -128,6 +151,8 @@ namespace Project_2
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
             this.label1.Location = new System.Drawing.Point(259, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(251, 20);
@@ -169,17 +194,7 @@ namespace Project_2
             this.ucViewAgencies1.Size = new System.Drawing.Size(729, 522);
             this.ucViewAgencies1.TabIndex = 2;
             // 
-            // btnLogIn
-            // 
-            this.btnLogIn.Location = new System.Drawing.Point(36, 530);
-            this.btnLogIn.Name = "btnLogIn";
-            this.btnLogIn.Size = new System.Drawing.Size(125, 41);
-            this.btnLogIn.TabIndex = 5;
-            this.btnLogIn.Text = "Log In.";
-            this.btnLogIn.UseVisualStyleBackColor = true;
-            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
-            // 
-            // frmSeach
+            // frmSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -192,7 +207,7 @@ namespace Project_2
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmSeach";
+            this.Name = "frmSearch";
             this.Text = "frmSeach";
             this.Load += new System.EventHandler(this.frmSeach_Load);
             this.panel1.ResumeLayout(false);

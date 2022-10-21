@@ -124,11 +124,11 @@
     <Compile Include="frmRole.Designer.cs">
       <DependentUpon>frmRole.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSeach.cs">
+    <Compile Include="frmSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSeach.Designer.cs">
-      <DependentUpon>frmSeach.cs</DependentUpon>
+    <Compile Include="frmSearch.Designer.cs">
+      <DependentUpon>frmSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSurbub.cs">
       <SubType>Form</SubType>
@@ -225,8 +225,8 @@
     <EmbeddedResource Include="frmRole.resx">
       <DependentUpon>frmRole.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSeach.resx">
-      <DependentUpon>frmSeach.cs</DependentUpon>
+    <EmbeddedResource Include="frmSearch.resx">
+      <DependentUpon>frmSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSurbub.resx">
       <DependentUpon>frmSurbub.cs</DependentUpon>

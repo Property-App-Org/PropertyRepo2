@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Project_2
 {
-    public partial class frmSeach : Form
+    public partial class frmSearch : Form
     {
-        public frmSeach()
+        public frmSearch()
         {
             InitializeComponent();
         }

@@ -71,6 +71,7 @@ namespace Project_2
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -96,6 +97,7 @@ namespace Project_2
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.lblWelcomeText);
             this.panel1.Controls.Add(this.panel13);
@@ -190,7 +192,7 @@ namespace Project_2
             this.panel12.Controls.Add(this.btnAdmin);
             this.panel12.Controls.Add(this.label11);
             this.panel12.Controls.Add(this.pictureBox11);
-            this.panel12.Location = new System.Drawing.Point(7, 27);
+            this.panel12.Location = new System.Drawing.Point(-1, 179);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(186, 213);
             this.panel12.TabIndex = 31;
@@ -430,7 +432,7 @@ namespace Project_2
             this.panel3.Controls.Add(this.btnProperty);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(379, 27);
+            this.panel3.Location = new System.Drawing.Point(351, 179);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(145, 213);
             this.panel3.TabIndex = 23;
@@ -470,7 +472,7 @@ namespace Project_2
             this.panel2.Controls.Add(this.btnPropertyType);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox12);
-            this.panel2.Location = new System.Drawing.Point(217, 27);
+            this.panel2.Location = new System.Drawing.Point(191, 179);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(145, 213);
             this.panel2.TabIndex = 21;
@@ -513,6 +515,15 @@ namespace Project_2
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(49, 81);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(181, 20);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "JGHFHGNYGBHGBYN";
             // 
             // frmAdminMenu
             // 
@@ -600,5 +611,6 @@ namespace Project_2
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -56,7 +56,7 @@ namespace Project_2
                 validate = true;
             }
 
-            if (string.IsNullOrEmpty(txtEmail.Text)| (!Regex.IsMatch(txtEmail.Text, @"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$")))
+            if (string.IsNullOrEmpty(txtEmail.Text)||(!Regex.IsMatch(txtEmail.Text, @"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$")))
             {
                 errUser.SetError(txtEmail, "Please enter the correct Email format.");
                 validate = false;
