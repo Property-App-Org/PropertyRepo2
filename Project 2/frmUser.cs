@@ -93,7 +93,7 @@ namespace Project_2
 
         private void btnBackTo_Click(object sender, EventArgs e)
         {
-            frmLogIn l = new frmLogIn();
+            frmAdminMenu l = new frmAdminMenu();
             l.Show();
             this.Hide();
         }

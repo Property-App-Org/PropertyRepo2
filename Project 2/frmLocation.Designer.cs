@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtLocationID = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.dgvLocation = new System.Windows.Forms.DataGridView();
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnList = new System.Windows.Forms.Button();
@@ -42,8 +44,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errLocation = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtLocationID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errLocation)).BeginInit();
@@ -72,6 +72,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Location Details";
             // 
+            // txtLocationID
+            // 
+            this.txtLocationID.Location = new System.Drawing.Point(210, 31);
+            this.txtLocationID.Name = "txtLocationID";
+            this.txtLocationID.Size = new System.Drawing.Size(215, 26);
+            this.txtLocationID.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 20);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "LocationID:";
+            // 
             // dgvLocation
             // 
             this.dgvLocation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -88,7 +104,7 @@
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(137, 41);
             this.btnMenu.TabIndex = 9;
-            this.btnMenu.Text = "MENU";
+            this.btnMenu.Text = "Back";
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
@@ -176,22 +192,6 @@
             // errLocation
             // 
             this.errLocation.ContainerControl = this;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 20);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "LocationID:";
-            // 
-            // txtLocationID
-            // 
-            this.txtLocationID.Location = new System.Drawing.Point(210, 31);
-            this.txtLocationID.Name = "txtLocationID";
-            this.txtLocationID.Size = new System.Drawing.Size(215, 26);
-            this.txtLocationID.TabIndex = 13;
             // 
             // frmLocation
             // 

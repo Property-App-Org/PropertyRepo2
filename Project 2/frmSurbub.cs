@@ -99,7 +99,7 @@ namespace Project_2
 
         private void btnBackTo_Click(object sender, EventArgs e)
         {
-            frmMenu m = new frmMenu();
+            frmAdminMenu m = new frmAdminMenu();
             m.Show();
             this.Hide();
 

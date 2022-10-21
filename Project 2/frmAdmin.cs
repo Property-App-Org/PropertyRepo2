@@ -30,8 +30,8 @@ namespace Project_2
 
         private void btnBackTo_Click(object sender, EventArgs e)
         {
-            frmLogIn lg = new frmLogIn();
-            lg.Show();
+            frmAdminMenu adM = new frmAdminMenu();
+            adM.Show();
             this.Hide();
             MessageBox.Show("Welcome Back!");
         }

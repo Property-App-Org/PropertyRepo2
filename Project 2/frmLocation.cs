@@ -123,7 +123,7 @@ namespace Project_2
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            frmMenu men = new frmMenu();
+            frmAdminMenu men = new frmAdminMenu();
             men.Show();
             this.Hide();
         }

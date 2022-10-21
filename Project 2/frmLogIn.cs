@@ -30,8 +30,8 @@ namespace Project_2
                 string role = dt.Rows[0]["RoleDescription"].ToString();
                 if(role=="Admin")
                 {
-                    frmAdmin ad = new frmAdmin();
-                    ad.Show();
+                    frmAdminMenu adM = new frmAdminMenu();
+                    adM.Show();
                     this.Hide();
                     
                     
@@ -45,8 +45,8 @@ namespace Project_2
                 }
                 else if (role=="Agent")
                 {
-                    frmAgent ag = new frmAgent();
-                    ag.Show();
+                    frmAgentMenu agM = new frmAgentMenu();
+                    agM.Show();
                     this.Hide();
                 }
 
@@ -63,8 +63,8 @@ namespace Project_2
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            frmMenu m = new frmMenu();
-            m.Show();
+            frmUser u = new frmUser();
+            u.Show();
             this.Hide();
         }
 

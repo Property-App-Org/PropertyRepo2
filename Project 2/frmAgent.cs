@@ -22,10 +22,10 @@ namespace Project_2
         BusinessLogicLayer bll = new BusinessLogicLayer();
         private void btnBackTo_Click(object sender, EventArgs e)
         {
-            frmLogIn lg = new frmLogIn();
-            lg.Show();
+            frmAgentMenu agM = new frmAgentMenu();
+            agM.Show();
             this.Hide();
-            MessageBox.Show("welcome Back!");
+            
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

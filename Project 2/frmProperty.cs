@@ -127,6 +127,8 @@ namespace Project_2
 
         private void frmProperty_Load(object sender, EventArgs e)
         {
+           
+
             txtPropertyID.Enabled=false;
             cmbPropertyType.DataSource = bll.GetPropertyType();
             cmbPropertyType.DisplayMember = "PropertyTypeDescription";
@@ -168,8 +170,8 @@ namespace Project_2
 
         private void btnBackTo_Click(object sender, EventArgs e)
         {
-            frmMenu menu = new frmMenu();
-            menu.Show();
+            frmAgentMenu agmenu = new frmAgentMenu();
+            agmenu.Show();
             this.Hide();
         }
 
@@ -183,6 +185,13 @@ namespace Project_2
                 ImageLoc = dialog.FileName.ToString();
                 pbxImage.ImageLocation = ImageLoc;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmAdminMenu adM = new frmAdminMenu();
+            adM.Show();
+            this.Hide();
         }
     }
 }

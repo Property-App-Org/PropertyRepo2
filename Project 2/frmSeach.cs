@@ -75,5 +75,12 @@ namespace Project_2
             ucViewRental1.Hide();
             ucViewAgencies1.Hide();
         }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            frmLogIn lg = new frmLogIn();
+            lg.Show();
+            this.Hide();
+        }
     }
 }

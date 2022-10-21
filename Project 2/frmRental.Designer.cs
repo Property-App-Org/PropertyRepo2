@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtRentalID = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.dgvRental = new System.Windows.Forms.DataGridView();
             this.btnBackTo = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -44,8 +46,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errRental = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtRentalID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRental)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errRental)).BeginInit();
@@ -76,6 +76,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Rental Details";
             // 
+            // txtRentalID
+            // 
+            this.txtRentalID.Location = new System.Drawing.Point(202, 31);
+            this.txtRentalID.Name = "txtRentalID";
+            this.txtRentalID.Size = new System.Drawing.Size(244, 26);
+            this.txtRentalID.TabIndex = 15;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 37);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 20);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "RentalID:";
+            // 
             // dgvRental
             // 
             this.dgvRental.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -91,7 +107,7 @@
             this.btnBackTo.Name = "btnBackTo";
             this.btnBackTo.Size = new System.Drawing.Size(125, 36);
             this.btnBackTo.TabIndex = 11;
-            this.btnBackTo.Text = "MENU";
+            this.btnBackTo.Text = "Back";
             this.btnBackTo.UseVisualStyleBackColor = true;
             this.btnBackTo.Click += new System.EventHandler(this.btnBackTo_Click);
             // 
@@ -195,22 +211,6 @@
             // errRental
             // 
             this.errRental.ContainerControl = this;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 37);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 20);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "RentalID:";
-            // 
-            // txtRentalID
-            // 
-            this.txtRentalID.Location = new System.Drawing.Point(202, 31);
-            this.txtRentalID.Name = "txtRentalID";
-            this.txtRentalID.Size = new System.Drawing.Size(244, 26);
-            this.txtRentalID.TabIndex = 15;
             // 
             // frmRental
             // 

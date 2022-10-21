@@ -113,7 +113,7 @@ namespace Project_2
 
         private void btnBackTo_Click(object sender, EventArgs e)
         {
-            frmMenu menu = new frmMenu();
+            frmAdminMenu menu = new frmAdminMenu();
             menu.Show();
             this.Hide();
         }

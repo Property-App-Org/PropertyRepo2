@@ -127,8 +127,8 @@ namespace Project_2
 
         private void btnBackTo_Click(object sender, EventArgs e)
         {
-            frmMenu m = new frmMenu();
-            m.Show();
+            frmAgentMenu agm = new frmAgentMenu();
+            agm.Show();
             this.Hide();
         }
     }

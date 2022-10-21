@@ -52,6 +52,12 @@
     <Compile Include="frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminMenu.Designer.cs">
+      <DependentUpon>frmAdminMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAgency.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,12 @@
     <Compile Include="frmAgent.Designer.cs">
       <DependentUpon>frmAgent.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAgentMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgentMenu.Designer.cs">
+      <DependentUpon>frmAgentMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,12 +87,6 @@
     </Compile>
     <Compile Include="frmLogIn.Designer.cs">
       <DependentUpon>frmLogIn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMenu.Designer.cs">
-      <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProperty.cs">
       <SubType>Form</SubType>
@@ -183,20 +189,23 @@
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminMenu.resx">
+      <DependentUpon>frmAdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAgency.resx">
       <DependentUpon>frmAgency.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAgent.resx">
       <DependentUpon>frmAgent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAgentMenu.resx">
+      <DependentUpon>frmAgentMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCity.resx">
       <DependentUpon>frmCity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMenu.resx">
-      <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProperty.resx">
       <DependentUpon>frmProperty.cs</DependentUpon>

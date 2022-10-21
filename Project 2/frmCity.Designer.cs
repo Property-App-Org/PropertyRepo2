@@ -76,7 +76,7 @@
             this.btnBackTo.Name = "btnBackTo";
             this.btnBackTo.Size = new System.Drawing.Size(95, 29);
             this.btnBackTo.TabIndex = 8;
-            this.btnBackTo.Text = "MENU";
+            this.btnBackTo.Text = "Back";
             this.btnBackTo.UseVisualStyleBackColor = true;
             this.btnBackTo.Click += new System.EventHandler(this.btnBackTo_Click);
             // 

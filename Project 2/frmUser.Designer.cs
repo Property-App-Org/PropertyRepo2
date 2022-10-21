@@ -53,6 +53,7 @@ namespace Project_2
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox1.Controls.Add(this.btnBackTo);
             this.groupBox1.Controls.Add(this.btnList);
             this.groupBox1.Controls.Add(this.btnAdd);
@@ -73,7 +74,7 @@ namespace Project_2
             this.groupBox1.Size = new System.Drawing.Size(680, 429);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "PLEASE REGISTER YOUR DETAILS";
+            this.groupBox1.Text = "PLEASE REGISTER THE USER DETAILS";
             // 
             // btnBackTo
             // 
@@ -81,7 +82,7 @@ namespace Project_2
             this.btnBackTo.Name = "btnBackTo";
             this.btnBackTo.Size = new System.Drawing.Size(109, 39);
             this.btnBackTo.TabIndex = 21;
-            this.btnBackTo.Text = "Log in";
+            this.btnBackTo.Text = "Back";
             this.btnBackTo.UseVisualStyleBackColor = true;
             this.btnBackTo.Click += new System.EventHandler(this.btnBackTo_Click);
             // 
@@ -97,11 +98,11 @@ namespace Project_2
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(546, 222);
+            this.btnAdd.Location = new System.Drawing.Point(504, 218);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(109, 39);
+            this.btnAdd.Size = new System.Drawing.Size(151, 39);
             this.btnAdd.TabIndex = 19;
-            this.btnAdd.Text = "Save Details";
+            this.btnAdd.Text = "Save User Details";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 

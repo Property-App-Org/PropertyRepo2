@@ -30,12 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBackToAdmin = new System.Windows.Forms.Button();
             this.txtPropertyID = new System.Windows.Forms.TextBox();
             this.lblProperty = new System.Windows.Forms.Label();
             this.pbxImage = new System.Windows.Forms.PictureBox();
             this.btnBrowseImage = new System.Windows.Forms.Button();
             this.dgvProperty = new System.Windows.Forms.DataGridView();
-            this.btnBackTo = new System.Windows.Forms.Button();
+            this.btnBackToAgent = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnList = new System.Windows.Forms.Button();
@@ -60,12 +61,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnBackToAdmin);
             this.groupBox1.Controls.Add(this.txtPropertyID);
             this.groupBox1.Controls.Add(this.lblProperty);
             this.groupBox1.Controls.Add(this.pbxImage);
             this.groupBox1.Controls.Add(this.btnBrowseImage);
             this.groupBox1.Controls.Add(this.dgvProperty);
-            this.groupBox1.Controls.Add(this.btnBackTo);
+            this.groupBox1.Controls.Add(this.btnBackToAgent);
             this.groupBox1.Controls.Add(this.btnDelete);
             this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.btnList);
@@ -88,6 +90,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Property Details";
+            // 
+            // btnBackToAdmin
+            // 
+            this.btnBackToAdmin.Location = new System.Drawing.Point(393, 258);
+            this.btnBackToAdmin.Name = "btnBackToAdmin";
+            this.btnBackToAdmin.Size = new System.Drawing.Size(150, 47);
+            this.btnBackToAdmin.TabIndex = 24;
+            this.btnBackToAdmin.Text = "Back to Admin";
+            this.btnBackToAdmin.UseVisualStyleBackColor = true;
+            this.btnBackToAdmin.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtPropertyID
             // 
@@ -134,15 +146,15 @@
             this.dgvProperty.TabIndex = 19;
             this.dgvProperty.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProperty_CellClick);
             // 
-            // btnBackTo
+            // btnBackToAgent
             // 
-            this.btnBackTo.Location = new System.Drawing.Point(237, 259);
-            this.btnBackTo.Name = "btnBackTo";
-            this.btnBackTo.Size = new System.Drawing.Size(150, 47);
-            this.btnBackTo.TabIndex = 18;
-            this.btnBackTo.Text = "MENU";
-            this.btnBackTo.UseVisualStyleBackColor = true;
-            this.btnBackTo.Click += new System.EventHandler(this.btnBackTo_Click);
+            this.btnBackToAgent.Location = new System.Drawing.Point(237, 259);
+            this.btnBackToAgent.Name = "btnBackToAgent";
+            this.btnBackToAgent.Size = new System.Drawing.Size(150, 47);
+            this.btnBackToAgent.TabIndex = 18;
+            this.btnBackToAgent.Text = "Back to Agent";
+            this.btnBackToAgent.UseVisualStyleBackColor = true;
+            this.btnBackToAgent.Click += new System.EventHandler(this.btnBackTo_Click);
             // 
             // btnDelete
             // 
@@ -304,7 +316,7 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvProperty;
-        private System.Windows.Forms.Button btnBackTo;
+        private System.Windows.Forms.Button btnBackToAgent;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnList;
@@ -325,5 +337,6 @@
         private System.Windows.Forms.PictureBox pbxImage;
         private System.Windows.Forms.TextBox txtPropertyID;
         private System.Windows.Forms.Label lblProperty;
+        private System.Windows.Forms.Button btnBackToAdmin;
     }
 }
