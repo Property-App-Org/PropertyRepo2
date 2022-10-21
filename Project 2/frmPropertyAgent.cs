@@ -39,7 +39,7 @@ namespace Project_2
         private void btnAdd_Click(object sender, EventArgs e)
         {
             PropertyAgent pa = new PropertyAgent();
-            bool validate = true;
+            bool validate = false;
 
             pa.PropertyID = int.Parse(cmbProperty.SelectedValue.ToString());
             pa.AgentID = int.Parse(cmbAgent.SelectedValue.ToString());
@@ -48,7 +48,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbProperty.Text))
             {
                 errPropertyAgent.SetError(cmbProperty, "select propety");
-                validate = false;
+                
             }
             else
             {
@@ -57,7 +57,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbAgent.Text))
             {
                 errPropertyAgent.SetError(cmbAgent, "select agent");
-                validate = false;
+                
             }
             else
             {
@@ -66,7 +66,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(dtaDate.Text) )
             {
                 errPropertyAgent.SetError(dtaDate, "select correct date");
-                validate = false;
+                
             }
             else
             {

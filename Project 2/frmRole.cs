@@ -23,14 +23,14 @@ namespace Project_2
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Role r = new Role();
-            bool validate = true;
+            bool validate = false;
 
             r.RoleDesc = txtRoleDesc.Text;
 
             if (string.IsNullOrEmpty(txtRoleDesc.Text))
             {
                 errRole.SetError(txtRoleDesc, "Please enter Role Description.");
-                validate = false;
+                
             }
             else
             {

@@ -23,13 +23,13 @@ namespace Project_2
         private void btnAdd_Click(object sender, EventArgs e)
         {
             PropertyType pty = new PropertyType();
-            bool validate = true;
+            bool validate = false;
 
             pty.PropertyTypeDescription = txtPropertyTypeDesc.Text;
             if (string.IsNullOrEmpty(txtPropertyTypeDesc.Text))
             {
                 errPropertyType.SetError(txtPropertyTypeDesc, "Please enter property type description");
-                validate = false;
+                
             }
             else
             {

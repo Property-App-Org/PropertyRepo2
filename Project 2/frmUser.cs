@@ -28,7 +28,7 @@ namespace Project_2
         private void btnAdd_Click(object sender, EventArgs e)
         {
              User u = new User();
-            bool validate = true;
+            bool validate = false;
 
             u.Name = txtName.Text;
             u.Surname=txtSurname.Text;
@@ -56,7 +56,7 @@ namespace Project_2
                 validate = true;
             }
 
-            if (string.IsNullOrEmpty(txtEmail.Text))
+            if (string.IsNullOrEmpty(txtEmail.Text)| (!Regex.IsMatch(txtEmail.Text, @"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$")))
             {
                 errUser.SetError(txtEmail, "Please enter the correct Email format.");
                 validate = false;

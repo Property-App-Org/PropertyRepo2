@@ -24,7 +24,7 @@ namespace Project_2
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Agency ag = new Agency();
-            bool validate;
+            bool validate = false;
 
             ag.AgencyName=txtAgencyName.Text;
             ag.SurbubID=int.Parse(cmbSurbub.SelectedValue.ToString());
@@ -33,7 +33,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(txtAgencyName.Text))
             {
                 errAgency.SetError(txtAgencyName, "Please Enter Agency Name");
-                validate = false;
+                
             }
             else
             {
@@ -42,7 +42,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbSurbub.Text))
             {
                 errAgency.SetError(cmbSurbub, "Please Select surbub.");
-                validate = false;
+               
             }
             else
             {

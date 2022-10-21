@@ -23,7 +23,7 @@ namespace Project_2
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Surbub sb = new Surbub();
-            bool validate = true;
+            bool validate = false;
 
             sb.SurbubDescription = txtSurbubDesc.Text;
             sb.PostalCode = txtPostalCode.Text;
@@ -32,7 +32,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbCity.Text))
             {
                 errSurbub.SetError(cmbCity, "Please select City.");
-                validate = false;
+               
             }
 
             else
@@ -42,7 +42,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(txtSurbubDesc.Text))
             {
                 errSurbub.SetError(txtSurbubDesc, "Please Enter Surbub.");
-                validate = false;
+                
             }
             else
             {
@@ -51,7 +51,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(txtPostalCode.Text))
             {
                 errSurbub.SetError(txtPostalCode, "Please Enter Postal Code");
-                validate = false;
+                
             }
             else
             {

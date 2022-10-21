@@ -31,7 +31,7 @@ namespace Project_2
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Tenant t = new Tenant();
-            bool validate = true;
+            bool validate = false;
 
             t.Name=txtName.Text;
             t.Surname=txtSurname.Text;
@@ -43,7 +43,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(txtName.Text))
             {
                 errTenant.SetError(txtName, "Please Enter Name.");
-                validate = false;
+                
             }
 
             else
@@ -53,13 +53,13 @@ namespace Project_2
             if (string.IsNullOrEmpty(txtSurname.Text))
             {
                 errTenant.SetError(txtSurname, "Please Enter Surname.");
-                validate = false;
+                
             }
             else
             {
                 validate = true;
             }
-            if (string.IsNullOrEmpty(txtEmail.Text)|| (!Regex.IsMatch(txtEmail.Text, @"/^w+[+.w-]*@([w-]+.)*w+[w-]*.([a-z]{2,4}|d+)$/i")))
+            if (string.IsNullOrEmpty(txtEmail.Text)|| (!Regex.IsMatch(txtEmail.Text, @"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$")))
             {
                 errTenant.SetError(txtEmail, "Please Enter Correct Email format.");
                 validate = false;
@@ -80,7 +80,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(txtPhone.Text))
             {
                 errTenant.SetError(txtPhone, "Please Enter Cell Phone number.");
-                validate = false;
+                
             }
             else
             {
@@ -89,7 +89,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbStatus.Text))
             {
                 errTenant.SetError(cmbStatus, "Please Choose Status.");
-                validate = false;
+                
             }
             else
             {

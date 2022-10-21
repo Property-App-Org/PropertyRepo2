@@ -23,7 +23,7 @@ namespace Project_2
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Rental r = new Rental();
-            bool validate = true;
+            bool validate = false;
 
             r.PropertyAgentID = int.Parse( cmbPropertyAgent.SelectedValue.ToString());
             r.TenantID = int.Parse( cmbTenant.SelectedValue.ToString());
@@ -33,7 +33,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbPropertyAgent.Text))
             {
                 errRental.SetError(cmbPropertyAgent, "Please select Property Agent");
-                validate = false;
+                
             }
 
             else
@@ -43,7 +43,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbTenant.Text))
             {
                 errRental.SetError(cmbTenant, "Please select Tenant");
-                validate = false;
+                
             }
             else
             {
@@ -52,7 +52,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(dtaStartDate.Text))
             {
                 errRental.SetError(dtaStartDate , "Please select Start Date");
-                validate = false;
+                
             }
             else
             {
@@ -61,7 +61,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(dtaEndDate.Text))
             {
                 errRental.SetError(dtaEndDate, "Please select End Date");
-                validate = false;
+                
             }
             else
             {

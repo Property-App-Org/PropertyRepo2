@@ -23,7 +23,7 @@ namespace Project_2
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Province pr = new Province();
-            bool validate = true;
+            bool validate = false;
 
             pr.Description = txtDesc.Text;
             
@@ -31,7 +31,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(txtDesc.Text))
             {
                 errorProvince.SetError(txtDesc, "Please enter description");
-                validate = false;
+                
             }
             else
             {

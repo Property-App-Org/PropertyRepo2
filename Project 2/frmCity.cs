@@ -23,7 +23,7 @@ namespace Project_2
         private void btnAdd_Click(object sender, EventArgs e)
         {
             City ct = new City();
-            bool validate = true;
+            bool validate = false;
 
             ct.CityDescription = txtDesc.Text;
             ct.ProvinceID = int.Parse(cmbProvince.SelectedValue.ToString());
@@ -31,7 +31,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(txtDesc.Text))
             {
                 errCity.SetError(txtDesc, "Please enter City");
-                validate = false;
+                
             }
             else
             {
@@ -40,7 +40,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbProvince.Text))
             {
                 errCity.SetError(cmbProvince, "Please select Province");
-                validate = false;
+                
             }
             else
             {

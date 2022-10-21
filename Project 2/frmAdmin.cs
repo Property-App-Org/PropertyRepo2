@@ -39,7 +39,7 @@ namespace Project_2
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Admin ad = new Admin();
-            bool validate;
+            bool validate =false;
 
             
             ad.Name=txtName.Text;
@@ -57,7 +57,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(txtName.Text))
             {
                 errAdmin.SetError(txtName, "Please enter Name");
-                validate = false;
+                
             }
             else
             {
@@ -66,13 +66,13 @@ namespace Project_2
             if (string.IsNullOrEmpty(txtSurname.Text) )
             {
                 errAdmin.SetError(txtSurname, "Please enter Surname");
-                validate = false;
+                
             }
             else
             {
                 validate = true;
             }
-            if (string.IsNullOrEmpty(txtEmail.Text)|| (!Regex.IsMatch(txtEmail.Text, @"/^w+[+.w-]*@([w-]+.)*w+[w-]*.([a-z]{2,4}|d+)$/i")))
+            if (string.IsNullOrEmpty(txtEmail.Text)|| (!Regex.IsMatch(txtEmail.Text, @"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"))) 
             {
                 errAdmin.SetError(txtEmail, "Please enter correct Email format");
                 validate = false;
@@ -93,7 +93,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbStatus.Text))
             {
                 errAdmin.SetError(cmbStatus, "select status");
-                validate = false;
+                
             }
             else
             {
@@ -102,7 +102,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbProperty.Text))
             {
                 errAdmin.SetError(cmbProperty, "Please select property");
-                validate = false;
+               
             }
             else
             {
@@ -111,7 +111,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbPropertyType.Text))
             {
                 errAdmin.SetError(cmbPropertyType, "Please select propertyType");
-                validate = false;
+                
             }
             else
             {
@@ -120,7 +120,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbLocation.Text))
             {
                 errAdmin.SetError(cmbLocation, "Please select Location");
-                validate = false;
+                
             }
             else
             {
@@ -129,7 +129,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbAgent.Text))
             {
                 errAdmin.SetError(cmbAgent, "Please select Agent");
-                validate = false;
+                
             }
             else
             {
@@ -138,7 +138,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbAgency.Text))
             {
                 errAdmin.SetError(cmbAgency, "Please select Agency");
-                validate = false;
+                
             }
             else
             {
@@ -151,6 +151,10 @@ namespace Project_2
                 {
                     MessageBox.Show("Admin Added!");
                 }
+            }
+            else
+            {
+
             }
 
         }

@@ -43,7 +43,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(txtName.Text))
             {
                 errAgent.SetError(txtName, "Please enter  Name");
-                validate = false;
+                
             }
 
             else
@@ -53,13 +53,13 @@ namespace Project_2
             if (string.IsNullOrEmpty(txtSurname.Text))
             {
                 errAgent.SetError(txtSurname, "Please enter Surname");
-                validate = false;
+                
             }
             else
             {
                 validate = true;
             }
-            if (string.IsNullOrEmpty(txtEmail.Text)|| (!Regex.IsMatch(txtEmail.Text, @"/^w+[+.w-]*@([w-]+.)*w+[w-]*.([a-z]{2,4}|d+)$/i")))
+            if (string.IsNullOrEmpty(txtEmail.Text)|| (!Regex.IsMatch(txtEmail.Text, @"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$")))
             {
                 errAgent.SetError(txtEmail, "Please enter correct Email format");
                 validate = false;
@@ -80,7 +80,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(txtPhone.Text))
             {
                 errAgent.SetError(txtPhone, "Please eneter phone");
-                validate = false;
+                
             }
             else
             {
@@ -89,7 +89,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbStatus.Text))
             {
                 errAgent.SetError(cmbStatus, "Please select status");
-                validate = false;
+                
             }
             else
             {
@@ -98,7 +98,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbAgency.Text))
             {
                 errAgent.SetError(cmbAgency, "Please select Agency");
-                validate = false;
+                
             }
             else
             {

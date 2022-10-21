@@ -29,7 +29,7 @@ namespace Project_2
              
             Property pt = new Property();
 
-            bool validate = true;
+            bool validate = false;
             byte[] images = null;
             FileStream Stream = new FileStream(ImageLoc, FileMode.Open, FileAccess.Read);
             BinaryReader reader = new BinaryReader(Stream);
@@ -45,7 +45,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(txtpropertyDesc.Text))
             {
                 errDescription.SetError(txtpropertyDesc, "Please enter property description");
-                validate = false;
+               
             }
             else
             {
@@ -63,7 +63,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbPropertyType.Text))
             {
                 errDescription.SetError(cmbPropertyType, "Please enter property type");
-                validate = false;
+                
             }
             else
             {
@@ -72,7 +72,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbStatus.Text))
             {
                 errDescription.SetError(cmbStatus, "select status");
-                validate = false;
+                
             }
             else
             {
@@ -81,7 +81,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbSurbub.Text))
             {
                 errDescription.SetError(cmbSurbub, "Please enter surbub");
-                validate = false;
+                
             }
             else
             {

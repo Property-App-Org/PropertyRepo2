@@ -23,7 +23,7 @@ namespace Project_2
         {
 
             Location loc = new Location();
-            bool validate;
+            bool validate =false;
 
             loc.Address=txtAddress.Text;
             loc.SurbubID=int.Parse(cmbSurbub.SelectedValue.ToString());
@@ -32,7 +32,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(txtAddress.Text))
             {
                 errLocation.SetError(txtAddress, "Please enter Address");
-                validate = false;
+                
             }
             else
             {
@@ -41,7 +41,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbSurbub.Text))
             {
                 errLocation.SetError(cmbSurbub, "Please select Surbub");
-                validate = false;
+                
             }
             else
             {
@@ -50,7 +50,7 @@ namespace Project_2
             if (string.IsNullOrEmpty(cmbProvince.Text))
             {
                 errLocation.SetError(cmbProvince, "Please select Province");
-                validate = false;
+                
             }
             else
             {

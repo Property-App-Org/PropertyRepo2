@@ -30,18 +30,20 @@ namespace Project_2
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.dgvAgancyReport = new System.Windows.Forms.DataGridView();
             this.btnViewAgency = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAgancyReport)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAgancyReport)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.dgvAgancyReport);
             this.groupBox1.Controls.Add(this.btnViewAgency);
@@ -53,6 +55,24 @@ namespace Project_2
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agancies report";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(10, 25);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(701, 64);
+            this.panel1.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(204, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(257, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "PLEASE VIEW YOUR AGANCIES";
             // 
             // dgvAgancyReport
             // 
@@ -70,6 +90,7 @@ namespace Project_2
             this.btnViewAgency.TabIndex = 6;
             this.btnViewAgency.Text = "View";
             this.btnViewAgency.UseVisualStyleBackColor = true;
+            this.btnViewAgency.Click += new System.EventHandler(this.btnViewAgency_Click);
             // 
             // label1
             // 
@@ -80,23 +101,14 @@ namespace Project_2
             this.label1.TabIndex = 0;
             this.label1.Text = "Agencies with more Propertes:";
             // 
-            // label2
+            // btnSearch
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(204, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(257, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "PLEASE VIEW YOUR AGANCIES";
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(10, 25);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(701, 64);
-            this.panel1.TabIndex = 15;
+            this.btnSearch.Location = new System.Drawing.Point(487, 145);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(213, 42);
+            this.btnSearch.TabIndex = 16;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // ucViewAgencies
             // 
@@ -107,9 +119,9 @@ namespace Project_2
             this.Size = new System.Drawing.Size(729, 522);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAgancyReport)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAgancyReport)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -122,5 +134,6 @@ namespace Project_2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
