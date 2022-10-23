@@ -89,5 +89,23 @@ namespace Project_2
             u.Show();
             this.Hide();
         }
+
+        private void chkPass_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            
+            
+            if (chkPass.Checked)
+            {
+                txtPassword.UseSystemPasswordChar=true;
+            }
+            else 
+            {
+                txtPassword.UseSystemPasswordChar=false;
+                
+            }
+            
+            
+        }
     }
 }

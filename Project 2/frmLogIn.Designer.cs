@@ -37,6 +37,7 @@ namespace Project_2
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblWrong = new System.Windows.Forms.Label();
             this.errEmail = new System.Windows.Forms.ErrorProvider(this.components);
+            this.chkPass = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.errEmail)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,20 +68,22 @@ namespace Project_2
             // 
             // txtEmail
             // 
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(247, 66);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(228, 26);
+            this.txtEmail.Size = new System.Drawing.Size(241, 26);
             this.txtEmail.TabIndex = 2;
             // 
             // txtPassword
             // 
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(247, 125);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(228, 26);
+            this.txtPassword.Size = new System.Drawing.Size(241, 26);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
@@ -110,12 +113,25 @@ namespace Project_2
             // 
             this.errEmail.ContainerControl = this;
             // 
+            // chkPass
+            // 
+            this.chkPass.AutoSize = true;
+            this.chkPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPass.Location = new System.Drawing.Point(494, 125);
+            this.chkPass.Name = "chkPass";
+            this.chkPass.Size = new System.Drawing.Size(105, 24);
+            this.chkPass.TabIndex = 7;
+            this.chkPass.Text = "Show/Hide";
+            this.chkPass.UseVisualStyleBackColor = true;
+            this.chkPass.CheckedChanged += new System.EventHandler(this.chkPass_CheckedChanged);
+            // 
             // frmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(701, 285);
+            this.Controls.Add(this.chkPass);
             this.Controls.Add(this.lblWrong);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
@@ -141,5 +157,6 @@ namespace Project_2
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblWrong;
         private System.Windows.Forms.ErrorProvider errEmail;
+        private System.Windows.Forms.CheckBox chkPass;
     }
 }
