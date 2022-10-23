@@ -81,9 +81,9 @@ namespace Project_2
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(247, 125);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(241, 26);
             this.txtPassword.TabIndex = 3;
-            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
@@ -138,7 +138,8 @@ namespace Project_2
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogIn";
             this.Text = "frmLogIn";
             this.Load += new System.EventHandler(this.frmLogIn_Load);

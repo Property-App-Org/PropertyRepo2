@@ -92,20 +92,17 @@ namespace Project_2
 
         private void chkPass_CheckedChanged(object sender, EventArgs e)
         {
-            
-            
-            
-            if (chkPass.Checked)
+            if (txtPassword.PasswordChar=='*')
             {
-                txtPassword.UseSystemPasswordChar=true;
+                chkPass.Checked=true;
+                txtPassword.PasswordChar='\0';
             }
-            else 
+            else if (txtPassword.PasswordChar=='\0')
             {
-                txtPassword.UseSystemPasswordChar=false;
-                
+                chkPass.Checked=false;
+                txtPassword.PasswordChar='*';
             }
-            
-            
+
         }
     }
 }
