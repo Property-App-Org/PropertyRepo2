@@ -38,6 +38,7 @@ namespace Project_2
             this.lblWrong = new System.Windows.Forms.Label();
             this.errEmail = new System.Windows.Forms.ErrorProvider(this.components);
             this.chkPass = new System.Windows.Forms.CheckBox();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errEmail)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,12 +126,26 @@ namespace Project_2
             this.chkPass.UseVisualStyleBackColor = true;
             this.chkPass.CheckedChanged += new System.EventHandler(this.chkPass_CheckedChanged);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnCancel.Location = new System.Drawing.Point(523, 216);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(138, 57);
+            this.btnCancel.TabIndex = 8;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // frmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(701, 285);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.chkPass);
             this.Controls.Add(this.lblWrong);
             this.Controls.Add(this.btnLogin);
@@ -159,5 +174,6 @@ namespace Project_2
         private System.Windows.Forms.Label lblWrong;
         private System.Windows.Forms.ErrorProvider errEmail;
         private System.Windows.Forms.CheckBox chkPass;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

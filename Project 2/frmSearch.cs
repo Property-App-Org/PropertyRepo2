@@ -69,7 +69,7 @@ namespace Project_2
 
         private void frmSeach_Load(object sender, EventArgs e)
         {
-            ucViewUser1.Hide();
+            ucViewUser1.Show();
             ucViewLocation1.Hide();
             ucViewProperty1.Hide();
             ucViewRental1.Hide();

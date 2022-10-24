@@ -23,19 +23,19 @@ namespace Project_2
         {
             Admin ad = new Admin();
 
-            dgvUserReport.DataSource = bll.GetAdmin();
+            dgvUserReport.DataSource = bll.GetAllAdmin();
         }
 
         private void btnViewAgent_Click(object sender, EventArgs e)
         {
             Agent a = new Agent();
-            dgvUserReport.DataSource = bll.GetAgent();
+            dgvUserReport.DataSource = bll.GetAllAgent();
         }
 
         private void btnViewTenant_Click(object sender, EventArgs e)
         {
             Tenant t = new Tenant();
-            dgvUserReport.DataSource = bll.GetTenant();
+            dgvUserReport.DataSource = bll.GetAllTenant();
         }
 
         private void btnSearchAdmin_Click(object sender, EventArgs e)

@@ -88,6 +88,10 @@ namespace BLL
         {
             return dal.GetAgent();
         }
+        public DataTable GetAllAgent()
+        {
+            return dal.GetAllAgent();
+        }
         public int InsertTenant(Tenant t)
         {
             return dal.InsertTenant(t);
@@ -103,6 +107,10 @@ namespace BLL
         public DataTable GetTenant()
         {
             return dal.GetTenant();
+        }
+        public DataTable GetAllTenant()
+        {
+            return dal.GetAllTenant();
         }
         public int InsertPropertyAgent(PropertyAgent pa)
         {
@@ -139,6 +147,10 @@ namespace BLL
         public int DeleteAdmin(Admin ad)
         {
             return dal.DeleteAdmin(ad);
+        }
+        public DataTable GetAllAdmin()
+        {
+            return dal.GetAllAdmin();
         }
         public DataTable GetAdmin()
         {
@@ -200,7 +212,14 @@ namespace BLL
         {
             return dal.GetRentalByPrice(p);
         }
-            
+        public DataTable GetPropertyByAgencyName( Agency a)
+        {
+            return dal.GetPropertyByAgencyName(a);
+        }
+        public DataTable GetAllPropertyByAgency()
+        {
+            return dal.GetAllPropertyByAgency();
+        }
 
 
     }

@@ -30,12 +30,13 @@ namespace Project_2
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvAgancyReport = new System.Windows.Forms.DataGridView();
             this.btnViewAgency = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtAgencyName = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgancyReport)).BeginInit();
@@ -43,6 +44,7 @@ namespace Project_2
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtAgencyName);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.dgvAgancyReport);
@@ -55,6 +57,16 @@ namespace Project_2
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agancies report";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(599, 145);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(101, 42);
+            this.btnSearch.TabIndex = 16;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // panel1
             // 
@@ -84,9 +96,9 @@ namespace Project_2
             // 
             // btnViewAgency
             // 
-            this.btnViewAgency.Location = new System.Drawing.Point(259, 145);
+            this.btnViewAgency.Location = new System.Drawing.Point(459, 145);
             this.btnViewAgency.Name = "btnViewAgency";
-            this.btnViewAgency.Size = new System.Drawing.Size(213, 42);
+            this.btnViewAgency.Size = new System.Drawing.Size(116, 42);
             this.btnViewAgency.TabIndex = 6;
             this.btnViewAgency.Text = "View";
             this.btnViewAgency.UseVisualStyleBackColor = true;
@@ -101,14 +113,12 @@ namespace Project_2
             this.label1.TabIndex = 0;
             this.label1.Text = "Agencies with more Propertes:";
             // 
-            // btnSearch
+            // txtAgencyName
             // 
-            this.btnSearch.Location = new System.Drawing.Point(487, 145);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(213, 42);
-            this.btnSearch.TabIndex = 16;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.txtAgencyName.Location = new System.Drawing.Point(251, 155);
+            this.txtAgencyName.Name = "txtAgencyName";
+            this.txtAgencyName.Size = new System.Drawing.Size(180, 26);
+            this.txtAgencyName.TabIndex = 17;
             // 
             // ucViewAgencies
             // 
@@ -135,5 +145,6 @@ namespace Project_2
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtAgencyName;
     }
 }

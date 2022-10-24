@@ -124,7 +124,37 @@ namespace DAL
             return dt;
 
         }
+        public DataTable GetPropertyByAgencyName(Agency a)
+        {
+            dbConn.Open();
 
+            dbComm=new SqlCommand("sp_GetPropertyByAgencyName", dbConn);
+
+            dbComm.CommandType=CommandType.StoredProcedure;
+            dbComm.Parameters.AddWithValue("@AgencyName", a.AgencyName);
+
+            dbAdapter=new SqlDataAdapter(dbComm);
+            dt=new DataTable();
+
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
+
+        }
+        public DataTable GetAllPropertyByAgency()
+        {
+            dbConn.Open();
+
+            dbComm=new SqlCommand("sp_GetAllPropertyByAgency", dbConn);
+
+            dbAdapter=new SqlDataAdapter(dbComm);
+            dt=new DataTable();
+
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
+
+        }
         public DataTable GetRole()
         {
             dbConn.Open();
@@ -472,6 +502,21 @@ namespace DAL
             return dt;
 
         }
+        public DataTable GetAllAgent()
+        {
+
+            dbConn.Open();
+
+            dbComm=new SqlCommand("sp_GetAllAgent", dbConn);
+
+            dbAdapter=new SqlDataAdapter(dbComm);
+            dt=new DataTable();
+
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
+
+        }
         public int InsertTenant(Tenant t)
         {
 
@@ -529,6 +574,21 @@ namespace DAL
             dbConn.Open();
 
             dbComm=new SqlCommand("sp_GetTenant", dbConn);
+
+            dbAdapter=new SqlDataAdapter(dbComm);
+            dt=new DataTable();
+
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
+
+        }
+        public DataTable GetAllTenant()
+        {
+
+            dbConn.Open();
+
+            dbComm=new SqlCommand("sp_GetAllTenant", dbConn);
 
             dbAdapter=new SqlDataAdapter(dbComm);
             dt=new DataTable();
@@ -697,6 +757,21 @@ namespace DAL
             int x = dbComm.ExecuteNonQuery();
             dbConn.Close();
             return x;
+
+        }
+        public DataTable GetAllAdmin()
+        {
+
+            dbConn.Open();
+
+            dbComm=new SqlCommand("sp_GetAllAdmin", dbConn);
+
+            dbAdapter=new SqlDataAdapter(dbComm);
+            dt=new DataTable();
+
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
 
         }
         public DataTable GetAdmin()

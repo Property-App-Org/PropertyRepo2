@@ -104,5 +104,12 @@ namespace Project_2
             }
 
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            frmSearch s = new frmSearch();
+            s.Show();
+            this.Hide();
+        }
     }
 }
