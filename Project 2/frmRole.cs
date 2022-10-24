@@ -58,5 +58,10 @@ namespace Project_2
         {
             dgvRole.DataSource=bll.GetRole();
         }
+
+        private void frmRole_Load(object sender, EventArgs e)
+        {
+            txtRoleID.Enabled=false;
+        }
     }
 }

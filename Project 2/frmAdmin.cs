@@ -211,6 +211,7 @@ namespace Project_2
 
         private void frmAdmin_Load(object sender, EventArgs e)
         {
+            txtAdminID.Enabled=false;
             cmbStatus.Items.Add("Available");
             cmbStatus.Items.Add("Not Available");
 

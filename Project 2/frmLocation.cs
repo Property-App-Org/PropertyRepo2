@@ -107,6 +107,7 @@ namespace Project_2
 
         private void frmLocation_Load(object sender, EventArgs e)
         {
+            txtLocationID.Enabled=false;
             cmbProvince.DataSource = bll.GetProvince();
             cmbProvince.DisplayMember = "Description";
             cmbProvince.ValueMember = "ProvinceID";

@@ -27,6 +27,7 @@ namespace Project_2
 
         private void frmPropertyAgent_Load(object sender, EventArgs e)
         {
+            txtPropertyAgentID.Enabled=false;
             cmbAgent.DataSource = bll.GetAgent();
             cmbAgent.DisplayMember = "Name";
             cmbAgent.ValueMember = "AgentID";

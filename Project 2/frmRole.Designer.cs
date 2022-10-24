@@ -31,6 +31,7 @@ namespace Project_2
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtRoleDesc = new System.Windows.Forms.TextBox();
             this.dgvRole = new System.Windows.Forms.DataGridView();
             this.btnBackTo = new System.Windows.Forms.Button();
             this.btnList = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@ namespace Project_2
             this.label3 = new System.Windows.Forms.Label();
             this.txtRoleID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtRoleDesc = new System.Windows.Forms.TextBox();
             this.errRole = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRole)).BeginInit();
@@ -62,6 +62,13 @@ namespace Project_2
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Role Details";
+            // 
+            // txtRoleDesc
+            // 
+            this.txtRoleDesc.Location = new System.Drawing.Point(200, 79);
+            this.txtRoleDesc.Name = "txtRoleDesc";
+            this.txtRoleDesc.Size = new System.Drawing.Size(237, 26);
+            this.txtRoleDesc.TabIndex = 10;
             // 
             // dgvRole
             // 
@@ -126,13 +133,6 @@ namespace Project_2
             this.label2.TabIndex = 1;
             this.label2.Text = "Role ID:";
             // 
-            // txtRoleDesc
-            // 
-            this.txtRoleDesc.Location = new System.Drawing.Point(200, 79);
-            this.txtRoleDesc.Name = "txtRoleDesc";
-            this.txtRoleDesc.Size = new System.Drawing.Size(237, 26);
-            this.txtRoleDesc.TabIndex = 10;
-            // 
             // errRole
             // 
             this.errRole.ContainerControl = this;
@@ -145,6 +145,7 @@ namespace Project_2
             this.Controls.Add(this.groupBox1);
             this.Name = "frmRole";
             this.Text = "frmRole";
+            this.Load += new System.EventHandler(this.frmRole_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRole)).EndInit();

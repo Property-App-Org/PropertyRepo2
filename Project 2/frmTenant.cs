@@ -175,6 +175,7 @@ namespace Project_2
 
         private void frmTenant_Load(object sender, EventArgs e)
         {
+            txtTenantID.Enabled=false;
             cmbStatus.Items.Add("Available");
             cmbStatus.Items.Add("Unavailable");
             

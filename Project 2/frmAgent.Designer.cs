@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtAgent = new System.Windows.Forms.TextBox();
+            this.txtAgentID = new System.Windows.Forms.TextBox();
             this.lblAgent = new System.Windows.Forms.Label();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.dgvAgent = new System.Windows.Forms.DataGridView();
@@ -60,7 +60,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtAgent);
+            this.groupBox1.Controls.Add(this.txtAgentID);
             this.groupBox1.Controls.Add(this.lblAgent);
             this.groupBox1.Controls.Add(this.cmbStatus);
             this.groupBox1.Controls.Add(this.dgvAgent);
@@ -90,12 +90,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agent Details";
             // 
-            // txtAgent
+            // txtAgentID
             // 
-            this.txtAgent.Location = new System.Drawing.Point(183, 25);
-            this.txtAgent.Name = "txtAgent";
-            this.txtAgent.Size = new System.Drawing.Size(193, 26);
-            this.txtAgent.TabIndex = 23;
+            this.txtAgentID.Location = new System.Drawing.Point(183, 25);
+            this.txtAgentID.Name = "txtAgentID";
+            this.txtAgentID.Size = new System.Drawing.Size(193, 26);
+            this.txtAgentID.TabIndex = 23;
             // 
             // lblAgent
             // 
@@ -321,7 +321,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.ErrorProvider errAgent;
-        private System.Windows.Forms.TextBox txtAgent;
+        private System.Windows.Forms.TextBox txtAgentID;
         private System.Windows.Forms.Label lblAgent;
     }
 }

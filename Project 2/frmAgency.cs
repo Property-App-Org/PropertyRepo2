@@ -81,6 +81,7 @@ namespace Project_2
 
         private void frmAgency_Load(object sender, EventArgs e)
         {
+            txtAgencyID.Visible=false;
             cmbSurbub.DataSource = bll.GetSurbub();
             cmbSurbub.DisplayMember = "SurbubDescription";
             cmbSurbub.ValueMember = "SurbubID";
@@ -102,6 +103,11 @@ namespace Project_2
                 cmbSurbub.Text = dgvAgency.SelectedRows[0].Cells["SurbubDescription"].Value.ToString();
                 
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

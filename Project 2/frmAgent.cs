@@ -124,7 +124,7 @@ namespace Project_2
             a.Email = txtName.Text;
             a.Phone = txtPhone.Text;
             a.Status = cmbStatus.SelectedItem.ToString();
-            a.AgentID = int.Parse(txtAgent.Text);
+            a.AgentID = int.Parse(txtAgentID.Text);
             bll.UpdateAgent(a);
             dgvAgent.DataSource = bll.GetAgent();
 
@@ -133,7 +133,7 @@ namespace Project_2
         private void btnDelete_Click(object sender, EventArgs e)
         {
             Agent a = new Agent();
-            a.AgentID = int.Parse(txtAgent.Text);
+            a.AgentID = int.Parse(txtAgentID.Text);
             bll.DeleteAgent(a);
             dgvAgent.DataSource = bll.GetAgent();
         }
@@ -152,19 +152,20 @@ namespace Project_2
         {
             if (dgvAgent.SelectedRows.Count > 0)
             {
-                txtAgent.Text = dgvAgent.SelectedRows[0].Cells["AgentID"].Value.ToString();
+                txtAgentID.Text = dgvAgent.SelectedRows[0].Cells["AgentID"].Value.ToString();
                 txtName.Text = dgvAgent.SelectedRows[0].Cells["Name"].Value.ToString();
                 txtSurname.Text = dgvAgent.SelectedRows[0].Cells["Surname"].Value.ToString();
                 txtEmail.Text = dgvAgent.SelectedRows[0].Cells["Email"].Value.ToString();
                 txtPassword.Text = dgvAgent.SelectedRows[0].Cells["Password"].Value.ToString();
                 txtPhone.Text = dgvAgent.SelectedRows[0].Cells["Phone"].Value.ToString();
                 cmbStatus.Text = dgvAgent.SelectedRows[0].Cells["Status"].Value.ToString();
-                //cmbAgency.Text = dgvAgent.SelectedRows[0].Cells["AngencyName"].Value.ToString();
+                
             }
         }
 
         private void frmAgent_Load(object sender, EventArgs e)
         {
+            txtAgentID.Enabled=false;
             cmbAgency.DataSource = bll.GetAgency();
             cmbAgency.DisplayMember = "AgencyName";
             cmbAgency.ValueMember = "AgencyID";

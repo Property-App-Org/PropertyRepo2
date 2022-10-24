@@ -125,8 +125,6 @@ namespace Project_2
 
         private void frmProperty_Load(object sender, EventArgs e)
         {
-           
-
             txtPropertyID.Enabled=false;
             cmbPropertyType.DataSource = bll.GetPropertyType();
             cmbPropertyType.DisplayMember = "PropertyTypeDescription";

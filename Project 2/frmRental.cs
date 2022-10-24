@@ -116,6 +116,7 @@ namespace Project_2
 
         private void frmRental_Load(object sender, EventArgs e)
         {
+            txtRentalID.Enabled=false;
             cmbPropertyAgent.DataSource = bll.GetPropertyAgent();
             cmbPropertyAgent.DisplayMember = "FullName";
             cmbPropertyAgent.ValueMember = "PropertyAgentID";
