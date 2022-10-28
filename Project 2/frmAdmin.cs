@@ -33,7 +33,7 @@ namespace Project_2
             frmAdminMenu adM = new frmAdminMenu();
             adM.Show();
             this.Hide();
-            MessageBox.Show("Welcome Back!");
+           
         }
         BusinessLogicLayer bll = new BusinessLogicLayer();
         private void btnAdd_Click(object sender, EventArgs e)

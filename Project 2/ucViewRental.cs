@@ -37,5 +37,11 @@ namespace Project_2
             p.Price=double.Parse(txtPrice.Text);
             dgvRentalReport.DataSource=bll.GetRentalByPrice(p);
         }
+
+        private void btnViewRentedProperties_Click(object sender, EventArgs e)
+        {
+            Tenant t = new Tenant();
+            dgvRentalReport.DataSource = bll.GetAllTenant();
+        }
     }
 }
