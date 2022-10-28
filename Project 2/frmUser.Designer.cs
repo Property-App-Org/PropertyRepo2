@@ -113,6 +113,7 @@ namespace Project_2
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.Size = new System.Drawing.Size(664, 150);
             this.dgvUser.TabIndex = 18;
+            this.dgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellClick);
             // 
             // cmbRoleDesc
             // 

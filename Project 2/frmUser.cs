@@ -104,5 +104,20 @@ namespace Project_2
             cmbRoleDesc.DisplayMember = "RoleDescription";
             cmbRoleDesc.ValueMember = "RoleID";
         }
+
+        private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvUser.SelectedRows.Count > 0)
+            {
+                
+                txtName.Text = dgvUser.SelectedRows[0].Cells["Name"].Value.ToString();
+                txtSurname.Text = dgvUser.SelectedRows[0].Cells["Surname"].Value.ToString();
+                txtEmail.Text = dgvUser.SelectedRows[0].Cells["Email"].Value.ToString();
+                txtPassword.Text = dgvUser.SelectedRows[0].Cells["Password"].Value.ToString();
+               
+                cmbRoleDesc.Text = dgvUser.SelectedRows[0].Cells["RoleDescription"].Value.ToString();
+
+            }
+        }
     }
 }

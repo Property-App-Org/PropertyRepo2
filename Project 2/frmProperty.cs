@@ -49,7 +49,7 @@ namespace Project_2
             {
                 validate = true;
             }
-            if (string.IsNullOrEmpty(txtPrice.Text) || (!Regex.IsMatch(txtPrice.Text, @"^[0-9]+[.[0-9]]+]?")))
+            if (string.IsNullOrEmpty(txtPrice.Text) )
             {
                 errDescription.SetError(txtPrice, "Please enter correct price format");
                 validate = false;
